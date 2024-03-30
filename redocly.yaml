@@ -5,7 +5,6 @@ apis:
     root: openapi/openapi.yaml
 theme:
   openapi:
-    htmlTemplate: ./docs/index.html
     jsonSampleExpandLevel: 3
     expandResponses: "200,201"
     pathInMiddlePanel:  true
