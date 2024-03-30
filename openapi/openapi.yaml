@@ -1,0 +1,220 @@
+openapi: 3.0.0
+info:
+  contact:
+    email: hello@drplus.au
+    name: DataRight Plus
+    url: https://drplus.au/
+  description: >
+    This is the DataRight Plus (DR+) Redocly repository containing the collation of DR+ Application Programming Interfaces (APIs).
+  license:
+    name: MIT
+    url: https://drplus.au/
+  title: "DR+: Redocly"
+  version: latest
+paths:
+  /banking/accounts:
+    $ref: paths/banking@accounts.yaml
+  /banking/accounts/balances:
+    $ref: paths/banking@accounts@balances.yaml
+  /banking/accounts/direct-debits:
+    $ref: paths/banking@accounts@direct-debits.yaml
+  '/banking/accounts/{accountId}':
+    $ref: paths/banking@accounts@{accountId}.yaml
+  '/banking/accounts/{accountId}/balance':
+    $ref: paths/banking@accounts@{accountId}@balance.yaml
+  '/banking/accounts/{accountId}/direct-debits':
+    $ref: paths/banking@accounts@{accountId}@direct-debits.yaml
+  '/banking/accounts/{accountId}/payments/scheduled':
+    $ref: paths/banking@accounts@{accountId}@payments@scheduled.yaml
+  '/banking/accounts/{accountId}/transactions':
+    $ref: paths/banking@accounts@{accountId}@transactions.yaml
+  '/banking/accounts/{accountId}/transactions/{transactionId}':
+    $ref: paths/banking@accounts@{accountId}@transactions@{transactionId}.yaml
+  /banking/payees:
+    $ref: paths/banking@payees.yaml
+  '/banking/payees/{payeeId}':
+    $ref: paths/banking@payees@{payeeId}.yaml
+  /banking/payments/scheduled:
+    $ref: paths/banking@payments@scheduled.yaml
+  /banking/products:
+    $ref: paths/banking@products.yaml
+  '/banking/products/{productId}':
+    $ref: paths/banking@products@{productId}.yaml
+  /common/customer:
+    $ref: paths/common@customer.yaml
+  /common/customer/detail:
+    $ref: paths/common@customer@detail.yaml
+  /discovery/outages:
+    $ref: paths/discovery@outages.yaml
+  /discovery/status:
+    $ref: paths/discovery@status.yaml
+  /energy/plans:
+    $ref: paths/energy@plans.yaml
+  /energy/plans/{planId}:
+    $ref: paths/energy@plans@{planId}.yaml
+  /energy/electricity/servicepoints:
+    $ref: paths/energy@electricity@servicepoints.yaml
+  /energy/electricity/servicepoints/{servicePointId}:
+    $ref: paths/energy@electricity@servicepoints@{servicePointId}.yaml
+  /energy/electricity/servicepoints/{servicePointId}/usage:
+    $ref: paths/energy@electricity@servicepoints@{servicePointId}@usage.yaml
+  /energy/electricity/servicepoints/{servicePointId}/der:
+    $ref: paths/energy@electricity@servicepoints@{servicePointId}@der.yaml
+  /energy/electricity/servicepoints/usage:
+    $ref: paths/energy@electricity@servicepoints@usage.yaml
+  /energy/electricity/servicepoints/der:
+    $ref: paths/energy@electricity@servicepoints@der.yaml
+  /energy/accounts:
+    $ref: paths/energy@accounts.yaml
+  /energy/accounts/{accountId}:
+    $ref: paths/energy@accounts@{accountId}.yaml
+  /energy/accounts/{accountId}/payment-schedule:
+    $ref: paths/energy@accounts@{accountId}@payment-schedule.yaml
+  /energy/accounts/{accountId}/concessions:
+    $ref: paths/energy@accounts@{accountId}@concessions.yaml
+  /energy/accounts/{accountId}/balance:
+    $ref: paths/energy@accounts@{accountId}@balance.yaml
+  /energy/accounts/balances:
+    $ref: paths/energy@accounts@balances.yaml
+  /energy/accounts/{accountId}/invoices:
+    $ref: paths/energy@accounts@{accountId}@invoices.yaml
+  /energy/accounts/invoices:
+    $ref: paths/energy@accounts@invoices.yaml
+  /energy/accounts/{accountId}/billing:
+    $ref: paths/energy@accounts@{accountId}@billing.yaml
+  /energy/accounts/billing:
+    $ref: paths/energy@accounts@billing.yaml
+  /admin/metrics:
+    $ref: paths/admin@metrics.yaml
+  /admin/register/metadata:
+    $ref: paths/admin@register@metadata.yaml
+  /register:
+    $ref: paths/dcr@register.yaml
+  /register/{clientId}:
+    $ref: paths/dcr@register@{clientId}.yaml
+  /arrangements/revoke:
+    $ref: paths/arrangements@revoke.yaml
+  /cdr-register/v1/{industry}/data-holders/brands:
+    $ref: paths/cdr-register@{industry}@data-holders@brands.yaml
+  /cdr-register/v1/{industry}/data-holders/brands/summary:
+    $ref: paths/cdr-register@{industry}@data-holders@brands@summary.yaml
+  /cdr-register/v1/{industry}/data-holders/status:
+    $ref: paths/cdr-register@{industry}@data-holders@status.yaml
+  /cdr-register/v1/{industry}/data-recipients/brands/{dataRecipientBrandId}/software-products/{softwareProductId}/ssa:
+    $ref: paths/cdr-register@{industry}@data-recipients@brands@{dataRecipientBrandId}@software-products@{softwareProductId}@ssa.yaml
+  /cdr-register/v1/{industry}/data-recipients/brands/software-products/status:
+    $ref: paths/cdr-register@{industry}@data-recipients@brands@software-products@status.yaml
+  /cdr-register/v1/{industry}/data-recipients/status:
+    $ref: paths/cdr-register@{industry}@data-recipients@status.yaml
+  /cdr-register/v1/{industry}/data-recipients:
+    $ref: paths/cdr-register@{industry}@data-recipients.yaml
+  /secondary/energy/electricity/servicepoints:
+    $ref: paths/secondary@energy@electricity@servicepoints.yaml
+  /secondary/energy/electricity/servicepoints/{nationalMeteringId}:
+    $ref: paths/secondary@energy@electricity@servicepoints@{nationalMeteringId}.yaml
+  /secondary/energy/electricity/servicepoints/{nationalMeteringId}/usage:
+    $ref: paths/secondary@energy@electricity@servicepoints@{nationalMeteringId}@usage.yaml
+  /secondary/energy/electricity/servicepoints/{nationalMeteringId}/der:
+    $ref: paths/secondary@energy@electricity@servicepoints@{nationalMeteringId}@der.yaml
+  /secondary/energy/electricity/servicepoints/usage:
+    $ref: paths/secondary@energy@electricity@servicepoints@usage.yaml
+  /secondary/energy/electricity/servicepoints/der:
+    $ref: paths/secondary@energy@electricity@servicepoints@der.yaml
+tags:
+  - name: Admin
+    description: "Admin APIs"
+  - name: Banking Accounts
+    x-displayName: Accounts
+    description: "Accounts Related APIs"
+  - name: Banking Balances
+    x-displayName: Balances
+    description: "Banking Account Balance Related APIs"
+  - name: Common
+    description: "Common APIs"
+  - name: Customer
+    description: "APIs related to the distribution of customer information, in the context of a Consumer, from a Provider."
+  - name: Operations
+    description: "APIs related to operational status of the Provider"
+  - name: Direct Debits
+    description: "Banking Direct Debits APIs"
+  - name: Metrics
+    description: "Metrics APIs"
+  - name: Metadata
+    description: "Metadata APIs"
+  - name: Payees
+    description: "Banking Payee APIs"
+  - name: Banking Products
+    x-displayName: Products
+    description: "Banking Product APIs"
+  - name: Scheduled Payments
+    description: "Scheduled Payments APIs"
+  - name: Transactions
+    description: "Banking Transactions APIs"
+  - name: CDR End Points
+    description: "CDR Endpoints within the Information Security profile"
+  - name: Energy Accounts
+    x-displayName: Accounts
+    description: "Energy Account Related APIs"
+  - name: Energy Plans
+    x-displayName: Plans
+    description: "Energy Plans Related APIs"
+  - name: Electricity Usage
+    x-displayName: Usage
+    description: "Electricity Usage Related APIs"
+  - name: Energy Billing
+    x-displayName: Billing
+    description: "Energy Billing Related APIs"
+  - name: Directory Initiators
+    description: "Endpoints hosted by the Ecosystem Authority related to Initiators"
+    x-displayName: Initiators
+  - name: Directory Providers
+    description: "Endpoints hosted by the Ecosystem Authority related to Providers"
+    x-displayName: Providers
+  - name: Directory Assertions
+    description: "Endpoints hosted by the Ecosystem Authority providing Assertions"
+    x-displayName: Assertions
+  - name: Client Registration
+    description: Dynamic Client Registration Endpoints
+  - name: Electrical Assets
+    x-displayName: Assets
+    description: Electrical Asset Information
+  - name: Electricity Authority Assets
+    x-displayName: Assets
+    description: "Asset information provided by the Electricity Authority"
+  - name: Electricity Authority Usage
+    x-displayName: Usage
+    description: "Meter usage information provided by the Electricity Authority"
+x-tagGroups:
+  - name: "Introduction"
+    tags: []
+  - name: "Common"
+    tags: ["Customer", "Operations"]
+  - name: "Banking Sector"
+    tags: ["Banking Accounts", "Banking Balances", "Direct Debits", "Payees", "Banking Products", "Scheduled Payments", "Transactions"]
+  - name: "Energy Sector"
+    tags: ["Electrical Assets", "Energy Accounts", "Energy Billing", "Energy Plans", "Electricity Usage"]
+  - name: "Provider Administration"
+    tags: ["Dynamic Client Registration"]
+  - name: "Ecosystem Administration"
+    tags: ["Metrics", "Metadata"]
+  - name: "Ecosystem Authority"
+    tags: ["Directory Assertions", "Directory Initiators", "Directory Providers"]
+  - name: "Electricity Authority"
+    tags: ["Electricity Authority Assets", "Electricity Authority Usage"]
+components:
+  securitySchemes:
+    ProviderAuth:
+      $ref: ./components/securitySchemes/ProviderAuth.yaml
+    EAClientAuth:
+      $ref: ./components/securitySchemes/EAClientAuth.yaml
+    EAAuth:
+      $ref: ./components/securitySchemes/EAAuth.yaml
+    ElecAuth:
+      $ref: ./components/securitySchemes/ElecAuth.yaml
+servers:
+  - url: 'https://api.provider.drplus.au/cds-au/v1'
+    description: "Example Base URL for a Provider"
+  - url: 'https://api.register.drplus.au'
+    description: "Example TLS Register Base URI"
+  - url: 'https://secure.api.register.drplus.au'
+    description: "Example MTLS Register Base URI"
