@@ -13,7 +13,6 @@ jobs:
       - run: npm ci
       - run: npm run build --if-present
       - run: npm test
-      - run: cp openapi.yml site/
       - name: Setup Pages
         if: github.ref == 'refs/heads/main'
         uses: actions/configure-pages@v3
