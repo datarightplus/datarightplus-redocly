@@ -21,7 +21,13 @@ features.openapi:
       fontFamily: "Montserrat"
     rightPanel:
       backgroundColor: '#464648'
-
+  generateCodeSamples:
+    languages:  # Array of language config objects; indicates in which languages to generate code samples.
+      - lang: curl
+      - lang: Node.js
+      - lang: JavaScript
+      - lang: PHP
+      - lang: Python
 plugins:
   - ./plugins/datarightplus-redocly.js
 rules:
