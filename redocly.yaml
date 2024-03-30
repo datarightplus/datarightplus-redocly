@@ -3,31 +3,29 @@ organization: datarightplus
 apis:
   datarightplus-api:
     root: openapi/openapi.yaml
-features.openapi:
-  htmlTemplate: ./docs/index.html
-  jsonSampleExpandLevel: 3
-  expandResponses: "200,201"
-  pathInMiddlePanel:  true
-  showExtensions: true
-  theme:
-    colors:
-      primary:
-        dark: "#132A54"
-        light: "#1790CF"
-        main: "#132A54"
-    sidebar:
-      backgroundColor: "#D2D2D2"
-    typography:
-      fontFamily: "Montserrat"
-    rightPanel:
-      backgroundColor: '#464648'
-  generateCodeSamples:
-    languages:  # Array of language config objects; indicates in which languages to generate code samples.
-      - lang: curl
-      - lang: Node.js
-      - lang: JavaScript
-      - lang: PHP
-      - lang: Python
+theme:
+  openapi:
+    htmlTemplate: ./docs/index.html
+    jsonSampleExpandLevel: 3
+    expandResponses: "200,201"
+    pathInMiddlePanel:  true
+    showExtensions: true
+    theme:
+      colors:
+        primary:
+          dark: "#132A54"
+          light: "#1790CF"
+          main: "#132A54"
+      sidebar:
+        backgroundColor: "#D2D2D2"
+      typography:
+        fontFamily: "Montserrat"
+      rightPanel:
+        backgroundColor: '#464648'
+    generateCodeSamples:
+      languages:
+        - lang: curl
+        - lang: Node.js
 plugins:
   - ./plugins/datarightplus-redocly.js
 rules:
