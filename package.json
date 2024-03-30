@@ -1,0 +1,21 @@
+{
+  "name": "datarightplus-redocly",
+  "version": "1.25.0",
+  "dependencies": {
+    "@redocly/cli": "^1.0.0-beta.107",
+    "core-js": "^3.16.1",
+    "mem": "^6.1.1",
+    "node-fetch": "^2.6.1",
+    "redoc": "^2.0.0-rc.63",
+    "static-eval": "^2.1.0",
+    "styled-components": "^5.3.0",
+    "underscore": "^1.13.1",
+    "yargs-parser": "^20.2.9"
+  },
+  "private": true,
+  "scripts": {
+    "start": "redocly preview-docs",
+    "build": "redocly bundle openapi/openapi.yaml -o openapi",
+    "test": "redocly lint openapi/openapi.yaml"
+  }
+}

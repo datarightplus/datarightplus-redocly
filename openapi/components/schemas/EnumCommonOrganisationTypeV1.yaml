@@ -1,0 +1,10 @@
+description: Legal organisation type
+enum:
+  - COMPANY
+  - GOVERNMENT_ENTITY
+  - OTHER
+  - PARTNERSHIP
+  - SOLE_TRADER
+  - TRUST
+type: string
+example: COMPANY

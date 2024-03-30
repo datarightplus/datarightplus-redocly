@@ -1,0 +1,70 @@
+get:
+  summary: Get Bulk Billing
+  description: Obtain billing transactions for all accounts
+  operationId: getEnergyAccountBillingBulk
+  parameters:
+    - $ref: ../components/parameters/QueryOldestDateTime.yaml
+    - $ref: ../components/parameters/QueryNewestDateTime.yaml
+    - $ref: ../components/parameters/QueryPage.yaml
+    - $ref: ../components/parameters/QueryPageSize.yaml
+    - $ref: ../components/parameters/HeaderXV.yaml
+    - $ref: ../components/parameters/HeaderXMinV.yaml
+    - $ref: ../components/parameters/HeaderXFapiInteractionId.yaml
+    - $ref: ../components/parameters/HeaderXFAPIAuthDate.yaml
+    - $ref: ../components/parameters/HeaderXFAPICustomerIPAddress.yaml
+    - $ref: ../components/parameters/HeaderXCDSClientHeaders.yaml
+  responses:
+    200:
+      $ref: ../components/responses/GetEnergyAccountBillingBulk.yaml
+    400:
+      $ref: ../components/responses/GetEnergyAccountBillingBulk400.yaml
+    403:
+      $ref: ../components/responses/Generic403.yaml
+    406:
+      $ref: ../components/responses/GetEnergyAccountBillingBulk406.yaml
+    422:
+      $ref: ../components/responses/GetEnergyAccountBillingBulk422.yaml
+    500:
+      $ref: ../components/responses/Generic500.yaml
+    503:
+      $ref: ../components/responses/Generic503.yaml
+  tags:
+    - Energy Billing
+  security:
+    - ProviderAuth: ['energy:billing:read']
+  x-version: '2'
+post:
+  summary: Get Billing for Specific Energy Accounts
+  description: Obtain billing for a specified set of accounts
+  operationId: listBillingSpecificEnergyAccounts
+  parameters:
+    - $ref: ../components/parameters/QueryOldestDateTime.yaml
+    - $ref: ../components/parameters/QueryNewestDateTime.yaml
+    - $ref: ../components/parameters/QueryPage.yaml
+    - $ref: ../components/parameters/QueryPageSize.yaml
+    - $ref: ../components/parameters/HeaderXV.yaml
+    - $ref: ../components/parameters/HeaderXMinV.yaml
+    - $ref: ../components/parameters/HeaderXFapiInteractionId.yaml
+    - $ref: ../components/parameters/HeaderXFAPIAuthDate.yaml
+    - $ref: ../components/parameters/HeaderXFAPICustomerIPAddress.yaml
+    - $ref: ../components/parameters/HeaderXCDSClientHeaders.yaml
+  requestBody:
+    $ref: ../components/requestBodies/RequestAccountIds.yaml
+  responses:
+    200:
+      $ref: ../components/responses/ListEnergyBillingSpecificAccounts.yaml
+    400:
+      $ref: ../components/responses/ListEnergyBillingSpecificAccounts400.yaml
+    406:
+      $ref: ../components/responses/ListEnergyBillingSpecificAccounts406.yaml
+    422:
+      $ref: ../components/responses/ListEnergyBillingSpecificAccounts422.yaml
+    500:
+      $ref: ../components/responses/Generic500.yaml
+    503:
+      $ref: ../components/responses/Generic503.yaml
+  tags:
+    - Energy Billing
+  security:
+    - ProviderAuth: ['energy:billing:read']
+  x-version: '2'

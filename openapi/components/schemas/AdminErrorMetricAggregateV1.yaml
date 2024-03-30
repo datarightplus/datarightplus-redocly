@@ -1,0 +1,22 @@
+description: Aggregate number of calls resulting in error due to server execution
+  over time for all endpoints
+properties:
+  currentDay:
+    description: Error counts for current day
+    type: integer
+    minimum: 0
+    example: 4
+    x-cds-type: NaturalNumber
+  previousDays:
+    description: Error counts for previous days. The first element indicates
+      yesterday and so on. A maximum of seven entries is required if available
+    items:
+      type: integer
+      minimum: 0
+      x-cds-type: NaturalNumber
+    type: array
+    example: [1,4,8,0,0,22,0]
+type: object
+x-conditional:
+  - currentDay
+  - previousDays

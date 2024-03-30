@@ -1,0 +1,25 @@
+get:
+  description: Allows Initiators to discover Provider Brands available in the CDR ecosystem.
+  operationId: listDataHolderBrands
+  parameters:
+    - $ref: ../components/parameters/QueryUpdatedSince.yaml
+    - $ref: ../components/parameters/QueryPage.yaml
+    - $ref: ../components/parameters/QueryPageSize.yaml
+    - $ref: ../components/parameters/PathIndustry.yaml
+    - $ref: ../components/parameters/HeaderXV.yaml
+    - $ref: ../components/parameters/HeaderXMinV.yaml
+  responses:
+    200:
+      $ref: ../components/responses/RegisterDataHolderBrands.yaml
+    400:
+      $ref: ../components/responses/RegisterDataHolderBrands400.yaml
+    401:
+      $ref: ../components/responses/RegisterDataHolderBrands401.yaml
+    406:
+      $ref: ../components/responses/RegisterDataHolderBrands406.yaml
+  summary: Get Provider Brands
+  tags:
+    - Directory Providers
+  security:
+    - EAAuth: ['cdr-register:read']
+  x-version: '2'

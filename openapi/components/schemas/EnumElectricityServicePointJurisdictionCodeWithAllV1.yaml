@@ -1,0 +1,13 @@
+description:
+  $ref: ./EnumElectricityServicePointJurisdictionCodeV1.md
+enum:
+  - ALL
+  - ACT
+  - NEM
+  - NSW
+  - QLD
+  - SA
+  - TAS
+  - VIC
+type: string
+example: QLD

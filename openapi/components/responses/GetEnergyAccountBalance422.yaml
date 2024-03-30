@@ -1,0 +1,17 @@
+description: Unprocessable Entity Error
+content:
+  application/json:
+    schema:
+      properties:
+        errors:
+          items:
+            $ref: ./GetEnergyAccountBalance422Item.yaml
+          type: array
+      required:
+        - errors
+      type: object
+headers:
+  x-fapi-interaction-id:
+    $ref: ../headers/XFAPIInteractionId.yaml
+  x-v:
+    $ref: ../headers/XV.yaml

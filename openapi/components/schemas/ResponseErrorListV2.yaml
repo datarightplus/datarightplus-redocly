@@ -1,0 +1,9 @@
+type: object
+required:
+  - errors
+properties:
+  errors:
+    type: array
+    description: Response Error List
+    items:
+      $ref: ./ErrorV2.yaml

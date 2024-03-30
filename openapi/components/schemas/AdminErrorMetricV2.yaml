@@ -1,0 +1,14 @@
+description: Number of calls resulting in error due to server execution over
+  time
+properties:
+  aggregate:
+    $ref: './AdminErrorMetricAggregateV1.yaml'
+  unauthenticated:
+    $ref: './AdminErrorMetricPerErrorCodeV1.yaml'
+  authenticated:
+    $ref: './AdminErrorMetricPerErrorCodeV1.yaml'
+required:
+  - aggregate
+  - authenticated
+  - unauthenticated
+type: object

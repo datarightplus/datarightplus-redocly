@@ -1,0 +1,20 @@
+properties:
+  data:
+    type: object
+    properties:
+      invoices:
+        description: Array of invoices sorted by issue date in descending order
+        items:
+          $ref: ./EnergyInvoiceV1.yaml
+        type: array
+    required:
+      - invoices
+  links:
+    $ref: ./LinksPaginatedV1.yaml
+  meta:
+    $ref: ./MetaPaginatedV1.yaml
+required:
+  - data
+  - links
+  - meta
+type: object

@@ -1,0 +1,12 @@
+description: Day including special `BUSINESS_DAYS`
+enum:
+  - SUNDAY
+  - MONDAY
+  - TUESDAY
+  - WEDNESDAY
+  - THURSDAY
+  - FRIDAY
+  - SATURDAY
+  - BUSINESS_DAYS
+type: string
+example: MONDAY

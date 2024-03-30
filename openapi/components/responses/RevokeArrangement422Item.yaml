@@ -1,0 +1,8 @@
+oneOf:
+  - $ref: ../schemas/ErrorAuthorisationInvalidArrangementV1.yaml
+  - $ref: ../schemas/ErrorGeneralExpectedV1.yaml
+discriminator:
+  propertyName: code
+  mapping:
+    "urn:au-cds:error:cds-all:Authorisation/InvalidArrangement": ../schemas/ErrorAuthorisationInvalidArrangementV1.yaml
+    "urn:au-cds:error:cds-all:GeneralError/Expected": ../schemas/ErrorGeneralExpectedV1.yaml

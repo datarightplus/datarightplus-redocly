@@ -1,0 +1,10 @@
+properties:
+  self:
+    description: Fully qualified link that generated the current response document
+    type: string
+    format: uri
+    x-cds-type: URIString
+    example: "https://api.provider.com.au/cds-au/v1/endpoint/path"
+required:
+  - self
+type: object

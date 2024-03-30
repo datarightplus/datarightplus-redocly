@@ -1,0 +1,8 @@
+description: Effective Date with All
+default: CURRENT
+enum:
+  - ALL
+  - CURRENT
+  - FUTURE
+type: string
+example: CURRENT

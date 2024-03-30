@@ -1,0 +1,6 @@
+description: Register triggered action to perform
+content:
+  application/json:
+    schema:
+      $ref: ../schemas/RequestMetaDataUpdateV1.yaml
+required: true

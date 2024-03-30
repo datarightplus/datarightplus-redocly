@@ -1,0 +1,47 @@
+# See https://docs.redoc.ly/cli/configuration/ for more information.
+organization: datarightplus
+apis:
+  datarightplus-api:
+    root: openapi/openapi.yaml
+features.openapi:
+  htmlTemplate: ./docs/index.html
+  jsonSampleExpandLevel: 3
+  expandResponses: "200,201"
+  pathInMiddlePanel:  true
+  showExtensions: true
+  theme:
+    colors:
+      primary:
+        dark: "#132A54"
+        light: "#1790CF"
+        main: "#132A54"
+    sidebar:
+      backgroundColor: "#D2D2D2"
+    typography:
+      fontFamily: "Montserrat"
+    rightPanel:
+      backgroundColor: '#464648'
+
+plugins:
+  - ./plugins/datarightplus-redocly.js
+rules:
+  request-mime-type:
+    severity: error
+    allowedValues:
+      - application/json
+      - application/x-www-form-urlencoded
+      - application/jwt
+  path-segment-plural: off
+  tags-alphabetical: off
+  paths-kebab-case: off
+  scalar-property-missing-example: off
+  datarightplus-redocly/check-discriminators:
+    severity: error
+    allowCds: true
+  datarightplus-redocly/enforce-cdstype-formats:
+    severity: error
+  datarightplus-redocly/check-required-fields-list:
+    severity: error
+  datarightplus-redocly/check-example-fields:
+    severity: error
+

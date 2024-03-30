@@ -1,0 +1,12 @@
+description: Percentage of Shared Responsibility calls within the performance
+  thresholds. Mandatory for Providers designated for a Shared Responsibility
+  Data Request data cluster
+properties:
+  primary:
+    $ref: './AdminPerformanceMetricsHourlyMetricsV1.yaml'
+  secondary:
+    $ref: './AdminPerformanceMetricsHourlyMetricsV1.yaml'
+required:
+  - primary
+  - secondary
+type: object

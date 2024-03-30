@@ -1,0 +1,47 @@
+properties:
+  first:
+    description: >-
+      URI to the first page of this set. Mandatory if this response is not the
+      first page
+    type: string
+    format: uri
+    x-cds-type: URIString
+    example: "https://api.provider.com.au/cds-au/v1/endpoint/path?page=1&page-size=25"
+  last:
+    description: >-
+      URI to the last page of this set. Mandatory if this response is not the
+      last page
+    type: string
+    format: uri
+    x-cds-type: URIString
+    example: "https://api.provider.com.au/cds-au/v1/endpoint/path?page=5&page-size=25"
+  next:
+    description: >-
+      URI to the next page of this set. Mandatory if this response is not the
+      last page
+    type: string
+    format: uri
+    x-cds-type: URIString
+    example: "https://api.provider.com.au/cds-au/v1/endpoint/path?page=4&page-size=25"
+  prev:
+    description: >-
+      URI to the previous page of this set. Mandatory if this response is not
+      the first page
+    type: string
+    format: uri
+    x-cds-type: URIString
+    example: "https://api.provider.com.au/cds-au/v1/endpoint/path?page=2&page-size=25"
+  self:
+    description: Fully qualified link that generated the current response document
+    type: string
+    format: uri
+    x-cds-type: URIString
+    example: "https://api.provider.com.au/cds-au/v1/endpoint/path?page=3&page-size=25"
+required:
+  - self
+type: object
+x-conditional:
+  - prev
+  - next
+  - first
+  - last

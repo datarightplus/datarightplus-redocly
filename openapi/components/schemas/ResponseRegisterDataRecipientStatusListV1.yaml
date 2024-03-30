@@ -1,0 +1,10 @@
+properties:
+  dataRecipients:
+    description: List of Initiators in the Ecosystem Authority
+    uniqueItems: true
+    items:
+      $ref: ./RegisterDataRecipientStatusV1.yaml
+    type: array
+required:
+  - dataRecipients
+type: object

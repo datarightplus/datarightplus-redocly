@@ -1,0 +1,6 @@
+type: string
+description: "The industry the Provider Brand belongs to (Banking, etc)"
+enum:
+  - banking
+example: banking
+x-cds-type: Enum

@@ -1,0 +1,33 @@
+properties:
+  softwareProductId:
+    type: string
+    description: Unique id of the Initiator Initiator issued by the Ecosystem Authority
+    maxLength: 36
+    example: "038b1ecc-d645-4d8b-9442-4afe952940e0"
+  softwareProductName:
+    type: string
+    description: Name of the Initiator
+    maxLength: 200
+    example: "ACME Initiator"
+  softwareProductDescription:
+    type: string
+    description: Description of the Initiator
+    maxLength: 4000
+    example: "ACME Initiator Description"
+  logoUri:
+    type: string
+    description: Initiator logo URI
+    x-cds-type: URIString
+    format: uri
+    maxLength: 1000
+    example: "https://acme.bank/logo.png"
+  status:
+    $ref: ./EnumRegisterSoftwareProductStatusV1.yaml
+type: object
+required:
+  - logoUri
+  - softwareProductDescription
+  - softwareProductId
+  - softwareProductName
+  - status
+description: Initiator Brand Initiators

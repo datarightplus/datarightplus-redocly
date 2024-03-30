@@ -1,0 +1,11 @@
+properties:
+  party:
+    description: The name of the party/organisation related to this service point
+    type: string
+    example: "Origin Energy"
+  role:
+    $ref: ./EnumEnergyParticipantRoleV1.yaml
+required:
+  - party
+  - role
+type: object

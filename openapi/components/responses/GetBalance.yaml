@@ -1,0 +1,12 @@
+description: Success
+content:
+  application/json:
+    schema:
+      x-cds-allowMissingDiscriminator: true
+      oneOf:
+        - $ref: ../schemas/ResponseBankingAccountsBalanceByIdV1.yaml
+headers:
+  x-fapi-interaction-id:
+    $ref: ../headers/XFAPIInteractionId.yaml
+  x-v:
+    $ref: ../headers/XV.yaml

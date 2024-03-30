@@ -1,0 +1,16 @@
+properties:
+  type:
+    $ref: ./EnumEnergyPlanEligibilityTypeV1.yaml
+  information:
+    description: Information of the eligibility restriction specific to
+      the type of the restriction
+    type: string
+    example: "Eligibility restrictions apply for this restriction"
+  description:
+    description: A description of the eligibility restriction
+    type: string
+    example: "Must be a remote property"
+required:
+  - information
+  - type
+type: object

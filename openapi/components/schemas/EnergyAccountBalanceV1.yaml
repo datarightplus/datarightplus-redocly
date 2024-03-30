@@ -1,0 +1,16 @@
+properties:
+  accountId:
+    description: The ID of the account.  To be created in accordance with CDR
+      ID permanence requirements
+    type: string
+    example: "jdnmwucgrchzngrqieryhiovpvzknokkwsediggdlnxgxizegvwpwfflgavkrbay"
+  balance:
+    description: >-
+      The current balance of the account. A positive value indicates that amount is owing to be paid. A negative value indicates that the account is in credit
+    type: string
+    x-cds-type: AmountString
+    example: "15.66"
+required:
+  - accountId
+  - balance
+type: object

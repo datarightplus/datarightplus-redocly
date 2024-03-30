@@ -1,0 +1,7 @@
+description: The fuel types covered by the plan
+enum:
+  - ELECTRICITY
+  - GAS
+  - DUAL
+type: string
+example: ELECTRICITY

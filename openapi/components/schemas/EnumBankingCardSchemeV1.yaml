@@ -1,0 +1,10 @@
+description: The type of credit card held on file
+enum:
+  - VISA
+  - MASTERCARD
+  - AMEX
+  - DINERS
+  - OTHER
+  - UNKNOWN
+type: string
+example: VISA

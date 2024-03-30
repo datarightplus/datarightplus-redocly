@@ -1,0 +1,18 @@
+description: The count of authorisations
+properties:
+  individual:
+    description: Authorisation count for individual customers
+    type: integer
+    minimum: 0
+    example: 139
+    x-cds-type: NaturalNumber
+  nonIndividual:
+    description: Authorisation count for non-individual customers
+    type: integer
+    minimum: 0
+    example: 27
+    x-cds-type: NaturalNumber
+required:
+  - individual
+  - nonIndividual
+type: object

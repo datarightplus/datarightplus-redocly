@@ -1,0 +1,10 @@
+description:
+  $ref: EnumBankingProductDiscountTypeV1.md
+enum:
+  - BALANCE
+  - DEPOSITS
+  - ELIGIBILITY_ONLY
+  - FEE_CAP
+  - PAYMENTS
+type: string
+example: BALANCE

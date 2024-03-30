@@ -1,0 +1,8 @@
+type: string
+description: Industries covered in Consumer Data Right
+enum:
+  - banking
+  - energy
+  - telco
+example: banking
+x-cds-type: Enum

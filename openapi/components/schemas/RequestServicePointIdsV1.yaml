@@ -1,0 +1,18 @@
+type: object
+properties:
+  data:
+    type: object
+    properties:
+      servicePointIds:
+        description: Array of specific NMIs to obtain data for
+        items:
+          type: string
+          x-cds-type: ASCIIString
+        type: array
+    required:
+      - servicePointIds
+  meta:
+    type: object
+required:
+  - data
+  - meta

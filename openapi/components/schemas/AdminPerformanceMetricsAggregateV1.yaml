@@ -1,0 +1,23 @@
+description: Percentage of calls within the performance thresholds
+properties:
+  currentDay:
+    description: Percentage of calls within the performance threshold for the
+      current day. 0.0 means 0%. 1.0 means 100%. Must be a positive value or
+      zero
+    type: string
+    example: "0.97"
+    x-cds-type: RateString
+  previousDays:
+    description: Percentage of calls within the performance threshold for previous
+      days. The first element indicates yesterday and so on. A maximum of seven
+      entries is required if available. 0.0 means 0%. 1.0 means 100%. Values
+      must be a positive or zero
+    items:
+      type: string
+      x-cds-type: RateString
+    example: ["1.0", "1.0", "1.0", "0.99", "1.0", "1.0", "0.989", "0.956", "1.0", "1.0", "1.0", "0.99", "1.0", "1.0", "1.0", "0.99"]
+    type: array
+type: object
+x-conditional:
+  - currentDay
+  - previousDays

@@ -1,0 +1,7 @@
+description: The type of the charging time period. If absent applies to all periods
+enum:
+  - PEAK
+  - OFF_PEAK
+  - SHOULDER
+type: string
+example: PEAK

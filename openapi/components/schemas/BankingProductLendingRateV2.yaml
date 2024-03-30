@@ -1,0 +1,69 @@
+properties:
+  additionalInfo:
+    description: Display text providing more information on the rate.
+    type: string
+    example: "Owner Occupied with Principal and Interest repayment type"
+  additionalInfoUri:
+    description: Link to a web page with more information on this rate
+    type: string
+    format: uri
+    x-cds-type: URIString
+    example: "https://www.provider.com.au/personal/apply-online/download-printed-forms/home-loan-update-002842.pdf"
+  additionalValue:
+    description: >-
+      Generic field containing additional information relevant to the
+      [lendingRateType](https://consumerdatastandardsaustralia.github.io/standards/#tocSproductlendingratetypedoc) specified. Whether
+      mandatory or not is dependent on the value of
+      [lendingRateType](https://consumerdatastandardsaustralia.github.io/standards/#tocSproductlendingratetypedoc)
+    type: string
+    example: "P1Y"
+  applicationFrequency:
+    description: >-
+      The period after which the calculated amount(s) (see calculationFrequency)
+      are 'applied' (i.e. debited or credited) to the account. Formatted
+      according to [ISO 8601
+      Durations](https://en.wikipedia.org/wiki/ISO_8601#Durations) (excludes
+      recurrence syntax)
+    type: string
+    x-cds-type: DurationString
+    example: "P1M"
+  calculationFrequency:
+    description: >-
+      The period after which the rate is applied to the balance to calculate the
+      amount due for the period. Calculation of the amount is often daily (as
+      balances may change) but accumulated until the total amount is 'applied'
+      to the account (see applicationFrequency). Formatted according to [ISO
+      8601 Durations](https://en.wikipedia.org/wiki/ISO_8601#Durations)
+      (excludes recurrence syntax)
+    type: string
+    x-cds-type: DurationString
+    example: "P1D"
+  comparisonRate:
+    description: A comparison rate equivalent for this rate
+    type: string
+    x-cds-type: RateString
+    example: "0.0456"
+  interestPaymentDue:
+    $ref: ./EnumBankingInterestPaymentDueV1.yaml
+  lendingRateType:
+    $ref: ./EnumBankingLendingRateTypeV1.yaml
+  loanPurpose:
+    $ref: ./EnumBankingLoanPurposeV1.yaml
+  rate:
+    description: The rate to be applied
+    type: string
+    x-cds-type: RateString
+    example: "0.0456"
+  repaymentType:
+    $ref: ./EnumBankingProductLendingRateRepaymentTypeV1.yaml
+  tiers:
+    description: Rate tiers applicable for this rate
+    items:
+      $ref: ./BankingProductRateTierV3.yaml
+    type: array
+required:
+  - lendingRateType
+  - rate
+type: object
+x-conditional:
+  - additionalValue

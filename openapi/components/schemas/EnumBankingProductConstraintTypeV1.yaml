@@ -1,0 +1,10 @@
+description:
+  $ref: EnumBankingProductConstraintTypeV1.md
+enum:
+  - MAX_BALANCE
+  - MAX_LIMIT
+  - MIN_BALANCE
+  - MIN_LIMIT
+  - OPENING_BALANCE
+type: string
+example: MIN_BALANCE

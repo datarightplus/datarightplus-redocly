@@ -1,0 +1,5 @@
+description: Unsupported Version
+content:
+  application/json:
+    schema:
+      $ref: ../schemas/ResponseErrorListV2.yaml

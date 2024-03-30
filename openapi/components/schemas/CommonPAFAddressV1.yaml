@@ -1,0 +1,115 @@
+description: Australian address formatted according to the file format defined
+  by the [PAF file format](https://auspost.com.au/content/dam/auspost_corp/media/documents/australia-post-data-guide.pdf).
+  Required if addressUType is set to paf
+properties:
+  buildingName1:
+    description: Building/Property name 1
+    type: string
+    example: CAPITAL HOUSE
+  buildingName2:
+    description: Building/Property name 2
+    type: string
+    example: WE WORK
+  dpid:
+    description: >-
+      Unique identifier for an address as defined by Australia Post.  Also known
+      as Delivery Point Identifier
+    type: string
+    example: "34567890"
+  flatUnitNumber:
+    description: 'Unit number (including suffix, if applicable)'
+    type: string
+    example: "2A"
+  flatUnitType:
+    description: Type of flat or unit for the address
+    type: string
+    example: "U"
+  floorLevelNumber:
+    description: Floor or level number (including alpha characters)
+    type: string
+    example: "2"
+  floorLevelType:
+    description: Type of floor or level for the address
+    type: string
+    example: "FL"
+  localityName:
+    description: Full name of locality
+    type: string
+    example: "RICHMOND"
+  lotNumber:
+    description: Allotment number for the address
+    type: string
+    example: "20"
+  postalDeliveryNumber:
+    description: Postal delivery number if the address is a postal delivery type
+    minimum: 1
+    type: integer
+    x-cds-type: PositiveInteger
+    example: 2
+  postalDeliveryNumberPrefix:
+    description: Postal delivery number prefix related to the postal delivery number
+    type: string
+    example: "N"
+  postalDeliveryNumberSuffix:
+    description: Postal delivery number suffix related to the postal delivery number
+    type: string
+    example: "A"
+  postalDeliveryType:
+    description: >-
+      Postal delivery type. (eg. PO BOX). Valid enumeration defined by Australia
+      Post PAF code file
+    type: string
+    example: "PO BOX"
+  postcode:
+    description: Postcode for the locality
+    type: string
+    example: "3024"
+  state:
+    $ref: ./EnumCommonStateV1.yaml
+  streetName:
+    description: The name of the street
+    type: string
+    example: "SMITH"
+  streetSuffix:
+    description: >-
+      The street type suffix. Valid enumeration defined by Australia Post PAF
+      code file
+    type: string
+    example: "W"
+  streetType:
+    description: The street type. Valid enumeration defined by Australia Post PAF code file
+    type: string
+    example: "ST"
+  thoroughfareNumber1:
+    description: >-
+      Thoroughfare number for a property (first number in a property ranged
+      address)
+    type: integer
+    x-cds-type: PositiveInteger
+    minimum: 1
+    example: 23
+  thoroughfareNumber1Suffix:
+    description: >-
+      Suffix for the thoroughfare number. Only relevant is thoroughfareNumber1
+      is populated
+    type: string
+    example: A
+  thoroughfareNumber2:
+    description: >-
+      Second thoroughfare number (only used if the property has a ranged address
+      eg 23-25)
+    type: integer
+    x-cds-type: PositiveInteger
+    example: 25
+    minimum: 1
+  thoroughfareNumber2Suffix:
+    description: >-
+      Suffix for the second thoroughfare number. Only relevant is
+      thoroughfareNumber2 is populated
+    type: string
+    example: B
+required:
+  - localityName
+  - postcode
+  - state
+type: object

@@ -1,0 +1,10 @@
+description: The type of charge
+enum:
+  - FIXED_PER_DAY
+  - FIXED_PER_WEEK
+  - FIXED_PER_MONTH
+  - FIXED_PER_UNIT
+  - PERCENT_OF_USE
+  - PERCENT_OF_BILL
+type: string
+example: FIXED_PER_DAY

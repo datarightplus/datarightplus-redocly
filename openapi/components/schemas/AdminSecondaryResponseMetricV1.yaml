@@ -1,0 +1,10 @@
+description: Response time in seconds, at millisecond resolution. Mandatory for Providers designated for a Shared Responsibility Data Request data cluster
+properties:
+  primary:
+    $ref: ./AdminTierMetricV1.yaml
+  secondary:
+    $ref: ./AdminTierMetricV1.yaml
+required:
+  - primary
+  - secondary
+type: object

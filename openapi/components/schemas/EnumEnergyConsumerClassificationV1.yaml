@@ -1,0 +1,7 @@
+description: A code that defines the consumer class as defined in the National
+  Energy Retail Regulations, or in overriding Jurisdictional instruments
+enum:
+  - BUSINESS
+  - RESIDENTIAL
+type: string
+example: RESIDENTIAL

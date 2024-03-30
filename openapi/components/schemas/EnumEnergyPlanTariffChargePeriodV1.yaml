@@ -1,0 +1,7 @@
+description: Charge period for the demand tariff
+enum:
+  - DAY
+  - MONTH
+  - TARIFF_PERIOD
+type: string
+example: DAY

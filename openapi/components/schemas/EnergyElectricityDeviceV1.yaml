@@ -1,0 +1,53 @@
+properties:
+  deviceIdentifier:
+    description: Unique identifier for a single DER device or a group of DER
+      devices with the same attributes. Does not align with CDR ID permanence
+      standards
+    type: number
+    example: 2927816
+  count:
+    description: Number of devices in the group of DER devices
+    minimum: 1
+    type: integer
+    x-cds-type: PositiveInteger
+    example: 3
+  manufacturer:
+    description: The name of the device manufacturer. If absent then assumed to be unknown
+    type: string
+    example: "APC"
+  modelNumber:
+    description: The model number of the device. If absent then assumed to be unknown
+    type: string
+    example: "3000"
+  status:
+    $ref: ./EnumElectricityDeviceStatusV1.yaml
+  type:
+    $ref: ./EnumElectricityDeviceTypeV1.yaml
+  subtype:
+    description: Used to indicate the primary technology used in the DER device.
+      This field is also used to record for example the battery chemistry, or
+      the type of PV panel. It is also used to record if a battery is contained
+      in an electric vehicle connected in a vehicle-to-grid arrangement. If
+      absent then assumed to be other.
+    type: string
+    example: "OTHER"
+  nominalRatedCapacity:
+    description: Maximum output in kVA that is listed in the product specification
+      by the manufacturer. This refers to the capacity of each unit within the
+      device group. Default is 0 if value not known
+    type: number
+    example: 50
+  nominalStorageCapacity:
+    description: Maximum storage capacity in kVAh. This refers to the capacity
+      of each storage module within the device group. Mandatory if type is equal
+      to `STORAGE`. Default is 0 if value not known
+    type: number
+    example: 25
+required:
+  - count
+  - deviceIdentifier
+  - nominalRatedCapacity
+  - type
+type: object
+x-conditional:
+  - nominalStorageCapacity

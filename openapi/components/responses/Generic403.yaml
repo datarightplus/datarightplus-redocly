@@ -1,0 +1,15 @@
+description: Forbidden
+content:
+  application/json:
+    schema:
+      properties:
+        errors:
+          items:
+            $ref: ./Generic403Item.yaml
+          type: array
+      required:
+        - errors
+      type: object
+headers:
+  x-fapi-interaction-id:
+    $ref: ../headers/XFAPIInteractionId.yaml

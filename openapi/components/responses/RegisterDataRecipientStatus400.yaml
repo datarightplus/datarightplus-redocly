@@ -1,0 +1,10 @@
+description: Missing Required Header / Invalid Version / Invalid Path Parameter
+content:
+  application/json:
+    schema:
+      $ref: ../schemas/ResponseErrorListV2.yaml
+headers:
+  x-fapi-interaction-id:
+    $ref: ../headers/XFAPIInteractionId.yaml
+  x-v:
+    $ref: ../headers/XV.yaml

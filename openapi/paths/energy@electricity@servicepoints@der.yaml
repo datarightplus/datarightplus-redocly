@@ -1,0 +1,66 @@
+get:
+  description: Obtain DER data for all service points associated with the customer
+  operationId: getElectricityServicePointDERBulk
+  parameters:
+    - $ref: ../components/parameters/QueryPage.yaml
+    - $ref: ../components/parameters/QueryPageSize.yaml
+    - $ref: ../components/parameters/HeaderXV.yaml
+    - $ref: ../components/parameters/HeaderXMinV.yaml
+    - $ref: ../components/parameters/HeaderXFapiInteractionId.yaml
+    - $ref: ../components/parameters/HeaderXFAPIAuthDate.yaml
+    - $ref: ../components/parameters/HeaderXFAPICustomerIPAddress.yaml
+    - $ref: ../components/parameters/HeaderXCDSClientHeaders.yaml
+  responses:
+    200:
+      $ref: ../components/responses/GetElectricityServicePointDERBulk.yaml
+    400:
+      $ref: ../components/responses/GetElectricityServicePointDERBulk400.yaml
+    403:
+      $ref: ../components/responses/Generic403.yaml
+    406:
+      $ref: ../components/responses/GetElectricityServicePointDERBulk406.yaml
+    422:
+      $ref: ../components/responses/GetElectricityServicePointDERBulk422.yaml
+    500:
+      $ref: ../components/responses/Generic500.yaml
+    503:
+      $ref: ../components/responses/Generic503.yaml
+  summary: Get Bulk DER
+  tags:
+    - Electrical Assets
+  security:
+    - ProviderAuth: ['energy:electricity.der:read']
+  x-version: '1'
+post:
+  description: Obtain DER data for a specific set of service points
+  operationId: getElectricityDERSpecificServicePoints
+  parameters:
+    - $ref: ../components/parameters/QueryPage.yaml
+    - $ref: ../components/parameters/QueryPageSize.yaml
+    - $ref: ../components/parameters/HeaderXV.yaml
+    - $ref: ../components/parameters/HeaderXMinV.yaml
+    - $ref: ../components/parameters/HeaderXFapiInteractionId.yaml
+    - $ref: ../components/parameters/HeaderXFAPIAuthDate.yaml
+    - $ref: ../components/parameters/HeaderXFAPICustomerIPAddress.yaml
+    - $ref: ../components/parameters/HeaderXCDSClientHeaders.yaml
+  requestBody:
+    $ref: ../components/requestBodies/RequestServicePointIds.yaml
+  responses:
+    200:
+      $ref: ../components/responses/GetElectricityDERSpecificServicePoints.yaml
+    400:
+      $ref: ../components/responses/GetElectricityDERSpecificServicePoints400.yaml
+    406:
+      $ref: ../components/responses/GetElectricityDERSpecificServicePoints406.yaml
+    422:
+      $ref: ../components/responses/GetElectricityDERSpecificServicePoints422.yaml
+    500:
+      $ref: ../components/responses/Generic500.yaml
+    503:
+      $ref: ../components/responses/Generic503.yaml
+  summary: Get DER For Specific Service Points
+  tags:
+    - Electrical Assets
+  security:
+    - ProviderAuth: ['energy:electricity.der:read']
+  x-version: '1'

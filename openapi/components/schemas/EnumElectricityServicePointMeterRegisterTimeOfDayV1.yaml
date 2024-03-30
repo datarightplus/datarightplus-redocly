@@ -1,0 +1,13 @@
+description: Code to identify the time validity of register contents
+enum:
+  - ALLDAY
+  - INTERVAL
+  - PEAK
+  - BUSINESS
+  - SHOULDER
+  - EVENING
+  - OFFPEAK
+  - CONTROLLED
+  - DEMAND
+type: string
+example: ALLDAY

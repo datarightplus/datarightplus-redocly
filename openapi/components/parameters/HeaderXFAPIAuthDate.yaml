@@ -1,0 +1,10 @@
+description: The time when the User last logged in to the Initiator as described in [FAPI-1.0-Baseline 6.2.2-3](https://openid.net/specs/openid-financial-api-part-1-1_0.html#client-provisions)
+explode: false
+in: header
+name: x-fapi-auth-date
+required: false
+schema:
+  type: string
+  example: "Thu, 16 Jan 2020 16:50:15 GMT"
+style: simple
+x-conditional: true

@@ -1,0 +1,74 @@
+properties:
+  accountId:
+    description: The ID of the account for which the invoice was issued
+    type: string
+    example: "jdnmwucgrchzngrqieryhiovpvzknokkwsediggdlnxgxizegvwpwfflgavkrbay"
+  invoiceNumber:
+    description: The number assigned to this invoice by the energy Retailer
+    type: string
+    example: "109818233"
+  issueDate:
+    description: The date that the invoice was actually issued (as opposed to
+      generated or calculated)
+    type: string
+    format: date
+    x-cds-type: DateString
+    example: "2022-08-01"
+  dueDate:
+    description: The date that the invoice is due to be paid
+    type: string
+    format: date
+    x-cds-type: DateString
+    example: "2022-09-01"
+  period:
+    $ref: ./EnergyInvoicePeriodV1.yaml
+  invoiceAmount:
+    description: The net amount due for this invoice regardless of previous
+      balance
+    type: string
+    x-cds-type: AmountString
+    example: "22.00"
+  gstAmount:
+    description: The total GST amount for this invoice.  If absent then zero
+      is assumed
+    type: string
+    x-cds-type: AmountString
+    example: "20.00"
+  payOnTimeDiscount:
+    $ref: ./EnergyInvoicePayOnTimeDiscountV1.yaml
+  balanceAtIssue:
+    description: The account balance at the time the invoice was issued
+    type: string
+    x-cds-type: AmountString
+    example: "10.00"
+  servicePoints:
+    description: Array of service point IDs to which this invoice applies. May
+      be empty if the invoice contains no electricity usage related charges
+    items:
+      type: string
+    type: array
+    example: ["aa719cefa99b27d2a86482c0e51460910e4336f24fa42b5c60dc72dcda86b3fa"]
+  gas:
+    $ref: ./EnergyInvoiceChargeUsageV1.yaml
+  electricity:
+    $ref: ./EnergyInvoiceChargeUsageV1.yaml
+  accountCharges:
+    $ref: ./EnergyInvoiceChargeAccountV1.yaml
+  paymentStatus:
+    description: Indicator of the payment status for the invoice
+    enum:
+      - PAID
+      - PARTIALLY_PAID
+      - NOT_PAID
+    type: string
+    example: NOT_PAID
+required:
+  - accountId
+  - balanceAtIssue
+  - invoiceNumber
+  - issueDate
+  - paymentStatus
+  - servicePoints
+type: object
+x-conditional:
+  - period

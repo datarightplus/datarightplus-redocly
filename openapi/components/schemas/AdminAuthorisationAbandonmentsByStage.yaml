@@ -1,0 +1,25 @@
+description: Customer abandonment count per stage of the consent flow.  Note
+  that the aggregated abandonment count for all stages for a period should equal
+  the count in `abandonedConsentFlowCount` for the same period (ie. each abandoned
+  consent should assigned to one, and only one, stage)
+properties:
+  preIdentification:
+    $ref: './AdminAuthorisationAbandonmentsCurrentDayPreviousDaysV1.yaml'
+  preAuthentication:
+    $ref: './AdminAuthorisationAbandonmentsCurrentDayPreviousDaysV1.yaml'
+  preAccountSelection:
+    $ref: './AdminAuthorisationAbandonmentsCurrentDayPreviousDaysV1.yaml'
+  preAuthorisation:
+    $ref: './AdminAuthorisationAbandonmentsCurrentDayPreviousDaysV1.yaml'
+  rejected:
+    $ref: './AdminAuthorisationAbandonmentsCurrentDayPreviousDaysV1.yaml'
+  failedTokenExchange:
+    $ref: './AdminAuthorisationAbandonmentsCurrentDayPreviousDaysV1.yaml'
+required:
+  - failedTokenExchange
+  - preAccountSelection
+  - preAuthentication
+  - preAuthorisation
+  - preIdentification
+  - rejected
+type: object

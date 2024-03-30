@@ -1,0 +1,11 @@
+description: The method of payment
+enum:
+  - DIRECT_DEBIT
+  - CARD
+  - TRANSFER
+  - BPAY
+  - CASH
+  - CHEQUE
+  - OTHER
+type: string
+example: CARD

@@ -1,0 +1,27 @@
+description: Describes the geographical area that the plan is available for.  If absent then it is assumed the plan is not geographically limited
+properties:
+  excludedPostcodes:
+    description: Array of valid Australian postcodes that are specifically
+      excluded from the plan.  Each element is a single four digit postcode
+      (e.g. 3000) or a range of postcodes defined by two four digit postcodes
+      and a hyphen (e.g. 3000-3999)
+    items:
+      type: string
+    type: array
+  includedPostcodes:
+    description: Array of valid Australian postcodes that are included from
+      the plan.  If absent defaults to all non-excluded postcodes.  Each element
+      is a single four digit postcode (e.g. 3000) or a range of postcodes defined
+      by two four digit postcodes and a hyphen (e.g. 3000-3999)
+    items:
+      type: string
+    type: array
+  distributors:
+    description: Array of distributors for the plan. Must have at least one
+      entry
+    items:
+      type: string
+    type: array
+required:
+  - distributors
+type: object

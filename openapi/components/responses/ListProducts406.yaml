@@ -1,0 +1,12 @@
+description: Not Acceptable
+content:
+  application/json:
+    schema:
+      properties:
+        errors:
+          items:
+            $ref: ./ListProducts406Item.yaml
+          type: array
+      required:
+        - errors
+      type: object

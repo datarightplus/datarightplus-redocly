@@ -1,0 +1,12 @@
+description: >-
+  Actual/Subtractive Indicator. Note the details of enumeration values below:
+  
+  **ACTUAL**: Implies volume of energy actually metered between two dates
+  **CUMULATIVE** indicates a meter reading for a specific date. 
+  
+  A second Meter Reading is required to determine the consumption between those two Meter Reading dates
+enum:
+  - ACTUAL
+  - CUMULATIVE
+type: string
+example: ACTUAL

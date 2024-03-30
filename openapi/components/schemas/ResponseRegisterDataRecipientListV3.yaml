@@ -1,0 +1,16 @@
+properties:
+  data:
+    description: List of Initiators in the Ecosystem Authority
+    items:
+      $ref: ./RegisterDataRecipientV3.yaml
+    type: array
+    uniqueItems: true
+  links:
+    $ref: ./LinksV1.yaml
+  meta:
+    $ref: ./MetaV1.yaml
+required:
+  - data
+  - links
+  - meta
+type: object

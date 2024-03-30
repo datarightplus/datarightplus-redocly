@@ -1,0 +1,13 @@
+description: The measurement unit. Assumed to be KWH if absent
+enum:
+  - KWH
+  - KVA
+  - KVAR
+  - KVARH
+  - KW
+  - DAYS
+  - METER
+  - MONTH
+default: KWH
+type: string
+example: KWH

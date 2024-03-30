@@ -1,0 +1,15 @@
+name: industry
+in: path
+description:
+  $ref: ./PathIndustry.md
+explode: false
+required: true
+schema:
+  type: string
+  enum:
+    - banking
+    - energy
+    - telco
+    - all
+  x-cds-type: Enum
+style: simple

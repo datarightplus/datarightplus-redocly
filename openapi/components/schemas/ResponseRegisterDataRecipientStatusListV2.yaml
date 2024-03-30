@@ -1,0 +1,16 @@
+properties:
+  data:
+    description: List of Initiators Statuses in the Ecosystem Authority
+    uniqueItems: true
+    items:
+      $ref: ./RegisterDataRecipientStatusV2.yaml
+    type: array
+  links:
+    $ref: ./LinksV1.yaml
+  meta:
+    $ref: ./MetaV1.yaml
+required:
+  - data
+  - links
+  - meta
+type: object

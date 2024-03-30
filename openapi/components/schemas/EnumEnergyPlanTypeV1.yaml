@@ -1,0 +1,7 @@
+description: Energy Plan Type
+enum:
+  - STANDING
+  - MARKET
+  - REGULATED
+type: string
+example: STANDING

@@ -1,0 +1,12 @@
+description: >-
+  Constrain the request to records with issue date at or after this date.
+  If absent defaults to newest-date minus 24 months. Format is aligned to DateString common type
+explode: true
+in: query
+name: oldest-date
+required: false
+schema:
+  type: string
+  format: date
+  x-cds-type: DateString
+style: form

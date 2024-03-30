@@ -1,0 +1,19 @@
+properties:
+  data:
+    type: object
+    properties:
+      paymentSchedules:
+        description: Array may be empty if no payment schedule exist
+        items:
+          $ref: ./EnergyPaymentScheduleV1.yaml
+        type: array
+    required:
+      - paymentSchedules
+  links:
+    $ref: ./LinksV1.yaml
+  meta:
+    $ref: ./MetaV1.yaml
+required:
+  - data
+  - links
+type: object

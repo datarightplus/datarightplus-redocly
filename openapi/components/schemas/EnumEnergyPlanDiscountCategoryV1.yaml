@@ -1,0 +1,9 @@
+description: The type of the discount.  Mandatory if the discount
+  type is `CONDITIONAL`
+enum:
+  - PAY_ON_TIME
+  - DIRECT_DEBIT
+  - GUARANTEED_DISCOUNT
+  - OTHER
+type: string
+example: GUARANTEED_DISCOUNT

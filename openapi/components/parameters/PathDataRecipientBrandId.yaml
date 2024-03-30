@@ -1,0 +1,8 @@
+name: dataRecipientBrandId
+in: path
+description: Unique id for the Initiator Brand that the Initiator is associated with in the Ecosystem Authority
+explode: false
+required: true
+schema:
+  type: string
+style: simple

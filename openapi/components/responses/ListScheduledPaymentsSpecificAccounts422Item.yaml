@@ -1,0 +1,12 @@
+oneOf:
+  - $ref: ../schemas/ErrorFieldInvalidPageV1.yaml
+  - $ref: ../schemas/ErrorBankingAuthorisationUnavailableAccountV1.yaml
+  - $ref: ../schemas/ErrorBankingAuthorisationInvalidAccountV1.yaml
+  - $ref: ../schemas/ErrorGeneralExpectedV1.yaml
+discriminator:
+  propertyName: code
+  mapping:
+    "urn:au-cds:error:cds-all:Field/InvalidPage": ../schemas/ErrorFieldInvalidPageV1.yaml
+    "urn:au-cds:error:cds-banking:Authorisation/UnavailableBankingAccount": ../schemas/ErrorBankingAuthorisationUnavailableAccountV1.yaml
+    "urn:au-cds:error:cds-banking:Authorisation/InvalidBankingAccount": ../schemas/ErrorBankingAuthorisationInvalidAccountV1.yaml
+    "urn:au-cds:error:cds-all:GeneralError/Expected": ../schemas/ErrorGeneralExpectedV1.yaml

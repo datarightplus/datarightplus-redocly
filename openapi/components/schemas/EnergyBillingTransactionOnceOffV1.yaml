@@ -1,0 +1,24 @@
+description: Represents a once off charge or credit. Mandatory if transactionUType is equal to onceOff
+properties:
+  servicePointId:
+    description: The ID of the service point to which this transaction applies if any
+    type: string
+    example: "aa719cefa99b27d2a86482c0e51460910e4336f24fa42b5c60dc72dcda86b3fa"
+  invoiceNumber:
+    description: The number of the invoice in which this transaction is included
+      if it has been issued
+    type: string
+  amount:
+    description: The amount of the charge or credit.  A positive value indicates
+      a charge and a negative value indicates a credit
+    type: string
+    x-cds-type: AmountString
+    example: "10.00"
+  description:
+    description: A free text description of the item
+    type: string
+    example: "Once Off Setup Charge"
+required:
+  - amount
+  - description
+type: object

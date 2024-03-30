@@ -1,0 +1,16 @@
+properties:
+  data:
+    description: The list of Provider Brands
+    items:
+      $ref: ./RegisterDataHolderBrandV1.yaml
+    type: array
+    uniqueItems: true
+  links:
+    $ref: ./LinksPaginatedV1.yaml
+  meta:
+    $ref: ./MetaPaginatedV1.yaml
+required:
+  - data
+  - links
+  - meta
+type: object

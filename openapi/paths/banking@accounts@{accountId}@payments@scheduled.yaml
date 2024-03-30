@@ -1,0 +1,36 @@
+get:
+  description: 'Obtain scheduled, outgoing payments for a specific account'
+  operationId: listScheduledPayments
+  parameters:
+    - $ref: ../components/parameters/PathAccountId.yaml
+    - $ref: ../components/parameters/QueryPage.yaml
+    - $ref: ../components/parameters/QueryPageSize.yaml
+    - $ref: ../components/parameters/HeaderXV.yaml
+    - $ref: ../components/parameters/HeaderXMinV.yaml
+    - $ref: ../components/parameters/HeaderXFapiInteractionId.yaml
+    - $ref: ../components/parameters/HeaderXFAPIAuthDate.yaml
+    - $ref: ../components/parameters/HeaderXFAPICustomerIPAddress.yaml
+    - $ref: ../components/parameters/HeaderXCDSClientHeaders.yaml
+  responses:
+    200:
+      $ref: ../components/responses/ListScheduledPayments.yaml
+    400:
+      $ref: ../components/responses/ListScheduledPayments400.yaml
+    403:
+      $ref: ../components/responses/Generic403.yaml
+    404:
+      $ref: ../components/responses/ListScheduledPayments404.yaml
+    406:
+      $ref: ../components/responses/ListScheduledPayments406.yaml
+    422:
+      $ref: ../components/responses/ListScheduledPayments422.yaml
+    500:
+      $ref: ../components/responses/Generic500.yaml
+    503:
+      $ref: ../components/responses/Generic503.yaml
+  summary: Get Scheduled Payments for Account
+  tags:
+    - Scheduled Payments
+  security:
+    - ProviderAuth: ['bank:regular_payments:read']
+  x-version: '2'

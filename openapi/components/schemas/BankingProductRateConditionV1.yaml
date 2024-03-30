@@ -1,0 +1,13 @@
+description: Defines a condition for the applicability of a tiered rate
+properties:
+  additionalInfo:
+    description: Display text providing more information on the condition
+    type: string
+    example: "Package discount is assessed on the package lending balance when you apply for a package."
+  additionalInfoUri:
+    description: Link to a web page with more information on this condition
+    type: string
+    format: uri
+    x-cds-type: URIString
+    example: "https://www.provider.com.au/home-loans/package.html"
+type: object

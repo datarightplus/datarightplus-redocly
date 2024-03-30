@@ -1,0 +1,19 @@
+properties:
+  totalPages:
+    description: 'The total number of pages in the full set. See [pagination](https://consumerdatastandardsaustralia.github.io/standards/#pagination).'
+    type: integer
+    x-cds-type: NaturalNumber
+    minimum: 0
+    example: 1
+  totalRecords:
+    description: >-
+      The total number of records in the full set. See
+      [pagination](https://consumerdatastandardsaustralia.github.io/standards/#pagination).
+    type: integer
+    x-cds-type: NaturalNumber
+    minimum: 0
+    example: 20
+required:
+  - totalPages
+  - totalRecords
+type: object

@@ -1,0 +1,8 @@
+description:
+  $ref: ./EnumEnergyParticipantRoleV1.md
+enum:
+  - FRMP
+  - LNSP
+  - DRSP
+type: string
+example: FRMP

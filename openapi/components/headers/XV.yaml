@@ -1,0 +1,7 @@
+description: >-
+  The payload version of the API endpoint that the Provider has responded with.
+explode: false
+required: true
+schema:
+  type: string
+style: simple

@@ -1,0 +1,28 @@
+type: object
+properties:
+  code:
+    description: Holds an end point specific error code. This MAY be a standard CDR error code or an application-specific error code.
+    type: string
+    default: "urn:au-cds:error:cds-all:Resource/NotImplemented"
+  title:
+    description: Holds a human readable label of the error that is constant per code
+    type: string
+    default: Resource Not Implemented
+  detail:
+    description: The requested resource URL is a valid API endpoint defined by the Consumer Data Standards, but it is not implemented or not currently supported.
+    type: string
+    example: "The requested resource URL is a valid API endpoint defined by the Consumer Data Standards, but it is not implemented or not currently supported."
+  meta:
+    description: Holds additional end point specific data relevant to the error
+    properties:
+      urn:
+        description: Holds a standard CDR error code
+        type: string
+        format: uri
+        x-cds-type: URIString
+        default: "urn:au-cds:error:cds-all:Resource/NotImplemented"
+    type: object
+required:
+  - code
+  - title
+  - detail

@@ -1,0 +1,21 @@
+properties:
+  nickname:
+    description: Optional display name for the plan provided by the customer
+      to help differentiate multiple plans
+    type: string
+    example: "Solar Saver Plan"
+  servicePointIds:
+    description: An array of servicePointIds, representing NMIs, that this plan
+      is linked to. If there are no service points allocated to this plan then
+      an empty array would be expected
+    items:
+      type: string
+    type: array
+    example: ["aa719cefa99b27d2a86482c0e51460910e4336f24fa42b5c60dc72dcda86b3fa"]
+  planOverview:
+    $ref: ./EnergyAccountPlanOverviewV1.yaml
+required:
+  - servicePointIds
+type: object
+x-conditional:
+  - planOverview

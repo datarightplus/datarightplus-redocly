@@ -1,0 +1,13 @@
+description: Represents a payment to the account. Mandatory if transactionUType is equal to payment
+properties:
+  amount:
+    description: The amount paid
+    type: string
+    x-cds-type: AmountString
+    example: "1.00"
+  method:
+    $ref: ./EnumEnergyBillingTransactionPaymentMethodV1.yaml
+required:
+  - amount
+  - method
+type: object

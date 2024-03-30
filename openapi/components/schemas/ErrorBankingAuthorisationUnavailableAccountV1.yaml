@@ -1,0 +1,28 @@
+type: object
+properties:
+  code:
+    description: Holds an end point specific error code. This MAY be a standard CDR error code or an application-specific error code.
+    type: string
+    default: "urn:au-cds:error:cds-banking:Authorisation/UnavailableBankingAccount"
+  title:
+    description: Holds a human readable label of the error that is constant per code
+    type: string
+    default: Unavailable Banking Account
+  detail:
+    description: The requested bank account is temporarily unavailable. Subsequent requests for the account may be successful. Applies when the account ID is provided in the URI. The error detail is the account ID of the resource being requested.
+    type: string
+    example: The requested bank account is temporarily unavailable.
+  meta:
+    description: Holds additional end point specific data relevant to the error
+    properties:
+      urn:
+        description: Holds a standard CDR error code
+        type: string
+        format: uri
+        x-cds-type: URIString
+        default: "urn:au-cds:error:cds-banking:Authorisation/UnavailableBankingAccount"
+    type: object
+required:
+  - code
+  - title
+  - detail

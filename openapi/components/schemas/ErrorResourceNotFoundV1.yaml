@@ -1,0 +1,28 @@
+type: object
+properties:
+  code:
+    description: Holds an end point specific error code. This MAY be a standard CDR error code or an application-specific error code.
+    type: string
+    default: "urn:au-cds:error:cds-all:Resource/NotFound"
+  title:
+    description: Holds a human readable label of the error that is constant per code
+    type: string
+    default: Resource Not Found
+  detail:
+    description: The requested resource URL is not an API endpoint defined by the Consumer Data Standards and it is not a URL recognised by the Data Holder or Initiator.
+    type: string
+    example: "The requested resource URL is not an API endpoint defined by the Consumer Data Standards"
+  meta:
+    description: Holds additional end point specific data relevant to the error
+    properties:
+      urn:
+        description: Holds a standard CDR error code
+        type: string
+        format: uri
+        x-cds-type: URIString
+        default: "urn:au-cds:error:cds-all:Resource/NotFound"
+    type: object
+required:
+  - code
+  - title
+  - detail

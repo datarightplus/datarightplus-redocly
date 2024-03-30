@@ -1,0 +1,61 @@
+description: Represents a demand charge or generation credit. Mandatory if transactionUType is equal to demand
+properties:
+  servicePointId:
+    description: The ID of the service point to which this transaction applies
+      if any
+    type: string
+    example: "aa719cefa99b27d2a86482c0e51460910e4336f24fa42b5c60dc72dcda86b3fa"
+  invoiceNumber:
+    description: The number of the invoice in which this transaction is included
+      if it has been issued
+    type: string
+  timeOfUseType:
+    $ref: ./EnumEnergyBillingTransactionDemandTimeOfUseTypeV2.yaml
+  description:
+    description: Optional description of the transaction that can be used for
+      display purposes
+    type: string
+  isEstimate:
+    description: Flag indicating if the usage is estimated or actual.  True
+      indicates estimate.  False or absent indicates actual
+    type: boolean
+  startDate:
+    description: Date and time when the demand period starts
+    type: string
+    format: date-time
+    x-cds-type: DateTimeString
+    example: "2022-07-20T03:01:42+00:00"
+  endDate:
+    description: Date and time when the demand period ends
+    type: string
+    format: date-time
+    x-cds-type: DateTimeString
+    example: "2022-08-20T03:01:42+00:00"
+  rate:
+    description: The rate for the demand charge in kVA.  A negative value indicates
+      power generated
+    type: number
+    example: 0.044
+  amount:
+    description: The amount charged or credited for this transaction prior to
+      any adjustments being applied.  A negative value indicates a credit
+    type: string
+    x-cds-type: AmountString
+    example: "10.00"
+  calculationFactors:
+    description: Additional calculation factors that inform the transaction
+    items:
+      $ref: ./EnergyBillingTransactionCalculationFactorV1.yaml
+    type: array
+  adjustments:
+    description: Optional array of adjustments arising for this transaction
+    items:
+      $ref: ./EnergyBillingTransactionAdjustmentV1.yaml
+    type: array
+required:
+  - amount
+  - endDate
+  - rate
+  - startDate
+  - timeOfUseType
+type: object

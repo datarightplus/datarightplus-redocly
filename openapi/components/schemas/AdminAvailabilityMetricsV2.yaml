@@ -1,0 +1,13 @@
+description: Availability metrics
+properties:
+  aggregate:
+    $ref: './AdminAvailabilityMetricsCurrentMonthPreviousMonthsV1.yaml'
+  unauthenticated:
+    $ref: './AdminAvailabilityMetricsCurrentMonthPreviousMonthsV1.yaml'
+  authenticated:
+    $ref: './AdminAvailabilityMetricsCurrentMonthPreviousMonthsV1.yaml'
+type: object
+required:
+  - aggregate
+  - authenticated
+  - unauthenticated

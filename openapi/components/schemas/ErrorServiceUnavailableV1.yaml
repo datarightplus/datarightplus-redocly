@@ -1,0 +1,28 @@
+type: object
+properties:
+  code:
+    description: Holds an end point specific error code. This MAY be a standard CDR error code or an application-specific error code.
+    type: string
+    default: "urn:au-cds:error:cds-all:Service/Unavailable"
+  title:
+    description: Holds a human readable label of the error that is constant per code
+    type: string
+    default: Service Unavailable
+  detail:
+    description: Holds a human readable description of this specific error
+    type: string
+    example: "Service Currently Unavailable"
+  meta:
+    description: Holds additional end point specific data relevant to the error
+    properties:
+      urn:
+        description: Holds a standard CDR error code
+        type: string
+        format: uri
+        x-cds-type: URIString
+        default: "urn:au-cds:error:cds-all:Service/Unavailable"
+    type: object
+required:
+  - code
+  - title
+  - detail

@@ -1,0 +1,66 @@
+properties:
+  displayName:
+    description: Display name of the controlled load rate
+    type: string
+    example: "Time of use charge applied"
+  description:
+    description: Description of the controlled load rate
+    type: string
+  dailySupplyCharge:
+    description: The daily supply charge (exclusive of GST) for this
+      controlled load tier
+    type: string
+    x-cds-type: AmountString
+  rates:
+    description: Array of controlled load rates in order of usage volume
+    items:
+      $ref: ./EnergyPlanRateV1.yaml
+    type: array
+  timeOfUse:
+    description: Array of times of use.
+    items:
+      properties:
+        days:
+          description: The days that the rate applies to
+          items:
+            $ref: ./EnumEnergyDayV1.yaml
+          type: array
+          example: ["PUBLIC_HOLIDAYS"]
+        startTime:
+          description: The beginning of the time period per day for
+            which the controlled load rate applies. Required if endTime
+            provided
+          type: string
+          x-cds-type: TimeString
+        endTime:
+          description: The end of the time period per day for which
+            the controlled load rate applies. Required if startTime
+            provided
+          type: string
+          x-cds-type: TimeString
+        additionalInfo:
+          description: Display text providing more information on the
+            contrlled load, for e.g. controlled load availability if
+            specific day/time is not known. Required if startTime and
+            endTime absent or if additionalInfoUri provided
+          type: string
+        additionalInfoUri:
+          description: Optional link to additional information regarding
+            the controlled load
+          type: string
+          format: uri
+          x-cds-type: URIString
+      type: object
+      x-conditional:
+      - startTime
+      - endTime
+      - additionalInfo
+    type: array
+  type:
+    $ref: ./EnumEnergyControlledLoadTimeOfUseRateTypeV1.yaml
+required:
+- displayName
+- rates
+- timeOfUse
+- type
+type: object

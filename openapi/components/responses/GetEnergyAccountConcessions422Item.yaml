@@ -1,0 +1,5 @@
+oneOf:
+  - $ref: ../schemas/ErrorFieldInvalidPageV1.yaml
+  - $ref: ../schemas/ErrorGeneralExpectedV1.yaml
+discriminator:
+  propertyName: code

@@ -1,0 +1,7 @@
+description: >-
+  Entity tag that uniquely represents the requested resource.
+explode: false
+schema:
+  type: string
+  x-cds-type: ASCIIString
+style: simple

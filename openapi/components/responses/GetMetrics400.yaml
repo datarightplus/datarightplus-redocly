@@ -1,0 +1,12 @@
+description: Bad Request
+content:
+  application/json:
+    schema:
+      properties:
+        errors:
+          items:
+            $ref: ./GetMetrics400Item.yaml
+          type: array
+      required:
+        - errors
+      type: object

@@ -1,0 +1,13 @@
+description: Peak transactions per second over time
+properties:
+  aggregate:
+    $ref: './AdminPeakTPSMetricsCurrentDayPreviousDaysV1.yaml'
+  unauthenticated:
+    $ref: './AdminPeakTPSMetricsCurrentDayPreviousDaysV1.yaml'
+  authenticated:
+    $ref: './AdminPeakTPSMetricsCurrentDayPreviousDaysV1.yaml'
+required:
+  - aggregate
+  - authenticated
+  - unauthenticated
+type: object

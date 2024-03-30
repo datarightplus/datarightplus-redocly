@@ -1,0 +1,9 @@
+description: >-
+  Makes the request method conditional on an Initiator cache or origin server not having any current representation of the target resource with an entity-tag that does not match any of those listed in the field-value.
+explode: false
+in: header
+name: If-None-Match
+schema:
+  type: string
+  x-cds-type: ASCIIString
+style: simple

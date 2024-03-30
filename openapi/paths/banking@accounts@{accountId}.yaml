@@ -1,0 +1,32 @@
+get:
+  description: Obtain detailed information on a single bank account
+  operationId: getBankingAccountDetail
+  parameters:
+    - $ref: ../components/parameters/PathAccountId.yaml
+    - $ref: ../components/parameters/HeaderXV.yaml
+    - $ref: ../components/parameters/HeaderXMinV.yaml
+    - $ref: ../components/parameters/HeaderXFapiInteractionId.yaml
+    - $ref: ../components/parameters/HeaderXFAPIAuthDate.yaml
+    - $ref: ../components/parameters/HeaderXFAPICustomerIPAddress.yaml
+    - $ref: ../components/parameters/HeaderXCDSClientHeaders.yaml
+  responses:
+    200:
+      $ref: ../components/responses/GetAccountDetail.yaml
+    400:
+      $ref: ../components/responses/GetAccountDetail400.yaml
+    403:
+      $ref: ../components/responses/Generic403.yaml
+    404:
+      $ref: ../components/responses/GetAccountDetail404.yaml
+    406:
+      $ref: ../components/responses/GetAccountDetail406.yaml
+    500:
+      $ref: ../components/responses/Generic500.yaml
+    503:
+      $ref: ../components/responses/Generic503.yaml
+  summary: Get Banking Account Detail
+  tags:
+    - Banking Accounts
+  security:
+    - ProviderAuth: ['bank:accounts.detail:read']
+  x-version: '3'

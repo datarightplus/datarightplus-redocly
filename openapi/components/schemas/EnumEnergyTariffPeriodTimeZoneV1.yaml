@@ -1,0 +1,6 @@
+description: Specifies the charge specific time zone for calculation of the time of use thresholds. If absent, timezone value in EnergyPlanContract is assumed
+enum:
+  - LOCAL
+  - AEST
+type: string
+example: AEST

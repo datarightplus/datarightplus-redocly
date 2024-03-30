@@ -1,0 +1,13 @@
+description: The classification of the service point as defined in MSATS
+  procedures
+enum:
+  - EXTERNAL_PROFILE
+  - GENERATOR
+  - LARGE
+  - SMALL
+  - WHOLESALE
+  - NON_CONTEST_UNMETERED_LOAD
+  - NON_REGISTERED_EMBEDDED_GENERATOR
+  - DISTRIBUTION_WHOLESALE
+type: string
+example: GENERATOR

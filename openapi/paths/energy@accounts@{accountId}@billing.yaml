@@ -1,0 +1,38 @@
+get:
+  summary: Get Billing for Energy Account
+  description: Obtain the billing transactions for a specific account
+  operationId: getEnergyAccountBilling
+  parameters:
+    - $ref: ../components/parameters/PathAccountId.yaml
+    - $ref: ../components/parameters/QueryOldestDateTime.yaml
+    - $ref: ../components/parameters/QueryNewestDateTime.yaml
+    - $ref: ../components/parameters/QueryPage.yaml
+    - $ref: ../components/parameters/QueryPageSize.yaml
+    - $ref: ../components/parameters/HeaderXV.yaml
+    - $ref: ../components/parameters/HeaderXMinV.yaml
+    - $ref: ../components/parameters/HeaderXFapiInteractionId.yaml
+    - $ref: ../components/parameters/HeaderXFAPIAuthDate.yaml
+    - $ref: ../components/parameters/HeaderXFAPICustomerIPAddress.yaml
+    - $ref: ../components/parameters/HeaderXCDSClientHeaders.yaml
+  responses:
+    200:
+      $ref: ../components/responses/GetEnergyAccountBilling.yaml
+    400:
+      $ref: ../components/responses/GetEnergyAccountBilling400.yaml
+    403:
+      $ref: ../components/responses/Generic403.yaml
+    404:
+      $ref: ../components/responses/GetEnergyAccountBilling404.yaml
+    406:
+      $ref: ../components/responses/GetEnergyAccountBilling406.yaml
+    422:
+      $ref: ../components/responses/GetEnergyAccountBilling422.yaml
+    500:
+      $ref: ../components/responses/Generic500.yaml
+    503:
+      $ref: ../components/responses/Generic503.yaml
+  tags:
+    - Energy Billing
+  security:
+    - ProviderAuth: ['energy:billing:read']
+  x-version: '2'

@@ -1,0 +1,10 @@
+description: Required if methodUType is fixedAmount
+properties:
+  amount:
+    description: The amount of the discount
+    type: string
+    x-cds-type: AmountString
+    example: "15.00"
+required:
+  - amount
+type: object

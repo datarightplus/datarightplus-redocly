@@ -1,0 +1,9 @@
+type: object
+required:
+  - softwareProducts
+properties:
+  softwareProducts:
+    type: array
+    uniqueItems: true
+    items:
+      $ref: ./RegisterSoftwareProductStatusV1.yaml

@@ -1,0 +1,18 @@
+type: object
+required:
+  - legalEntityId
+  - status
+properties:
+  legalEntityId:
+    type: string
+    description: Unique id of the Provider Legal Entity issued by the Ecosystem Authority.
+    maxLength: 36
+    example: "533bdca3-a733-4949-abda-f8c5317b7516"
+  status:
+    type: string
+    description: Provider status in the Ecosystem Authority
+    enum:
+      - ACTIVE
+      - REMOVED
+    example: ACTIVE
+    x-cds-type: Enum

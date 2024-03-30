@@ -1,0 +1,32 @@
+properties:
+  dataRecipientBrandId:
+    type: string
+    description: Unique id of the Initiator Brand issued by the Ecosystem Authority
+    maxLength: 36
+    example: "7f72c074-ac4a-4bad-87f7-bd654f89b031"
+  brandName:
+    type: string
+    description: Initiator Brand name
+    maxLength: 200
+    example: "ACME Bank"
+  logoUri:
+    type: string
+    description: Initiator Brand logo URI
+    format: uri
+    x-cds-type: URIString
+    maxLength: 1000
+    example: "https://acme.bank/logo.png"
+  softwareProducts:
+    type: array
+    uniqueItems: true
+    items:
+      $ref: ./RegisterSoftwareProductMetaDataV1.yaml
+  status:
+    $ref: ./EnumRegisterDataRecipientBrandStatusV1.yaml
+description: Metadata related to Initiator Brand
+type: object
+required:
+  - brandName
+  - dataRecipientBrandId
+  - logoUri
+  - status

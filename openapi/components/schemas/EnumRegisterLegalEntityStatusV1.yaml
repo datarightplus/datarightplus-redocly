@@ -1,0 +1,7 @@
+type: string
+description: Legal Entity Status
+enum:
+  - ACTIVE
+  - REMOVED
+example: ACTIVE
+x-cds-type: Enum

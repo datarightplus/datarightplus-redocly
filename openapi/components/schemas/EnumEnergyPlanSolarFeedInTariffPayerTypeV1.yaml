@@ -1,0 +1,6 @@
+description: The type of the payer
+enum:
+  - GOVERNMENT
+  - RETAILER
+type: string
+example: RETAILER

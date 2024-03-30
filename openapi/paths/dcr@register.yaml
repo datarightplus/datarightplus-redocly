@@ -1,0 +1,16 @@
+post:
+  description: >-
+    Register a client using a Ecosystem Authority issued Software Statement Assertion.
+    This endpoint does not require CORS.
+  operationId: dcrRegister
+  requestBody:
+    $ref: ../components/requestBodies/ClientRegistrationRequest.yaml
+  responses:
+    201:
+      $ref: ../components/responses/DCRRegister.yaml
+    400:
+      $ref: ../components/responses/DCRRegister400.yaml
+  summary: Register Initiator Client
+  tags:
+    - Dynamic Client Registration
+  x-version: '1'

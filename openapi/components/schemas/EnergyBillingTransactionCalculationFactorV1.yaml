@@ -1,0 +1,16 @@
+properties:
+  value:
+    description: The value of the calculation factor
+    type: number
+    example: 1.34
+  type:
+    description: The type of the calculation factor
+    enum:
+      - DLF
+      - MLF
+    type: string
+    example: DLF
+required:
+  - type
+  - value
+type: object

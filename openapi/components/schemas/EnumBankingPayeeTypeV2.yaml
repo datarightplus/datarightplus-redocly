@@ -1,0 +1,9 @@
+description:
+  $ref: ./EnumBankingPayeeTypeV2.md
+enum:
+  - BILLER
+  - DIGITAL_WALLET
+  - DOMESTIC
+  - INTERNATIONAL
+type: string
+example: BILLER

@@ -1,0 +1,41 @@
+description: Defines the criteria and conditions for which a rate applies
+properties:
+  additionalInfo:
+    description: Display text providing more information on the rate tier.
+    type: string
+  additionalInfoUri:
+    description: Link to a web page with more information on this rate tier
+    type: string
+    format: uri
+    x-cds-type: URIString
+  applicabilityConditions:
+    $ref: ./BankingProductRateConditionV1.yaml
+  maximumValue:
+    description: >-
+      The number of tierUnitOfMeasure units that form the upper bound of the
+      tier or band. For a tier with a discrete value (as opposed to a range of
+      values e.g. 1 month) this must be the same as tierValueMinimum. Where this
+      is the same as the tierValueMinimum value of the next-higher tier the
+      referenced tier should be exclusive of this value. For example a term
+      deposit of 2 months falls into the upper tier of the following tiers: (1 –
+      2 months, 2 – 3 months). If absent the tier's range has no upper bound.
+    type: number
+  minimumValue:
+    description: >-
+      The number of tierUnitOfMeasure units that form the lower bound of the
+      tier. The tier should be inclusive of this value
+    type: number
+    example: 0.05
+  name:
+    description: A display name for the tier
+    type: string
+    example: "Example Rate Tier"
+  rateApplicationMethod:
+    $ref: ./EnumBankingRateApplicationMethodV1.yaml
+  unitOfMeasure:
+    $ref: ./EnumUnitOfMeasureV1.yaml
+required:
+  - minimumValue
+  - name
+  - unitOfMeasure
+type: object

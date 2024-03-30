@@ -1,0 +1,14 @@
+description: >-
+  A unique string representing a consent arrangement between a Data Recipient Software Product and 
+  Data Holder for a given consumer. The identifier MUST be unique per customer according to the definition
+  of customer in the CDR Federation section of this profile. The x-cds-arrangement should contain the 
+  arrangement ID for the consent that the request is being made under and will be used for tracing and 
+  audit purposes. This field MUST be populated but the Electricity Authority MUST NOT seek to validate the consent associated 
+  with the arrangement
+explode: false
+in: header
+name: x-cds-arrangement
+required: true
+schema:
+  type: string
+style: simple

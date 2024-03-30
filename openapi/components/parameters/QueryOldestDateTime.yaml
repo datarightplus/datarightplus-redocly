@@ -1,0 +1,11 @@
+description:
+  $ref: ./QueryOldestDateTime.md
+explode: true
+in: query
+name: oldest-time
+required: false
+schema:
+  type: string
+  format: date-time
+  x-cds-type: DateTimeString
+style: form

@@ -1,0 +1,54 @@
+properties:
+  legalEntityId:
+    type: string
+    description: Unique id of the Initiator Legal Entity issued by the Ecosystem Authority
+    example: "038b1ecc-d645-4d8b-9442-4afe952940e0"
+  legalEntityName:
+    type: string
+    description: Legal name of the Initiator
+    example: "ACME Recipient"
+  accreditationNumber:
+    type: string
+    description: Ecosystem Authority issued human readable unique number given to Initiators upon accreditation
+    example: "BNK00000102"
+  industry:
+    type: string
+    enum:
+      - banking
+    example: banking
+    x-cds-type: Enum
+  logoUri:
+    type: string
+    description: Legal Entity logo URI
+    x-cds-type: URIString
+    format: uri
+    example: "https://acme.recipient/logo.png"
+  dataRecipientBrands:
+    type: array
+    uniqueItems: true
+    items:
+      $ref: ./RegisterDataRecipientBrandMetaDataV1.yaml
+  status:
+    type: string
+    enum:
+      - ACTIVE
+      - SUSPENDED
+      - REVOKED
+      - SURRENDERED
+    example: ACTIVE
+    x-cds-type: Enum
+  lastUpdated:
+    type: string
+    format: date-time
+    description: The date/time that the Legal Entity was last updated in the Ecosystem Authority
+    x-cds-type: DateTimeString
+    example: "2022-08-20T03:01:42+00:00"
+type: object
+required:
+  - accreditationNumber
+  - industry
+  - lastUpdated
+  - legalEntityId
+  - legalEntityName
+  - logoUri
+  - status

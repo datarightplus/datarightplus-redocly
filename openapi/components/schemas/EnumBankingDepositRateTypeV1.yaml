@@ -1,0 +1,12 @@
+description:
+  $ref: EnumBankingDepositRateTypeV1.md
+enum:
+  - BONUS
+  - BUNDLE_BONUS
+  - FIXED
+  - FLOATING
+  - INTRODUCTORY
+  - MARKET_LINKED
+  - VARIABLE
+type: string
+example: FIXED

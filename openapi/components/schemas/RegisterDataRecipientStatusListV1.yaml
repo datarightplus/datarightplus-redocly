@@ -1,0 +1,9 @@
+properties:
+  dataRecipients:
+    type: array
+    uniqueItems: true
+    items:
+      $ref: ./RegisterDataRecipientStatusV1.yaml
+type: object
+required:
+  - dataRecipients

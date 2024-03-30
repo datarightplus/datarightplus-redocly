@@ -1,0 +1,85 @@
+properties:
+  displayName:
+    description: The name of the tariff
+    type: string
+    example: "Solar Feed In Tariff"
+  description:
+    description: A description of the tariff
+    type: string
+    example: "A base charge for feeding back into the grid"
+  scheme:
+    $ref: EnumEnergyPlanSolarFeedInTariffSchemeTypeV1.yaml
+  payerType:
+    $ref: EnumEnergyPlanSolarFeedInTariffPayerTypeV1.yaml
+  tariffUType:
+    description: The type of the tariff
+    enum:
+      - singleTariff
+      - timeVaryingTariffs
+    type: string
+    example: singleTariff
+  singleTariff:
+    description: Represents a constant tariff.  Mandatory if tariffUType
+      is set to singleTariff
+    properties:
+      amount:
+        description: The tariff amount
+        type: string
+        x-cds-type: AmountString
+        example: "0.05"
+    required:
+      - amount
+    type: object
+  timeVaryingTariffs:
+    description: Represents a tariff based on time.  Mandatory if tariffUType
+      is set to timeVaryingTariffs
+    properties:
+      type:
+        $ref: ./EnumEnergyTariffTimeVaryingTariffTypeV1.yaml
+      amount:
+        description: The tariff amount
+        type: string
+        x-cds-type: AmountString
+        example: "0.13"
+      timeVariations:
+        description: Array of time periods for which this tariff is applicable
+        items:
+          properties:
+            days:
+              description: The days that the tariff applies to. At least one
+                entry required
+              items:
+                $ref: ./EnumEnergyDayV1.yaml
+              type: array
+              minItems: 1
+            startTime:
+              description: The beginning of the time period per day for
+                which the tariff applies.  If absent assumes start of
+                day (ie. midnight)
+              type: string
+              x-cds-type: TimeString
+              example: "12:00"
+            endTime:
+              description: The end of the time period per day for which
+                the tariff applies.  If absent assumes end of day (ie.
+                one second before midnight)
+              type: string
+              x-cds-type: TimeString
+              example: "23:00"
+          required:
+            - days
+          type: object
+        type: array
+    required:
+      - amount
+      - timeVariations
+    type: object
+required:
+  - displayName
+  - payerType
+  - scheme
+  - tariffUType
+type: object
+x-conditional:
+  - singleTariff
+  - timeVaryingTariffs

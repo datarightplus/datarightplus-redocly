@@ -1,0 +1,11 @@
+description: Indicates the consumption type of register
+enum:
+  - INTERVAL
+  - BASIC
+  - PROFILE_DATA
+  - ACTIVE_IMPORT
+  - ACTIVE
+  - REACTIVE_IMPORT
+  - REACTIVE
+type: string
+example: INTERVAL

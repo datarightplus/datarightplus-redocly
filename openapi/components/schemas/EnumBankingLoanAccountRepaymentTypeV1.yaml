@@ -1,0 +1,7 @@
+description: Options in place for repayments. If absent defaults to PRINCIPAL_AND_INTEREST
+default: PRINCIPAL_AND_INTEREST
+enum:
+  - INTEREST_ONLY
+  - PRINCIPAL_AND_INTEREST
+type: string
+example: "PRINCIPAL_AND_INTEREST"

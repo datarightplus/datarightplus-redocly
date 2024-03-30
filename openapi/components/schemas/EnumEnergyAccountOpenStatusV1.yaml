@@ -1,0 +1,7 @@
+default: OPEN
+description: Open or closed status for the account. If not present then OPEN is assumed
+enum:
+  - CLOSED
+  - OPEN
+type: string
+example: OPEN

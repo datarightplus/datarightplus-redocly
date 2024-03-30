@@ -1,0 +1,12 @@
+description: >-
+  Allows for the filtering of results based on whether the current time
+  is within the period of time defined as effective by the effectiveFrom
+  and effectiveTo fields. Valid values are ‘CURRENT’, ‘FUTURE’ and ‘ALL’.
+  If absent defaults to 'CURRENT'
+explode: true
+in: query
+name: effective
+required: false
+schema:
+  $ref: ../schemas/EnumEffectiveWithAllV1.yaml
+style: form

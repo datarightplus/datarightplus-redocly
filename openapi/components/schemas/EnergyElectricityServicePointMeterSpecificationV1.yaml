@@ -1,0 +1,31 @@
+description: Technical characteristics of the meter
+properties:
+  status:
+    $ref: ./EnumElectricityMeterStatusV1.yaml
+  installationType:
+    $ref: ./EnumElectricityMeterInstallationTypeV1.yaml
+  manufacturer:
+    description: Free text field to identify the manufacturer of the installed
+      meter
+    type: string
+    example: "APC"
+  model:
+    description: Free text field to identify the meter manufacturer's designation
+      for the meter model
+    type: string
+    example: "APC Metering Device"
+  readType:
+    description:
+      $ref: ./EnergyElectricityServicePointMeterSpecificationReadTypeV1.md
+    type: string
+  nextScheduledReadDate:
+    description: This date is the next scheduled meter read date (NSRD) if a
+      manual Meter Reading is required
+    type: string
+    format: date
+    x-cds-type: DateString
+    example: "2023-01-04"
+required:
+  - installationType
+  - status
+type: object

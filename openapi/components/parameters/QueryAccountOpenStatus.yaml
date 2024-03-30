@@ -1,0 +1,10 @@
+description: >-
+  Used to filter results according to open/closed status. Values can be OPEN,
+  CLOSED or ALL. If absent then ALL is assumed
+explode: true
+in: query
+name: open-status
+required: false
+schema:
+  $ref: ../schemas/EnumAccountOpenStatusWithAllV1.yaml
+style: form

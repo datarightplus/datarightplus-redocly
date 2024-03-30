@@ -1,0 +1,8 @@
+name: softwareProductId
+in: path
+description: Unique id for the Initiator in the Ecosystem Authority
+explode: false
+required: true
+schema:
+  type: string
+style: simple

@@ -1,0 +1,10 @@
+description: >-
+  The OAuth2 Client Identifier issued by the target Provider for the specific Initiator registration
+explode: false
+in: path
+name: clientId
+required: true
+schema:
+  type: string
+  x-cds-type: ASCIIString
+style: simple

@@ -1,0 +1,8 @@
+description: Code used to indicate the status of the device. This will be
+  used to identify if an inverter is active or inactive or decommissioned
+enum:
+  - ACTIVE
+  - INACTIVE
+  - DECOMMISSIONED
+type: string
+example: ACTIVE

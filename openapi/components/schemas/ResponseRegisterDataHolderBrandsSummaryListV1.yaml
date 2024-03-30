@@ -1,0 +1,16 @@
+type: object
+required:
+  - data
+  - links
+  - meta
+properties:
+  data:
+    type: array
+    description: Response data for the query
+    uniqueItems: true
+    items:
+      $ref: ./RegisterDataHolderBrandSummaryV1.yaml
+  links:
+    $ref: ./LinksV1.yaml
+  meta:
+    $ref: ./MetaV1.yaml

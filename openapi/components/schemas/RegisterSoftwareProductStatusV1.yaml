@@ -1,0 +1,11 @@
+properties:
+  softwareProductId:
+    type: string
+    description: Unique id of the Initiator issued by the Ecosystem Authority
+    example: 038b1ecc-d645-4d8b-9442-4afe952940e0
+  softwareProductStatus:
+    $ref: ./EnumRegisterSoftwareProductStatusV1.yaml
+type: object
+required:
+  - softwareProductId
+  - softwareProductStatus

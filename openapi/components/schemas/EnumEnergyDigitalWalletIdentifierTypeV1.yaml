@@ -1,0 +1,8 @@
+description:
+  $ref: ./EnumEnergyDigitalWalletIdentifierTypeV1.md
+enum:
+  - EMAIL
+  - CONTACT_NAME
+  - TELEPHONE
+type: string
+example: EMAIL

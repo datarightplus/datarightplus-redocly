@@ -1,0 +1,48 @@
+properties:
+  accountId:
+    description: The ID of the account for which transaction applies
+    type: string
+    example: "jdnmwucgrchzngrqieryhiovpvzknokkwsediggdlnxgxizegvwpwfflgavkrbay"
+  executionDateTime:
+    description: The date and time that the transaction occurred
+    type: string
+    format: date-time
+    x-cds-type: DateTimeString
+    example: "2022-08-20T03:01:42+00:00"
+  gst:
+    description: The GST incurred in the transaction.  Should not be included
+      for credits or payments.  If absent zero is assumed
+    type: string
+    x-cds-type: AmountString
+  transactionUType:
+    description: Indicator of the type of transaction object present in this
+      record
+    enum:
+      - usage
+      - demand
+      - onceOff
+      - otherCharges
+      - payment
+    type: string
+    example: onceOff
+  usage:
+    $ref: ./EnergyBillingTransactionUsageV2.yaml
+  demand:
+    $ref: ./EnergyBillingTransactionDemandV2.yaml
+  onceOff:
+    $ref: ./EnergyBillingTransactionOnceOffV1.yaml
+  otherCharges:
+    $ref: ./EnergyBillingTransactionOtherV1.yaml
+  payment:
+    $ref: ./EnergyBillingTransactionPaymentV1.yaml
+required:
+  - accountId
+  - executionDateTime
+  - transactionUType
+type: object
+x-conditional:
+  - usage
+  - demand
+  - onceOff
+  - otherCharges
+  - payment

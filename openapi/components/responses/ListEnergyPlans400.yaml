@@ -1,0 +1,12 @@
+description: Bad Request
+content:
+  application/json:
+    schema:
+      properties:
+        errors:
+          items:
+            $ref: ./ListEnergyPlans400Item.yaml
+          type: array
+      required:
+        - errors
+      type: object

@@ -1,0 +1,7 @@
+description: Account Open Status with ALL
+default: ALL
+enum:
+  - ALL
+  - CLOSED
+  - OPEN
+type: string

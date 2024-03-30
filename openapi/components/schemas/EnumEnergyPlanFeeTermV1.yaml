@@ -1,0 +1,17 @@
+description: The term of the fee
+enum:
+  - FIXED
+  - 1_YEAR
+  - 2_YEAR
+  - 3_YEAR
+  - 4_YEAR
+  - 5_YEAR
+  - PERCENT_OF_BILL
+  - ANNUAL
+  - DAILY
+  - WEEKLY
+  - MONTHLY
+  - BIANNUAL
+  - VARIABLE
+type: string
+example: FIXED

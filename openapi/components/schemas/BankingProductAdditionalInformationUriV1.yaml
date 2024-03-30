@@ -1,0 +1,14 @@
+type: object
+required:
+  - additionalInfoUri
+properties:
+  description:
+    type: string
+    description: Display text providing more information about the document URI
+    example: "Additional Product Information can be found at ACME Bank website"
+  additionalInfoUri:
+    type: string
+    description: The URI describing the additional information
+    format: uri
+    x-cds-type: URIString
+    example: "https://www.acmeprovider.com.au/products/home-loans/home-loans-full-example.pdf"

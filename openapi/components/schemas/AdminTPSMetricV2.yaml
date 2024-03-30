@@ -1,0 +1,13 @@
+description: Average transactions per second over time
+properties:
+  aggregate:
+    $ref: './AdminTPSMetricCurrentDayPreviousDaysV1.yaml'
+  unauthenticated:
+    $ref: './AdminTPSMetricCurrentDayPreviousDaysV1.yaml'
+  authenticated:
+    $ref: './AdminTPSMetricCurrentDayPreviousDaysV1.yaml'
+required:
+  - aggregate
+  - authenticated
+  - unauthenticated
+type: object

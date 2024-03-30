@@ -1,0 +1,12 @@
+description: Service Unavailable
+content:
+  application/json:
+    schema:
+      properties:
+        errors:
+          items:
+            $ref: ../schemas/ErrorServiceUnavailableV1.yaml
+          type: array
+      required:
+        - errors
+      type: object

@@ -1,0 +1,8 @@
+description: Version of the API end point requested by the Initiator.
+explode: false
+in: header
+name: x-v
+required: true
+schema:
+  type: string
+style: simple

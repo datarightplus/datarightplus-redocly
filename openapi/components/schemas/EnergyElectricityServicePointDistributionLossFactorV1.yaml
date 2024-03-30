@@ -1,0 +1,20 @@
+properties:
+  code:
+    description: A code used to identify data loss factor for the service point
+      values.  Refer to the Electricity Authority distribution loss factor documents for each financial
+      year to interpret
+    type: string
+    example: "A"
+  description:
+    description: Description of the data loss factor code and value
+    type: string
+    example: "Distribution Loss Factor A"
+  lossValue:
+    description: The value associated with the loss factor code
+    type: string
+    example: "1.23"
+required:
+  - code
+  - description
+  - lossValue
+type: object

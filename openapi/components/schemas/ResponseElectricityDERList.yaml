@@ -1,0 +1,3 @@
+oneOf:
+  - $ref: ./ResponseElectricityDERListV1.yaml
+x-cds-allowMissingDiscriminator: true

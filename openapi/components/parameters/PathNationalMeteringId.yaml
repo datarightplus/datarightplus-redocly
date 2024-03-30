@@ -1,0 +1,9 @@
+description: National Metering Identifier
+explode: false
+in: path
+name: nationalMeteringId
+required: true
+schema:
+  type: string
+x-cds-type: ASCIIString
+style: simple

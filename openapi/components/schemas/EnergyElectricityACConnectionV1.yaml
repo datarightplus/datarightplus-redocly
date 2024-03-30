@@ -1,0 +1,59 @@
+properties:
+  connectionIdentifier:
+    description: AC Connection ID as defined in the DER register.  Does not
+      align with CDR ID permanence standards
+    type: number
+    example: 19283
+  count:
+    description: Number of AC Connections in the group. For the suite of AC
+      Connections to be considered as a group, all of the AC Connections included
+      must have the same attributes
+    minimum: 1
+    type: integer
+    x-cds-type: PositiveInteger
+    example: 3
+  equipmentType:
+    $ref: ./EnumElectricityEquipmentTypeV1.yaml
+  manufacturerName:
+    description: The name of the inverter manufacturer. Mandatory if equipmentType
+      is `INVERTER`
+    type: string
+    example: "APC Power Inverter"
+  inverterSeries:
+    description: The inverter series. Mandatory if equipmentType is `INVERTER`
+    type: string
+    example: "INV3000"
+  inverterModelNumber:
+    description: The inverter model number. Mandatory if equipmentType is `INVERTER`
+    type: string
+    example: "3000"
+  commissioningDate:
+    description: The date that the DER installation is commissioned
+    type: string
+    format: date
+    x-cds-type: DateString
+    example: "2022-08-01"
+  status:
+    $ref: ./EnumElectricityDeviceStatusV1.yaml
+  inverterDeviceCapacity:
+    description: The rated AC output power that is listed in the product specified
+      by the manufacturer. Mandatory if equipmentType is INVERTER. Default is
+      0 if value not known
+    type: number
+    example: 100
+  derDevices:
+    items:
+      $ref: ./EnergyElectricityDeviceV1.yaml
+    type: array
+required:
+  - commissioningDate
+  - connectionIdentifier
+  - count
+  - derDevices
+  - status
+type: object
+x-conditional:
+  - manufacturerName
+  - inverterSeries
+  - inverterModelNumber
+  - inverterDeviceCapacity

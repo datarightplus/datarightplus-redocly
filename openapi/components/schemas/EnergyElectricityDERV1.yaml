@@ -1,0 +1,59 @@
+properties:
+  servicePointId:
+    description: Tokenised ID of the service point to be used for referring
+      to the service point in the CDR API suite.  To be created in accordance
+      with CDR ID permanence requirements
+    type: string
+    example: aa719cefa99b27d2a86482c0e51460910e4336f24fa42b5c60dc72dcda86b3fa
+  approvedCapacity:
+    description: Approved small generating unit capacity as agreed with NSP
+      in the connection agreement, expressed in kVA. Value of 0 indicates no
+      DER record exists for the given servicePointId
+    type: number
+    example: 100
+  availablePhasesCount:
+    description: The number of phases available for the installation of DER.
+      Acceptable values are 0, 1, 2 or 3. Value of 0 indicates no DER record
+      exists for the given servicePointId
+    type: integer
+    x-cds-type: NaturalNumber
+    minimum: 0
+    maximum: 3
+    example: 3
+  installedPhasesCount:
+    description: The number of phases that DER is connected to. Acceptable values
+      are 0, 1, 2 or 3. Value of 0 indicates no DER record exists for the given
+      servicePointId
+    type: integer
+    x-cds-type: NaturalNumber
+    minimum: 0
+    maximum: 3
+    example: 3
+  islandableInstallation:
+    description: For identification of small generating units designed with
+      the ability to operate in an islanded mode
+    type: boolean
+    example: true
+  hasCentralProtectionControl:
+    default: false
+    description: For DER installations where NSPs specify the need for additional
+      forms of protection above those inbuilt in an inverter.  If absent then
+      assumed to be false
+    type: boolean
+    example: true
+  protectionMode:
+    $ref: ./EnergyElectricityProtectionModeV1.yaml
+  acConnections:
+    items:
+      $ref: ./EnergyElectricityACConnectionV1.yaml
+    type: array
+required:
+  - acConnections
+  - approvedCapacity
+  - availablePhasesCount
+  - installedPhasesCount
+  - islandableInstallation
+  - servicePointId
+type: object
+x-conditional:
+  - protectionMode

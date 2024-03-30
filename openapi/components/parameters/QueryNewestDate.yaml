@@ -1,0 +1,12 @@
+description: >-
+  Constrain the request to records with effective date at or before this date. If absent defaults to current date.
+  Format is aligned to DateString common type
+explode: true
+in: query
+name: newest-date
+required: false
+schema:
+  type: string
+  format: date
+  x-cds-type: DateString
+style: form

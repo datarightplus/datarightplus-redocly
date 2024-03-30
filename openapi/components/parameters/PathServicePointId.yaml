@@ -1,0 +1,11 @@
+description: ID of the specific service point requested. This is a tokenised
+  ID previous obtained from the Service Point List Data end point. Note that
+  it is not a nationalMeteringId.
+explode: false
+in: path
+name: servicePointId
+required: true
+schema:
+  type: string
+x-cds-type: ASCIIString
+style: simple

@@ -1,0 +1,12 @@
+description: Resource Not Found
+content:
+  application/json:
+    schema:
+      properties:
+        errors:
+          items:
+            $ref: ./GetProductDetail404Item.yaml
+          type: array
+      required:
+        - errors
+      type: object

@@ -1,0 +1,19 @@
+type: object
+properties:
+  data:
+    properties:
+      action:
+        default: REFRESH
+        description: The action to take for the meta data. At the moment the only
+          option is REFRESH which requires the Provider to call the Ecosystem Authority to refresh
+          meta data as soon as practicable
+        enum:
+          - REFRESH
+        type: string
+    required:
+      - action
+    type: object
+  meta:
+    type: object
+required:
+  - data

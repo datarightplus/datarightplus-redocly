@@ -1,0 +1,10 @@
+description: The count of onceOff and ongoing authorisations
+properties:
+  onceOff:
+    $ref: './AdminAuthorisationCountV1.yaml'
+  ongoing:
+    $ref: './AdminAuthorisationCountV1.yaml'
+required:
+  - onceOff
+  - ongoing
+type: object

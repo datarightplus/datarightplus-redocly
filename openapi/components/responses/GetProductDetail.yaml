@@ -1,0 +1,11 @@
+description: Success
+content:
+  application/json:
+    schema:
+      x-cds-allowMissingDiscriminator: true
+      oneOf:
+        - $ref: ../schemas/ResponseBankingProductByIdV4.yaml
+        - $ref: ../schemas/ResponseBankingProductByIdV3.yaml
+headers:
+  x-v:
+    $ref: ../headers/XV.yaml

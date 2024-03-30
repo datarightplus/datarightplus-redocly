@@ -1,0 +1,15 @@
+description: Bad Request
+content:
+  application/json:
+    schema:
+      properties:
+        errors:
+          items:
+            $ref: ./ListEnergyBillingSpecificAccounts400Item.yaml
+          type: array
+      required:
+        - errors
+      type: object
+headers:
+  x-fapi-interaction-id:
+    $ref: ../headers/XFAPIInteractionId.yaml

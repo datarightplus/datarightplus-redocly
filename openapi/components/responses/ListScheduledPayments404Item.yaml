@@ -1,0 +1,12 @@
+oneOf:
+  - $ref: ../schemas/ErrorBankingAuthorisationUnavailableAccountV1.yaml
+  - $ref: ../schemas/ErrorBankingAuthorisationInvalidAccountV1.yaml
+  - $ref: ../schemas/ErrorResourceInvalidV1.yaml
+  - $ref: ../schemas/ErrorResourceNotImplementedV1.yaml
+discriminator:
+  propertyName: code
+  mapping:
+    "urn:au-cds:error:cds-banking:Authorisation/UnavailableBankingAccount": ../schemas/ErrorBankingAuthorisationUnavailableAccountV1.yaml
+    "urn:au-cds:error:cds-banking:Authorisation/InvalidBankingAccount": ../schemas/ErrorBankingAuthorisationInvalidAccountV1.yaml
+    "urn:au-cds:error:cds-all:Resource/Invalid": ../schemas/ErrorResourceInvalidV1.yaml
+    "urn:au-cds:error:cds-all:Resource/NotImplemented": ../schemas/ErrorResourceNotImplementedV1.yaml

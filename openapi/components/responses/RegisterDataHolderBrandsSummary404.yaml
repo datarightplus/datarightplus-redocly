@@ -1,0 +1,5 @@
+description: Industry Not Found
+content:
+  application/json:
+    schema:
+      $ref: ../schemas/ResponseErrorListV2.yaml

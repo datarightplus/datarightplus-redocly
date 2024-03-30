@@ -1,0 +1,60 @@
+properties:
+  type:
+    $ref: ./EnumEnergyConcessionTypeV1.yaml
+  displayName:
+    description: The display name of the concession
+    type: string
+    example: "Pensioner Discount"
+  additionalInfo:
+    description: Display text providing more information on the concession.
+      Mandatory if type is VARIABLE
+    type: string
+  additionalInfoUri:
+    description: Optional link to additional information regarding the concession
+    type: string
+    x-cds-type: URIString
+    format: uri
+  startDate:
+    description: Optional start date for the application of the concession
+    type: string
+    format: date
+    x-cds-type: DateString
+  endDate:
+    description: Optional end date for the application of the concession
+    type: string
+    format: date
+    x-cds-type: DateString
+  discountFrequency:
+    description: Conditional attribute for frequency at which a concession is
+      applied. Required if type is FIXED_AMOUNT or FIXED_PERCENTAGE. Formatted
+      according to [ISO 8601 Durations](https://en.wikipedia.org/wiki/ISO_8601#Durations)
+      (excludes recurrence syntax)
+    type: string
+    x-cds-type: DurationString
+  amount:
+    description: Conditional attribute for the amount of discount for the concession-
+      required if type is FIXED_AMOUNT
+    type: string
+    x-cds-type: AmountString
+    example: "67.39"
+  percentage:
+    description: Conditional attribute for the percentage of discount of concession
+      - required if type is FIXED_PERCENTAGE
+    type: string
+    x-cds-type: RateString
+    example: "0.05"
+  appliedTo:
+    description: Array of ENUM's to specify what the concession applies to.
+      Multiple ENUM values can be provided. If absent, USAGE is assumed
+    items:
+      $ref: ./EnumEnergyConcessionApplicationV1.yaml
+    type: array
+required:
+  - displayName
+  - type
+type: object
+x-conditional:
+  - additionalInfo
+  - discountFrequency
+  - amount
+  - percentage

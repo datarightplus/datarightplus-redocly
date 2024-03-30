@@ -1,0 +1,29 @@
+description: Energy account plan containing service points and associated plan details
+properties:
+  nickname:
+    description: Optional display name for the plan provided by the customer
+      to help differentiate multiple plans
+    type: string
+    example: "Solar Saver"
+  servicePointIds:
+    description: An array of servicePointIds, representing NMIs, that this account
+      is linked to
+    items:
+      type: string
+    type: array
+    example: ["aa719cefa99b27d2a86482c0e51460910e4336f24fa42b5c60dc72dcda86b3fa"]
+  planOverview:
+    $ref: ./EnergyAccountPlanOverviewV1.yaml
+  planDetail:
+    $ref: ./EnergyAccountPlanDetailV1.yaml
+  authorisedContacts:
+    description: An array of additional contacts that are authorised to act on this account
+    items:
+      $ref: ./EnergyAccountAuthorisedContactV1.yaml
+    type: array
+required:
+  - servicePointIds
+type: object
+x-conditional:
+  - planDetail
+  - planOverview

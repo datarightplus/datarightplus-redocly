@@ -1,0 +1,28 @@
+type: object
+properties:
+  code:
+    description: Holds an end point specific error code. This MAY be a standard CDR error code or an application-specific error code.
+    type: string
+    default: "urn:au-cds:error:cds-all:Header/UnsupportedVersion"
+  title:
+    description: Holds a human readable label of the error that is constant per code
+    type: string
+    default: Unsupported Version
+  detail:
+    description: A request is made for a version that is lower than the minimum version or greater than maximum version the Data Holder supports for the requested endpoint. The error detail MAY include the minimum and maximum versions the Data Holder supports.
+    type: string
+    example: "Unsupported Version Requested"
+  meta:
+    description: Holds additional end point specific data relevant to the error
+    properties:
+      urn:
+        description: Holds a standard CDR error code
+        type: string
+        format: uri
+        x-cds-type: URIString
+        default: "urn:au-cds:error:cds-all:Header/UnsupportedVersion"
+    type: object
+required:
+  - code
+  - title
+  - detail

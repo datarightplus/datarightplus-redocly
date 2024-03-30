@@ -1,0 +1,12 @@
+description: >-
+  Only include items that have been updated after the specified date
+  and time. If absent defaults to include all items
+explode: true
+in: query
+name: updated-since
+required: false
+schema:
+  type: string
+  format: date-time
+  x-cds-type: DateTimeString
+style: form

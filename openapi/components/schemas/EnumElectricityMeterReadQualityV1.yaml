@@ -1,0 +1,9 @@
+default: ACTUAL
+description: The quality of the read taken.  If absent then assumed to be
+  `ACTUAL`
+enum:
+  - ACTUAL
+  - SUBSTITUTE
+  - FINAL_SUBSTITUTE
+type: string
+example: ACTUAL

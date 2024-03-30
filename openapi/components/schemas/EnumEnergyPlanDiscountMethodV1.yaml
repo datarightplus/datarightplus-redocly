@@ -1,0 +1,8 @@
+description: The method of calculation of the discount
+enum:
+  - percentOfBill
+  - percentOfUse
+  - fixedAmount
+  - percentOverThreshold
+type: string
+example: percentOfBill

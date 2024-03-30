@@ -1,0 +1,19 @@
+description: Rate
+properties:
+  unitPrice:
+    description: Unit price of usage per measure unit (exclusive
+      of GST)
+    type: string
+    x-cds-type: AmountString
+    example: "0.044"
+  measureUnit:
+    $ref: ./EnumEnergyMeasureUnitV1.yaml
+  volume:
+    description: Volume that this rate applies to. Only applicable
+      for 'stepped' rates where different rates apply for different
+      volumes of usage in a period
+    type: number
+    example: 145
+required:
+  - unitPrice
+type: object

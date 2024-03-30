@@ -1,0 +1,12 @@
+description: >-
+  Filters accounts based on whether they are owned by the authorised customer. 
+  True for owned accounts, false for unowned accounts and absent for all
+  accounts
+explode: true
+in: query
+name: is-owned
+required: false
+schema:
+  type: boolean
+style: form
+x-cds-type: Boolean

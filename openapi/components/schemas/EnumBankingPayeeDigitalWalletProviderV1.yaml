@@ -1,0 +1,8 @@
+description: >-
+  The provider of the digital wallet service. PAYPAL_AU for PayPal, OTHER for other
+  service provider.
+enum:
+  - PAYPAL_AU
+  - OTHER
+type: string
+example: OTHER

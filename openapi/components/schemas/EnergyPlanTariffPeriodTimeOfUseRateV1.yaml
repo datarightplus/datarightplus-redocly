@@ -1,0 +1,48 @@
+properties:
+  displayName:
+    description: Display name of the rate
+    type: string
+    example: "Time of use charge applied"
+  description:
+    description: Description of the rate
+    type: string
+    example: "Rate applied based on the time the energy is used"
+  rates:
+    description: Array of controlled load rates in order of usage volume
+    items:
+      $ref: ./EnergyPlanRateV1.yaml
+    type: array
+  timeOfUse:
+    description: Array of times of use
+    items:
+      properties:
+        days:
+          description: The days that the rate applies to
+          items:
+            $ref: ./EnumEnergyDayV1.yaml
+          type: array
+          example: ["MON", "TUE", "WED", "THU", "FRI"]
+        startTime:
+          description: Start of the period
+          type: string
+          x-cds-type: TimeString
+          example: 17:00:00.000+10:00
+        endTime:
+          description: End of the period
+          type: string
+          x-cds-type: TimeString
+          example: 20:59:59.999+10:00
+      required:
+        - days
+        - endTime
+        - startTime
+      type: object
+    type: array
+  type:
+    $ref: ./EnumEnergyTariffPeriodTimeOfUseRateTypeV1.yaml
+required:
+  - displayName
+  - rates
+  - timeOfUse
+  - type
+type: object

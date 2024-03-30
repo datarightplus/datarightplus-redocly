@@ -1,0 +1,9 @@
+default: ALL
+description: Energy Plan Type with All
+enum:
+  - STANDING
+  - MARKET
+  - REGULATED
+  - ALL
+type: string
+example: ALL

@@ -1,0 +1,9 @@
+description: Request failed due to unknown or invalid Client or invalid access token
+headers:
+  WWW-Authenticate:
+    description: The Response Header Field as per [RFC4122](https://tools.ietf.org/html/rfc6750)
+    explode: false
+    schema:
+      type: string
+      x-cds-type: ExternalRef
+    style: simple

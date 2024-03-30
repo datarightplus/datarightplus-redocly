@@ -1,0 +1,19 @@
+properties:
+  meterId:
+    description: The meter ID uniquely identifies a meter for a given service
+      point.  It is unique in the context of the service point.  It is not globally
+      unique
+    type: string
+    example: "4b5e3fc483dc79ca7b831a8ebaa10c4a6abc761d0417ed2fbda5c1cf936d82da"
+  specifications:
+    $ref: ./EnergyElectricityServicePointMeterSpecificationV1.yaml
+  registers:
+    description: Usage data registers available from the meter. This may be
+      empty where there are no meters physically installed at the service point
+    items:
+      $ref: ./EnergyElectricityServicePointMeterRegistersV1.yaml
+    type: array
+required:
+  - meterId
+  - specifications
+type: object

@@ -1,0 +1,27 @@
+description: Energy Plan Fee Value
+properties:
+  type:
+    $ref: ./EnumEnergyPlanFeeTypeV1.yaml
+  term:
+    $ref: ./EnumEnergyPlanFeeTermV1.yaml
+  amount:
+    description: The fee amount. Required if term is not `PERCENT_OF_BILL`
+    type: string
+    x-cds-type: AmountString
+    example: "1.55"
+  rate:
+    description: The fee rate. Required if term is `PERCENT_OF_BILL`
+    type: string
+    x-cds-type: RateString
+    example: "0.10"
+  description:
+    description: A description of the fee
+    type: string
+    example: "Initial Setup Charge"
+required:
+  - term
+  - type
+type: object
+x-conditional:
+  - amount
+  - rate

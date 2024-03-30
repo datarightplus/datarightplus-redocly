@@ -1,0 +1,21 @@
+properties:
+  startInterval:
+    description: Start interval for read quality flag. First read begins at 1
+    type: integer
+    minimum: 1
+    x-cds-type: PositiveInteger
+    example: 1
+  endInterval:
+    description: End interval for read quality flag
+    minimum: 1
+    type: integer
+    x-cds-type: PositiveInteger
+    example: 5
+  quality:
+    $ref: ./EnumElectricityMeterReadQualityNotActualV1.yaml
+    example: FINAL_SUBSTITUTE
+required:
+  - endInterval
+  - quality
+  - startInterval
+type: object

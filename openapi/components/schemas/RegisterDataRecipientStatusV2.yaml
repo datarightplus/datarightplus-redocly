@@ -1,0 +1,12 @@
+properties:
+  legalEntityId:
+    type: string
+    description: Unique id of the Initiator Legal Entity issued by the Ecosystem Authority
+    maxLength: 36
+    example: 038b1ecc-d645-4d8b-9442-4afe952940e0
+  status:
+    $ref: ./EnumRegisterDataRecipientStatusV1.yaml
+type: object
+required:
+  - legalEntityId
+  - status

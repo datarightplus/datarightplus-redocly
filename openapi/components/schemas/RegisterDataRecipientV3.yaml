@@ -1,0 +1,47 @@
+properties:
+  legalEntityId:
+    type: string
+    description: Unique id of the Initiator Legal Entity issued by the Ecosystem Authority
+    maxLength: 36
+    example: "038b1ecc-d645-4d8b-9442-4afe952940e0"
+  legalEntityName:
+    type: string
+    description: Legal name of the Initiator
+    maxLength: 200
+    example: "ACME Recipient"
+  accreditationNumber:
+    type: string
+    description: Ecosystem Authority issued human readable unique number given to Initiators upon accreditation
+    maxLength: 100
+    example: "BNK00000102"
+  accreditationLevel:
+    $ref: ./EnumRegisterAccreditationLevelV1.yaml
+  logoUri:
+    type: string
+    description: Legal Entity logo URI
+    format: uri
+    x-cds-type: URIString
+    maxLength: 1000
+    example: "https://acme.recipient/logo.png"
+  dataRecipientBrands:
+    type: array
+    uniqueItems: true
+    items:
+      $ref: ./RegisterDataRecipientBrandMetaDataV1.yaml
+  status:
+    $ref: ./EnumRegisterDataRecipientStatusV1.yaml
+  lastUpdated:
+    type: string
+    format: date-time
+    description: The date/time that the Legal Entity was last updated in the Ecosystem Authority
+    x-cds-type: DateTimeString
+    example: "2022-08-20T03:01:42+00:00"
+type: object
+required:
+  - legalEntityId
+  - legalEntityName
+  - accreditationNumber
+  - accreditationLevel
+  - logoUri
+  - status
+  - lastUpdated

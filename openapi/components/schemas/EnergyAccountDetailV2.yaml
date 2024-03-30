@@ -1,0 +1,11 @@
+allOf:
+  - $ref: ./EnergyAccountBaseV2.yaml
+  - properties:
+      plans:
+        description: The array of plans containing service points and associated plan details
+        items:
+          $ref: ./EnergyAccountDetailPlanV2.yaml
+        type: array
+    required:
+      - plans
+    type: object

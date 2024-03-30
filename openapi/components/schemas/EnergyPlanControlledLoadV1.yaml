@@ -1,0 +1,41 @@
+properties:
+  displayName:
+    description: A display name for the controlled load
+    type: string
+    example: Electric hot water system
+  rateBlockUType:
+    description: 'Specifies the type of controlled load rate'
+    enum:
+      - singleRate
+      - timeOfUseRates
+    type: string
+    example: singleRate
+  startDate:
+    description: Optional start date of the application of the controlled
+      load rate
+    type: string
+    format: date
+    x-cds-type: DateString
+    example: "2021-10-23"
+  endDate:
+    description: Optional end date of the application of the controlled load
+      rate
+    type: string
+    format: date
+    x-cds-type: DateString
+    example: "2022-04-30"
+  singleRate:
+    $ref: ./EnergyPlanControlledLoadSingleRateV1.yaml
+  timeOfUseRates:
+    description: Array of objects representing time of use rates.  Required
+      if rateBlockUType is timeOfUseRates
+    items:
+      $ref: ./EnergyPlanControlledLoadTimeOfUseRateV1.yaml
+    type: array
+required:
+  - displayName
+  - rateBlockUType
+type: object
+x-conditional:
+  - singleRate
+  - timeOfUseRates

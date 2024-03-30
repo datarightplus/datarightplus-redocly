@@ -1,0 +1,26 @@
+description: Number of API calls in each performance tier over time
+properties:
+  highPriority:
+    $ref: ./AdminInvocationMetricV2.yaml
+  largePayload:
+    $ref: ./AdminInvocationMetricV2.yaml
+  lowPriority:
+    $ref: ./AdminInvocationMetricV2.yaml
+  unattended:
+    $ref: ./AdminInvocationMetricV2.yaml
+  unauthenticated:
+    $ref: ./AdminInvocationMetricV2.yaml
+  secondary:
+    $ref: ./AdminInvocationMetricV2.yaml
+  largeSecondary:
+    $ref: ./AdminInvocationMetricV2.yaml
+type: object
+required:
+  - highPriority
+  - largePayload
+  - lowPriority
+  - unattended
+  - unauthenticated
+x-conditional:
+  - secondary
+  - largeSecondary

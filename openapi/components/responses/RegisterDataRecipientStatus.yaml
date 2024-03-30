@@ -1,0 +1,11 @@
+description: Success
+content:
+  application/json:
+    schema:
+      oneOf:
+        - $ref: ../schemas/ResponseRegisterDataHolderStatusListV1.yaml
+headers:
+  x-v:
+    $ref: ../headers/XV.yaml
+  Etag:
+    $ref: ../headers/Etag.yaml

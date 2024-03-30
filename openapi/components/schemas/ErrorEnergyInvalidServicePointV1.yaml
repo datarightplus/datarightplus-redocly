@@ -1,0 +1,28 @@
+type: object
+properties:
+  code:
+    description: Holds an end point specific error code. This MAY be a standard CDR error code or an application-specific error code.
+    type: string
+    default: "urn:au-cds:error:cds-energy:Authorisation/InvalidServicePoint"
+  title:
+    description: Holds a human readable label of the error that is constant per code
+    type: string
+    default: Invalid Service Point
+  detail:
+    description: The requested service point is permanently unavailable. No subsequent request for the service point will be successful. Applies when the service point is provided in the URI. The error detail is the service point ID of the resource being requested. This error code MUST be supported for authenticated APIs.
+    type: string
+    example: "The requested service point is permanently unavailable."
+  meta:
+    description: Holds additional end point specific data relevant to the error
+    properties:
+      urn:
+        description: Holds a standard CDR error code
+        type: string
+        format: uri
+        x-cds-type: URIString
+        default: "urn:au-cds:error:cds-energy:Authorisation/InvalidServicePoint"
+    type: object
+required:
+  - code
+  - title
+  - detail

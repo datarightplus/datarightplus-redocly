@@ -1,0 +1,35 @@
+description: Represents a regular direct debit from a specified bank account.
+  Mandatory if paymentScheduleUType is set to directDebit
+properties:
+  isTokenised:
+    description: Flag indicating that the account details are tokenised, or
+      held in a closed system, and is not accessible through any other channels.
+      False if absent
+    type: boolean
+  bsb:
+    description: The unmasked BSB for the account to be debited. Is expected
+      to be formatted as digits only with leading zeros included and no punctuation
+      or spaces.  Is required if isTokenised is absent or false
+    type: string
+  accountNumber:
+    description: The unmasked account number for the account to be debited.
+      Is expected to be formatted as digits only with leading zeros included
+      and no punctuation or spaces.  Is required if isTokenised is absent or
+      false
+    type: string
+  paymentFrequency:
+    description: The frequency that payments will occur.  Formatted according
+      to [ISO 8601 Durations](https://en.wikipedia.org/wiki/ISO_8601#Durations)
+      (excludes recurrence syntax)
+    type: string
+    x-cds-type: DurationString
+    example: "P3M"
+  calculationType:
+    $ref: ./EnumEnergyPaymentScheduleCalculationTypeV1.yaml
+required:
+  - calculationType
+  - paymentFrequency
+type: object
+x-conditional:
+  - bsb
+  - accountNumber

@@ -1,0 +1,25 @@
+description: A discount for on time payment
+properties:
+  discountAmount:
+    description: The amount that will be discounted if the invoice is paid by
+      the date specified
+    type: string
+    x-cds-type: AmountString
+    example: "5.00"
+  gstAmount:
+    description: The GST amount that will be discounted if the invoice is paid
+      by the date specified.  If absent then zero is assumed
+    type: string
+    x-cds-type: AmountString
+    example: "0.50"
+  date:
+    description: The date by which the invoice must be paid to receive the pay
+      on time discount
+    type: string
+    format: date
+    x-cds-type: DateString
+    example: "2022-07-15"
+required:
+  - date
+  - discountAmount
+type: object

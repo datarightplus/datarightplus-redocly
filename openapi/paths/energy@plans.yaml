@@ -1,0 +1,34 @@
+get:
+  summary: Get Energy Plans
+  description: >-
+    Obtain a list of energy plans that are currently offered to the market.
+
+    Note that the results returned by this end point are expected to be ordered in descending order according to `lastUpdated`.
+  operationId: listEnergyPlans
+  parameters:
+    - $ref: ../components/parameters/QueryEnergyPlanType.yaml
+    - $ref: ../components/parameters/QueryEnergyFuelType.yaml
+    - $ref: ../components/parameters/QueryProductEffective.yaml
+    - $ref: ../components/parameters/QueryUpdatedSince.yaml
+    - $ref: ../components/parameters/QueryProductBrand.yaml
+    - $ref: ../components/parameters/QueryPage.yaml
+    - $ref: ../components/parameters/QueryPageSize.yaml
+    - $ref: ../components/parameters/HeaderXV.yaml
+    - $ref: ../components/parameters/HeaderXMinV.yaml
+  responses:
+    200:
+      $ref: ../components/responses/ListEnergyPlans.yaml
+    400:
+      $ref: ../components/responses/ListEnergyPlans400.yaml
+    406:
+      $ref: ../components/responses/ListEnergyPlans406.yaml
+    422:
+      $ref: ../components/responses/ListEnergyPlans422.yaml
+    500:
+      $ref: ../components/responses/Generic500.yaml
+    503:
+      $ref: ../components/responses/Generic503.yaml
+  security: []
+  tags:
+    - Energy Plans
+  x-version: '1'

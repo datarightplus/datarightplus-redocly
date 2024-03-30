@@ -1,0 +1,32 @@
+properties:
+  accountId:
+    description: The ID of the account.  To be created in accordance with CDR
+      ID permanence requirements
+    type: string
+    example: "jdnmwucgrchzngrqieryhiovpvzknokkwsediggdlnxgxizegvwpwfflgavkrbay"
+  accountNumber:
+    description: Optional identifier of the account as defined by the Provider.  This
+      must be the value presented on physical statements (if it exists) and
+      must not be used for the value of accountId
+    type: string
+    example: "28326662"
+  displayName:
+    description: An optional display name for the account if one exists or can
+      be derived.  The content of this field is at the discretion of the data
+      holder
+    type: string
+    example: "My Home Energy"
+  openStatus:
+    $ref: ./EnumEnergyAccountOpenStatusV1.yaml
+  creationDate:
+    description: The date that the account was created or opened. Mandatory
+      if openStatus is OPEN
+    type: string
+    format: date
+    x-cds-type: DateString
+    example: "2021-08-03"
+required:
+  - accountId
+type: object
+x-conditional:
+  - creationDate

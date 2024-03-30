@@ -1,0 +1,9 @@
+properties:
+  cardNumber:
+    description: Number of the card to pay to
+    type: string
+    x-cds-type: MaskedPANString
+    example: "XXXX-XXXX-XXXX-1234"
+required:
+  - cardNumber
+type: object

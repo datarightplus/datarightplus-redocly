@@ -1,0 +1,20 @@
+description: Average transactions per second over time
+properties:
+  currentDay:
+    description: Average TPS for current day. Must be a positive value or zero
+    type: number
+    minimum: 0
+    example: 5.22
+  previousDays:
+    description: Average TPS for previous days. The first element indicates
+      yesterday and so on. A maximum of seven entries is required if available.
+      Values must be a positive or zero
+    items:
+      type: number
+      minimum: 0
+    type: array
+    example: [1.22, 1.22, 0.22, 2.22, 3.66, 4.22, 9.22]
+type: object
+x-conditional:
+  - currentDay
+  - previousDays

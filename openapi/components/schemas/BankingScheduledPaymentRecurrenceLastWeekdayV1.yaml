@@ -1,0 +1,42 @@
+description: >-
+  Indicates that the schedule of payments is defined according to the last
+  occurrence of a specific weekday in an interval. Mandatory if recurrenceUType
+  is set to lastWeekDay
+properties:
+  finalPaymentDate:
+    description: >-
+      The limit date after which no more payments should be made using this
+      schedule. If both finalPaymentDate and paymentsRemaining are present then
+      payments will stop according to the most constraining value. If neither
+      field is present the payments will continue indefinitely
+    type: string
+    format: date
+    x-cds-type: DateString
+    example: "2023-05-01"
+  interval:
+    description: >-
+      The interval for the payment. Formatted according to [ISO 8601
+      Durations](https://en.wikipedia.org/wiki/ISO_8601#Durations) (excludes
+      recurrence syntax) with components less than a day in length ignored. This
+      duration defines the period between payments starting with nextPaymentDate
+    type: string
+    x-cds-type: DurationString
+    example: "P1D"
+  lastWeekDay:
+    $ref: ./EnumWeekDayV1.yaml
+  nonBusinessDayTreatment:
+    $ref: ./EnumBankingNonBusinessDayTreatmentV1.yaml
+  paymentsRemaining:
+    description: >-
+      Indicates the number of payments remaining in the schedule. If both
+      finalPaymentDate and paymentsRemaining are present then payments will stop
+      according to the most constraining value. If neither field is present the
+      payments will continue indefinitely
+    type: integer
+    x-cds-type: PositiveInteger
+    minimum: 1
+    example: 1
+required:
+  - interval
+  - lastWeekDay
+type: object

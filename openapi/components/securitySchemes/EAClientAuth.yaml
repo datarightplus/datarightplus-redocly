@@ -1,0 +1,9 @@
+type: oauth2
+description: Ecosystem Authority Client authentication. This is the authentication profile for the Ecosystem Authority 
+  to access Provider and Initiator endpoints.
+flows:
+  clientCredentials:
+    tokenUrl: https://idp.holder.cdr/token
+    scopes:
+      "admin:metadata:update": Update notification accessible ONLY to the Ecosystem Authority. If the Provider uses Private Key JWT Client Authentication to authenticate the Ecosystem Authority, this scope is required. Includes permission to notify Providers of changes to Initiator metadata held by the Ecosystem Authority.
+      "admin:metrics.basic:read": Metrics data accessible ONLY to the Ecosystem Authority. If the Provider uses Private Key JWT Client Authentication to authenticate the Ecosystem Authority, this scope is required. Includes access to basic Metrics data.

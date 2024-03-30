@@ -1,0 +1,26 @@
+description: Charge tier based on the percentage of green power used for the period implied by the type.
+properties:
+  percentGreen:
+    description: The upper percentage of green power used applicable
+      for this tier
+    type: string
+    x-cds-type: RateString
+    example: "0.90"
+  rate:
+    description: The rate of the charge if the type implies the
+      application of a rate
+    type: string
+    x-cds-type: RateString
+    example: "0.345"
+  amount:
+    description: The amount of the charge if the type implies the
+      application of a fixed amount
+    type: string
+    x-cds-type: AmountString
+    example: "10.00"
+required:
+  - percentGreen
+type: object
+x-conditional:
+  - rate
+  - amount

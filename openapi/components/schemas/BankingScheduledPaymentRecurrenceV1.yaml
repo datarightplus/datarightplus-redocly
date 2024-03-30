@@ -1,0 +1,33 @@
+description: Object containing the detail of the schedule for the payment
+properties:
+  eventBased:
+    $ref: ./BankingScheduledPaymentRecurrenceEventBasedV1.yaml
+  intervalSchedule:
+    $ref: ./BankingScheduledPaymentRecurrenceIntervalScheduleV1.yaml
+  lastWeekDay:
+    $ref: ./BankingScheduledPaymentRecurrenceLastWeekdayV1.yaml
+  nextPaymentDate:
+    description: The date of the next payment under the recurrence schedule
+    type: string
+    format: date
+    x-cds-type: DateString
+    example: "2022-09-13"
+  onceOff:
+    $ref: ./BankingScheduledPaymentRecurrenceOnceOffV1.yaml
+  recurrenceUType:
+    description: The type of recurrence used to define the schedule
+    enum:
+      - eventBased
+      - intervalSchedule
+      - lastWeekDay
+      - onceOff
+    type: string
+    example: "intervalSchedule"
+required:
+  - recurrenceUType
+type: object
+x-conditional:
+  - onceOff
+  - intervalSchedule
+  - lastWeekDay
+  - eventBased

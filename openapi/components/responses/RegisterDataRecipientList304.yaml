@@ -1,0 +1,4 @@
+description: Not Modified - The current representation of the target resource matches with the entity-tag provided in the If-None-Match request header
+headers:
+  Etag:
+    $ref: ../headers/Etag.yaml

@@ -1,0 +1,8 @@
+description: Filter results based on a specific brand. If absent defaults to include all plans.
+explode: true
+in: query
+name: brand
+required: false
+schema:
+  type: string
+style: form

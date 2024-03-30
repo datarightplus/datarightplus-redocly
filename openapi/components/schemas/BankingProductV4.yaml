@@ -1,0 +1,80 @@
+properties:
+  additionalInformation:
+    $ref: ./BankingProductAdditionalInformationV2.yaml
+  applicationUri:
+    description: A link to an application web page where this product can be applied for.
+    type: string
+    format: uri
+    x-cds-type: URIString
+  brand:
+    description: >-
+      A label of the brand for the product. Able to be used for filtering. For
+      Providers with single brands this value is still required
+    type: string
+    example: "ACME"
+  brandName:
+    description: An optional display name of the brand
+    type: string
+  cardArt:
+    description: An array of card art images
+    items:
+      $ref: ./BankingProductCardArtV1.yaml
+    type: array
+  description:
+    description: A description of the product
+    type: string
+    example: "An amazing example product"
+  effectiveFrom:
+    description: >-
+      The date and time from which this product is effective (ie. is available
+      for origination).  Used to enable the articulation of products to the
+      regime before they are available for customers to originate
+    type: string
+    format: date-time
+    x-cds-type: DateTimeString
+  effectiveTo:
+    description: >-
+      The date and time at which this product will be retired and will no longer
+      be offered.  Used to enable the managed deprecation of products
+    type: string
+    format: date-time
+    x-cds-type: DateTimeString
+  isTailored:
+    description: >-
+      Indicates whether the product is specifically tailored to a circumstance. 
+      In this case fees and prices are significantly negotiated depending on
+      context. While all products are open to a degree of tailoring this flag
+      indicates that tailoring is expected and thus that the provision of
+      specific fees and rates is not applicable
+    type: boolean
+    example: true
+  lastUpdated:
+    description: >-
+      The last date and time that the information for this product was changed
+      (or the creation date for the product if it has never been altered)
+    type: string
+    format: date-time
+    x-cds-type: DateTimeString
+    example: "2022-08-20T03:01:42+00:00"
+  name:
+    description: The display name of the product
+    type: string
+    example: "Example Product"
+  productCategory:
+    $ref: ./EnumBankingProductCategoryV1.yaml
+  productId:
+    description: >-
+      A Provider specific unique identifier for this product. This identifier
+      must be unique to a product but does not otherwise need to adhere to ID
+      permanence guidelines.
+    type: string
+    example: "9bf2cae7-ca32-4124-905b-68404de9628f"
+required:
+  - brand
+  - description
+  - isTailored
+  - lastUpdated
+  - name
+  - productCategory
+  - productId
+type: object

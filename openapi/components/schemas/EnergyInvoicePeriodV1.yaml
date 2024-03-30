@@ -1,0 +1,20 @@
+description: Object containing the start and end date for the period covered
+  by the invoice.  Mandatory if any usage or demand based charges are included
+  in the invoice
+properties:
+  startDate:
+    description: The start date of the period covered by this invoice
+    type: string
+    format: date
+    x-cds-type: DateString
+    example: "2022-01-01"
+  endDate:
+    description: The end date of the period covered by this invoice
+    type: string
+    format: date
+    x-cds-type: DateString
+    example: "2022-06-30"
+required:
+  - endDate
+  - startDate
+type: object

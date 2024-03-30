@@ -1,0 +1,19 @@
+description: Represents a regular credit card payment schedule. Mandatory if
+  paymentScheduleUType is set to cardDebit
+properties:
+  cardScheme:
+    $ref: ./EnumBankingCardSchemeV1.yaml
+  paymentFrequency:
+    description: The frequency that payments will occur.  Formatted according
+      to [ISO 8601 Durations](https://en.wikipedia.org/wiki/ISO_8601#Durations)
+      (excludes recurrence syntax)
+    type: string
+    x-cds-type: DurationString
+    example: "P3M"
+  calculationType:
+    $ref: ./EnumEnergyPaymentScheduleCalculationTypeV1.yaml
+required:
+  - calculationType
+  - cardScheme
+  - paymentFrequency
+type: object

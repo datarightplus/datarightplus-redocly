@@ -1,0 +1,63 @@
+get:
+  description: >-
+    Get the Initiator Registration for a given OAuth2 Client identifier.
+  operationId: dcrGet
+  parameters:
+    - $ref: ../components/parameters/PathClientId.yaml
+  responses:
+    200:
+      $ref: ../components/responses/DCRRegister.yaml
+    401:
+      $ref: ../components/responses/DCRRegister401.yaml
+    403:
+      description: The Initiator does not have permission to read, update or delete the OAuth2 Client
+  summary: Get Initiator Registration
+  tags:
+    - Dynamic Client Registration
+  x-version: '1'
+  security:
+    - ProviderAuth: ['cdr:registration']
+put:
+  description: >-
+    Update a Initiator Registration for a given OAuth2 Client ID.
+  operationId: dcrUpdate
+  requestBody:
+    $ref: ../components/requestBodies/ClientRegistrationRequest.yaml
+  parameters:
+    - $ref: ../components/parameters/PathClientId.yaml
+  responses:
+    200:
+      $ref: ../components/responses/DCRRegister.yaml
+    400:
+      $ref: ../components/responses/DCRRegister400.yaml
+    401:
+      $ref: ../components/responses/DCRRegister401.yaml
+    403:
+      description: The client does not have permission to read, update or delete the Client
+  summary: Update Initiator Registration
+  tags:
+    - Dynamic Client Registration
+  x-version: '1'
+  security:
+    - ProviderAuth: ['cdr:registration']
+delete:
+  description: >-
+    Delete an Initiator Registration for a given OAuth2 Client ID.
+  operationId: dcrDelete
+  parameters:
+    - $ref: ../components/parameters/PathClientId.yaml
+  responses:
+    204:
+      description: Client deleted
+    401:
+      $ref: ../components/responses/DCRRegister401.yaml
+    403:
+      description: The provided OAuth2 Client does not have permission to read, update or delete the registration
+    405:
+      description: Method Not Allowed. The requested method is unsupported.
+  summary: Delete Initiator Registration
+  tags:
+    - Dynamic Client Registration
+  x-version: '1'
+  security:
+    - ProviderAuth: ['cdr:registration']

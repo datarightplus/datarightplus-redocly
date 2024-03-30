@@ -1,0 +1,9 @@
+description: The type of usage that the rate applies to
+enum:
+  - PEAK
+  - OFF_PEAK
+  - SHOULDER
+  - SHOULDER1
+  - SHOULDER2
+type: string
+example: PEAK

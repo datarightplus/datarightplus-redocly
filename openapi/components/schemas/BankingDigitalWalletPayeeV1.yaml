@@ -1,0 +1,19 @@
+properties:
+  name:
+    description: The display name of the wallet as given by the customer, else a default value defined by the Provider
+    type: string
+    example: "My Digital Wallet"
+  identifier:
+    description: The identifier of the digital wallet (dependent on type)
+    type: string
+    example: "user@digital.wallet.com"
+  type:
+    $ref: ./EnumBankingPayeeDigitalWalletTypeV1.yaml
+  provider:
+    $ref: ./EnumBankingPayeeDigitalWalletProviderV1.yaml
+required:
+  - name
+  - identifier
+  - type
+  - provider
+type: object
