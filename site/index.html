@@ -61,14 +61,24 @@
     $listitem.innerText = "<< Return to DataRight+";
     $listitem.addEventListener('click', function() { window.location = "https://dataright.plus";});
     $list.appendChild($listitem);
+    $listitem.innerText = "latest";
+    $listitem.setAttribute('data-link', "openapi.yaml");
+    $listitem.addEventListener('click', onClick);
+    $list.appendChild($listitem);
 
-    apis.forEach(function(api) {
-      var $listitem = document.createElement('li');
-      $listitem.setAttribute('data-link', api.url);
-      $listitem.innerText = api.name;
-      $listitem.addEventListener('click', onClick);
-      $list.appendChild($listitem);
-    });
+    (async () => {
+      const res = await fetch('https://api.github.com/repos/datarightplus/datarightplus-redocly/releases', {
+        headers: { Accept: 'application/json' },
+      });
+      const json = await res.json();
+      json.forEach((release) => {
+        var $listitem = document.createElement('li');
+        $listitem.setAttribute('data-link', release.assets.filter(function (entry) { return entry.name == "openapi.yaml"; })[0].browser_download_url);
+        $listitem.innerText = release.name;
+        $listitem.addEventListener('click', onClick);
+        $list.appendChild($listitem);
+      });
+    })();
   </script>
   </body>
 </html>
