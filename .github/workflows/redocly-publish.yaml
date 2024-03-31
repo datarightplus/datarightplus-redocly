@@ -38,9 +38,12 @@ jobs:
   produce-release:
     runs-on: ubuntu-latest
     needs: build-redocly
+    on:
+      push:
+        tags:
+          - 'v*'
     steps:
       - name: Create Release from Tag
-        if: startsWith(github.event.ref, 'refs/tags/v')
         id: create_release
         uses: actions/create-release@v1
         env:
@@ -52,7 +55,6 @@ jobs:
           prerelease: false
       - name: Upload Release Asset
         uses: actions/upload-release-asset@v1
-        if: startsWith(github.event.ref, 'refs/tags/v')
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
