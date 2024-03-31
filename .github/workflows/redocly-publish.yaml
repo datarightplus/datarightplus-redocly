@@ -59,7 +59,7 @@ jobs:
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           branch: main
-          commit_message: 'docs: commit updated CHANGELOG and tagged specification for ${{ github.ref_name }}'
+          commit_message: 'docs: commit updated CHANGELOG and tagged specification for ${{ github.ref_name }} [skip ci]'
           file_pattern: "CHANGELOG.md site/releases/openapi-${{ github.ref_name }}.yaml site/releases/index.json"
   deploy-pages:
     if: github.ref == 'refs/heads/main' || startsWith(github.event.ref, 'refs/tags/v')
