@@ -60,7 +60,7 @@ jobs:
         if: startsWith(github.event.ref, 'refs/tags/v')
         run: |
           cp site/openapi.yaml site/releases/openapi-${{ github.ref_name }}.yaml
-          curl https://api.github.com/repos/datarightplus/datarightplus-redocly/releases > releases/index.json
+          curl https://api.github.com/repos/datarightplus/datarightplus-redocly/releases > site/releases/index.json
       - name: Commit Releases OpenAPI Specification
         if: startsWith(github.event.ref, 'refs/tags/v')
         uses: stefanzweifel/git-auto-commit-action@v5
