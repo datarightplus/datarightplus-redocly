@@ -27,6 +27,7 @@ jobs:
         uses: requarks/changelog-action@v1
         with:
           includeInvalidCommits: true
+          excludeTypes: ""
           token: ${{ github.token }}
           tag: ${{ github.ref_name }}
       - uses: ncipollo/release-action@v1
