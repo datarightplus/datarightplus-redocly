@@ -47,7 +47,7 @@
   <script>
     const searchParams = new URLSearchParams(window.location.search);
     if(searchParams.has('v')) {
-      Redoc.init(`releases-${searchParams.get('v')}`);
+      Redoc.init(`releases-${searchParams.get('v')}.yaml`);
     } else {
       Redoc.init("openapi.yaml");
     }
@@ -75,7 +75,7 @@
         var $listitem = document.createElement('option');
         $listitem.setAttribute('value', `releases/openapi-${release.name}.yaml`);
         $listitem.innerText = release.name;
-        if(release.name == searchParams.has('v')) {
+        if(searchParams.has('v') && release.name == searchParams.get('v')) {
           $listitem.setAttribute("selected", true);
         }
         $list.appendChild($listitem);
