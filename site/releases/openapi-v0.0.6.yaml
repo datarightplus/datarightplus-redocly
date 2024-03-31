@@ -1,22 +1,22 @@
 openapi: 3.0.0
 info:
   contact:
-    email: hello@drplus.au
+    email: hello@dataright.plus
     name: DataRight Plus
-    url: https://drplus.au/
+    url: https://dataright.plus/
   description: |
-    This is the DataRight Plus (DR+) Redocly repository containing the collation of DR+ Application Programming Interfaces (APIs).
+    This is the DataRight Plus (DataRight+) Redocly repository containing the collation of DataRight+ Application Programming Interfaces (APIs).
   license:
     name: MIT
-    url: https://drplus.au/
-  title: 'DR+: Redocly'
+    url: https://dataright.plus/
+  title: 'DataRight+: Redocly'
   version: v0.0.6
 servers:
-  - url: https://api.provider.drplus.au/cds-au/v1
+  - url: https://api.provider.dataright.plus/cds-au/v1
     description: Example Base URL for a Provider
-  - url: https://api.register.drplus.au
+  - url: https://api.register.dataright.plus
     description: Example TLS Register Base URI
-  - url: https://secure.api.register.drplus.au
+  - url: https://secure.api.register.dataright.plus
     description: Example MTLS Register Base URI
 tags:
   - name: Admin
@@ -4908,7 +4908,7 @@ components:
         identifier:
           description: The identifier of the PayID (dependent on type)
           type: string
-          example: hello@drplus.au
+          example: hello@dataright.plus
         name:
           description: The name assigned to the PayID by the owner of the PayID
           type: string
