@@ -21,6 +21,13 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           path: "./site"
+      - uses: ncipollo/release-action@v1
+        if: startsWith(github.event.ref, 'refs/tags/v')
+        with:
+          artifacts: "site/openapi.yaml"
+          artifactContentType: "application/yaml"
+          replacesArtifacts: true
+          removeArtifacts: true
   deploy-pages:
     if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
@@ -35,27 +42,4 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-  produce-release:
-    runs-on: ubuntu-latest
-    needs: build-redocly
-    if: startsWith(github.event.ref, 'refs/tags/v')
-    steps:
-      - name: Create Release from Tag
-        id: create_release
-        uses: actions/create-release@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          tag_name: ${{ github.ref }}
-          release_name: Release ${{ github.ref }}
-          draft: true
-          prerelease: false
-      - name: Upload Release Asset
-        uses: actions/upload-release-asset@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ./site/openapi.yaml
-          asset_name: openapi.yaml
-          asset_content_type: application/yaml
+
