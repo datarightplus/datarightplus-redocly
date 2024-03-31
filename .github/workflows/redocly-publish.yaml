@@ -58,14 +58,16 @@ jobs:
           file_pattern: CHANGELOG.md
       - name: Copy openapi to release location
         if: startsWith(github.event.ref, 'refs/tags/v')
-        run: "cp site/openapi.yaml site/releases/openapi-${{ github.ref_name }}.yaml"
+        run: |
+          cp site/openapi.yaml site/releases/openapi-${{ github.ref_name }}.yaml
+          curl https://api.github.com/repos/datarightplus/datarightplus-redocly/releases > releases/index.json
       - name: Commit Releases OpenAPI Specification
         if: startsWith(github.event.ref, 'refs/tags/v')
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           branch: main
-          commit_message: 'docs: update CHANGELOG.md for ${{ github.ref_name }} [skip ci]'
-          file_pattern: "site/releases/openapi-${{ github.ref_name }}.yaml"
+          commit_message: 'docs: commit tagged specification for ${{ github.ref_name }} [skip ci]'
+          file_pattern: "site/releases/openapi-${{ github.ref_name }}.yaml site/releases/index.json"
   deploy-pages:
     if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
