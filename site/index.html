@@ -45,11 +45,18 @@
   <redoc scroll-y-offset="body > nav"></redoc>
   <script src="https://cdn.redoc.ly/redoc/latest/bundles/redoc.standalone.js"></script>
   <script>
-    Redoc.init("openapi.yaml");
+    const searchParams = new URLSearchParams(window.location.search);
+    if(searchParams.has('v')) {
+      Redoc.init(`releases-${searchParams.get('v')}`);
+    } else {
+      Redoc.init("openapi.yaml");
+    }
 
     function changeVersion(selected) {
       Redoc.init(selected.value);
     }
+
+
 
     function onClick() {
       var url = this.getAttribute('data-link');
@@ -68,6 +75,9 @@
         var $listitem = document.createElement('option');
         $listitem.setAttribute('value', `releases/openapi-${release.name}.yaml`);
         $listitem.innerText = release.name;
+        if(release.name == searchParams.has('v')) {
+          $listitem.setAttribute("selected", true);
+        }
         $list.appendChild($listitem);
       });
     })();
