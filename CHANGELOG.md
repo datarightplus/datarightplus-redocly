@@ -4,6 +4,15 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [v0.0.6] - 2024-03-31
+### :memo: Documentation Changes
+- [`8047a0c`](https://github.com/datarightplus/datarightplus-redocly/commit/8047a0c02080078a0af0ce1624ebffd79be45501) - update CHANGELOG.md for v0.0.5 [skip ci] *(commit by [@perlboy](https://github.com/perlboy))*
+
+### :flying_saucer: Other Changes
+- [`77e46a5`](https://github.com/datarightplus/datarightplus-redocly/commit/77e46a5d5517e606a5d3791b17eefc30ac399f04) - Fix bug *(commit by [@perlboy](https://github.com/perlboy))*
+- [`ed8a2f2`](https://github.com/datarightplus/datarightplus-redocly/commit/ed8a2f27f0bfdeea528a38a45adefb4401350df6) - Merge branch 'main' of github.com:datarightplus/datarightplus-redocly *(commit by [@perlboy](https://github.com/perlboy))*
+
+
 ## [v0.0.5] - 2024-03-31
 ### :memo: Documentation Changes
 - [`d7ebd58`](https://github.com/datarightplus/datarightplus-redocly/commit/d7ebd58119d4d4894c547385c49ef980c967d7ed) - update CHANGELOG.md for v0.0.4 [skip ci] *(commit by [@perlboy](https://github.com/perlboy))*
@@ -44,3 +53,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [v0.0.3]: https://github.com/datarightplus/datarightplus-redocly/compare/v0.0.2...v0.0.3
 [v0.0.4]: https://github.com/datarightplus/datarightplus-redocly/compare/v0.0.3...v0.0.4
 [v0.0.5]: https://github.com/datarightplus/datarightplus-redocly/compare/v0.0.4...v0.0.5
+[v0.0.6]: https://github.com/datarightplus/datarightplus-redocly/compare/v0.0.5...v0.0.6
