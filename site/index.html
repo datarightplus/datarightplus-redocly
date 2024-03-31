@@ -20,13 +20,13 @@
       #links_container {
         margin: 0;
         padding: 0;
-        background-color: #0033a0;
+        background-color: rgb(245, 246, 250);
       }
 
       #links_container li {
         display: inline-block;
         padding: 10px;
-        color: white;
+        color: rgb(114, 83, 237);
         cursor: pointer;
       }
     </style>
@@ -35,15 +35,14 @@
 
   <!-- Top navigation placeholder -->
   <nav>
-    <ul id="links_container">
-    </ul>
+    <ul id="links_container"></ul>
   </nav>
   <redoc scroll-y-offset="body > nav"></redoc>
   <script src="https://cdn.redoc.ly/redoc/latest/bundles/redoc.standalone.js"></script>
   <script>
     var apis = [
       {
-        name: 'latest',
+        name: 'latest2',
         url: 'openapi.yaml'
       }
     ];
@@ -58,6 +57,11 @@
 
     // dynamically building navigation items
     var $list = document.getElementById('links_container');
+    var $listitem = document.createElement('li');
+    $listitem.innerText = "<< Return to DataRight+";
+    $listitem.addEventListener('click', function() { window.location = "https://dataright.plus";});
+    $list.appendChild($listitem);
+
     apis.forEach(function(api) {
       var $listitem = document.createElement('li');
       $listitem.setAttribute('data-link', api.url);
