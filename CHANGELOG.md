@@ -4,6 +4,17 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [v0.0.7] - 2024-03-31
+### :memo: Documentation Changes
+- [`54bca01`](https://github.com/datarightplus/datarightplus-redocly/commit/54bca0113bbbb1ab7372ee9c3d1b1c99ece2d793) - update CHANGELOG.md for v0.0.6 [skip ci] *(commit by [@perlboy](https://github.com/perlboy))*
+- [`0deac16`](https://github.com/datarightplus/datarightplus-redocly/commit/0deac16b9044bb4629f23a3d8dc3af656b47224e) - commit tagged specification for v0.0.6 [skip ci] *(commit by [@perlboy](https://github.com/perlboy))*
+
+### :flying_saucer: Other Changes
+- [`1153ce2`](https://github.com/datarightplus/datarightplus-redocly/commit/1153ce2dee47d5babbd9e99ccb4c6bafef2f5f33) - Trigger deploy if tags driven *(commit by [@perlboy](https://github.com/perlboy))*
+- [`c610628`](https://github.com/datarightplus/datarightplus-redocly/commit/c610628ba74ad974732534a7986d8f7180b3166c) - Merge branch 'main' of github.com:datarightplus/datarightplus-redocly *(commit by [@perlboy](https://github.com/perlboy))*
+- [`9f2ef65`](https://github.com/datarightplus/datarightplus-redocly/commit/9f2ef656cf96ccae01cd8ca75dc785b53e543a60) - Trigger deploy if tags driven [#2](https://github.com/datarightplus/datarightplus-redocly/pull/2) *(commit by [@perlboy](https://github.com/perlboy))*
+
+
 ## [v0.0.6] - 2024-03-31
 ### :memo: Documentation Changes
 - [`8047a0c`](https://github.com/datarightplus/datarightplus-redocly/commit/8047a0c02080078a0af0ce1624ebffd79be45501) - update CHANGELOG.md for v0.0.5 [skip ci] *(commit by [@perlboy](https://github.com/perlboy))*
@@ -54,3 +65,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [v0.0.4]: https://github.com/datarightplus/datarightplus-redocly/compare/v0.0.3...v0.0.4
 [v0.0.5]: https://github.com/datarightplus/datarightplus-redocly/compare/v0.0.4...v0.0.5
 [v0.0.6]: https://github.com/datarightplus/datarightplus-redocly/compare/v0.0.5...v0.0.6
+[v0.0.7]: https://github.com/datarightplus/datarightplus-redocly/compare/v0.0.6...v0.0.7
