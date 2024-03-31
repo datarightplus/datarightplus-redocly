@@ -10,7 +10,7 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '18.x'
-      - name: Update values.yaml
+      - name: Update openapi.yaml
         if: startsWith(github.event.ref, 'refs/tags/v')
         uses: fjogeleit/yaml-update-action@main
         with:

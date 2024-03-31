@@ -35,20 +35,21 @@
 
   <!-- Top navigation placeholder -->
   <nav>
-    <ul id="links_container"></ul>
+    <ul id="links_container">
+      <li onclick="window.location = 'https://dataright.plus'">&lt;&lt; Return to DataRight+</li>
+      Version: <select id="selectVersion" onchange="changeVersion(this)">
+        <option value="openapi.yaml">latest</option>
+      </select>
+    </ul>
   </nav>
   <redoc scroll-y-offset="body > nav"></redoc>
   <script src="https://cdn.redoc.ly/redoc/latest/bundles/redoc.standalone.js"></script>
   <script>
-    var apis = [
-      {
-        name: 'latest',
-        url: 'openapi.yaml'
-      }
-    ];
+    Redoc.init("openapi.yaml");
 
-    // initially render first API
-    Redoc.init(apis[0].url);
+    function changeVersion(selected) {
+      Redoc.init(selected.value);
+    }
 
     function onClick() {
       var url = this.getAttribute('data-link');
@@ -56,16 +57,7 @@
     }
 
     // dynamically building navigation items
-    var $list = document.getElementById('links_container');
-    var $listitem = document.createElement('li');
-    $listitem.innerText = "<< Return to DataRight+";
-    $listitem.addEventListener('click', function() { window.location = "https://dataright.plus";});
-    $list.appendChild($listitem);
-    $listitem = document.createElement('li');
-    $listitem.innerText = "latest";
-    $listitem.setAttribute('data-link', "openapi.yaml");
-    $listitem.addEventListener('click', onClick);
-    $list.appendChild($listitem);
+    var $list = document.getElementById('selectVersion');
 
     (async () => {
       const res = await fetch('https://api.github.com/repos/datarightplus/datarightplus-redocly/releases', {
@@ -73,10 +65,9 @@
       });
       const json = await res.json();
       json.forEach((release) => {
-        var $listitem = document.createElement('li');
-        $listitem.setAttribute('data-link', `releases/openapi-${release.name}.yaml`);
+        var $listitem = document.createElement('option');
+        $listitem.setAttribute('value', `releases/openapi-${release.name}.yaml`);
         $listitem.innerText = release.name;
-        $listitem.addEventListener('click', onClick);
         $list.appendChild($listitem);
       });
     })();
