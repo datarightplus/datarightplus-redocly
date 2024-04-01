@@ -1,15 +1,25 @@
-# Consumer Data Standards Redocs
+# DataRight+: Redocly
 
-This repository contains a [Redoc](https://github.com/Redocly/redoc) implementation of the [Consumer Data Standards](https://consumerdatastandardsaustralia.github.io/standards) governing the [Consumer Data Right](https://www.accc.gov.au/focus-areas/consumer-data-right-cdr-0).
+This repository contains a [Redocly](https://github.com/Redocly/redoc) repository providing an OpenAPI 3 formatted specification of the resource endpoints described within the [DataRight+](https://dataright.plus) initiative.
 
-## Current Status
+# Contributing
 
-We believe this documentation is currently up to date with **1.11.1** of the Standards with respect to the payloads.
+We utilise a Git Flow approach and encourage people to install the [git-flow](https://danielkummer.github.io/git-flow-cheatsheet/) toolset. When performing `git flow init` be sure to specify a blank tag prefix as we utilise RFC style tagging.
 
-## Enhancements
+All changes should be presented as pull requests on `develop`
 
-We have utilised the additional features OpenAPI 3 delivers to provide enhancements over and above the published Standards. These include:
+# Releasing
 
-- Use of `oneOf` notation providing for the describing of version based responses
-- Use of `allOf` for compound definitions
-- String `format` entries to provide hints of string type
+The published version of this specification is _always_ based on the current `develop` branch with tags being used to track checkpoints, generate releases and provide static exports of the agreed versions.
+
+## Creating a Release
+
+The following is shorthand for how to create a release:
+1. Ensure all changes are committed
+2. Run `git flow release start RELEASENAME` where RELEASENAME _should_ be an RFC style name such as `ID1`
+3. Modify the version number in `openapi/openapi.yaml` to match the release name. This is not strictly necessary as the CI/CD process will set it specifically to the tag value.
+4. Run `git flow release finish RELEASENAME`
+5. Push the tags with `git push origin --tags`
+6. Push the main branch `git push origin main`
+7. Push the develop branch `git push origin develop`
+

@@ -11,7 +11,7 @@ jobs:
         with:
           node-version: '18.x'
       - name: Update openapi.yaml
-        if: startsWith(github.event.ref, 'refs/tags/v')
+        if: startsWith(github.event.ref, 'refs/tags/')
         uses: fjogeleit/yaml-update-action@main
         with:
           valueFile: 'openapi/openapi.yaml'
@@ -30,7 +30,7 @@ jobs:
         with:
           path: "./site"
       - name: Update CHANGELOG
-        if: startsWith(github.event.ref, 'refs/tags/v')
+        if: startsWith(github.event.ref, 'refs/tags/')
         id: changelog
         uses: requarks/changelog-action@v1
         with:
@@ -39,7 +39,7 @@ jobs:
           token: ${{ github.token }}
           tag: ${{ github.ref_name }}
       - uses: ncipollo/release-action@v1
-        if: startsWith(github.event.ref, 'refs/tags/v')
+        if: startsWith(github.event.ref, 'refs/tags/')
         with:
           artifacts: "site/openapi.yaml"
           artifactContentType: "application/yaml"
@@ -50,12 +50,12 @@ jobs:
           makeLatest: true
           body: ${{ steps.changelog.outputs.changes }}
       - name: Copy openapi to release location
-        if: startsWith(github.event.ref, 'refs/tags/v')
+        if: startsWith(github.event.ref, 'refs/tags/')
         run: |
           cp site/openapi.yaml site/releases/openapi-${{ github.ref_name }}.yaml
           curl https://api.github.com/repos/datarightplus/datarightplus-redocly/releases > site/releases/index.json
       - name: Commit Releases OpenAPI Specification
-        if: startsWith(github.event.ref, 'refs/tags/v')
+        if: startsWith(github.event.ref, 'refs/tags/')
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           branch: develop
