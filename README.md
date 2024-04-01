@@ -21,4 +21,7 @@ The following is shorthand for how to create a release:
 4. Push the tags with `git push origin --tags`
 5. Push the main branch `git push origin main`
 6. Push the develop branch `git push origin develop`
+7. Switch back to develop branch and continue your day `git checkout develop`
+
+
 
