@@ -67,7 +67,7 @@
     var $list = document.getElementById('selectVersion');
 
     (async () => {
-      const res = await fetch('releases/index.json', {
+      const res = await fetch('//raw.githubusercontent.com/datarightplus/datarightplus-redocly/develop/site/releases/index.json', {
         headers: { Accept: 'application/json' },
       });
       const json = await res.json();
