@@ -4,6 +4,16 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [ID3] - 2024-04-01
+### :memo: Documentation Changes
+- [`8aead78`](https://github.com/datarightplus/datarightplus-redocly/commit/8aead78db8332a71246743479c7b20e3625a1840) - commit updated CHANGELOG and tagged specification for ID2 [skip ci] *(commit by [@perlboy](https://github.com/perlboy))*
+
+### :flying_saucer: Other Changes
+- [`ae348aa`](https://github.com/datarightplus/datarightplus-redocly/commit/ae348aa4590c39496c85a78cb2a487e6d3bfda33) - Updated workflows including main and develop *(commit by [@perlboy](https://github.com/perlboy))*
+- [`85fd875`](https://github.com/datarightplus/datarightplus-redocly/commit/85fd87529bef99036ca8c6ea32da8552512d4bd2) - Merge branch 'develop' of github.com:datarightplus/datarightplus-redocly into develop *(commit by [@perlboy](https://github.com/perlboy))*
+- [`8791eae`](https://github.com/datarightplus/datarightplus-redocly/commit/8791eae3e3e2387d8263057cca649f4fb5b43468) - Merge branch 'release/ID3' *(commit by [@perlboy](https://github.com/perlboy))*
+
+
 ## [ID2] - 2024-04-01
 ### :bug: Bug Fixes
 - [`ca7c3ab`](https://github.com/datarightplus/datarightplus-redocly/commit/ca7c3abe0cb54b65d4066a822f6aca9d100452d3) - Workflow to support RFC release mechanism *(commit by [@perlboy](https://github.com/perlboy))*
@@ -54,3 +64,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [v0.0.6]: https://github.com/datarightplus/datarightplus-redocly/compare/v0.0.5...v0.0.6
 [v0.0.6]: https://github.com/datarightplus/datarightplus-redocly/compare/v0.0.5...v0.0.6
 [ID2]: https://github.com/datarightplus/datarightplus-redocly/compare/ID1...ID2
+[ID3]: https://github.com/datarightplus/datarightplus-redocly/compare/ID2...ID3
