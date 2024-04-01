@@ -1,7 +1,0 @@
-description:
-  $ref: ./EnumElectricityMeterStatusV1.md
-enum:
-  - CURRENT
-  - DISCONNECTED
-type: string
-example: CURRENT

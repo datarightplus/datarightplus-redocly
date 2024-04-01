@@ -1,9 +1,0 @@
-name: interval-reads
-in: query
-description: Type of interval reads. Any one of the valid values for this
-  field can be supplied. If absent defaults to NONE
-explode: true
-required: false
-schema:
-  $ref: ../schemas/EnumElectricityMeterReadIntervalReadTypeV1.yaml
-style: form

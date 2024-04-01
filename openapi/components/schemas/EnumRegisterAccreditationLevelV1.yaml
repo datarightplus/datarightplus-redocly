@@ -1,7 +1,0 @@
-type: string
-description: Accreditation level of the Initiator in the Ecosystem Authority
-enum:
-  - UNRESTRICTED
-  - SPONSORED
-example: UNRESTRICTED
-x-cds-type: Enum

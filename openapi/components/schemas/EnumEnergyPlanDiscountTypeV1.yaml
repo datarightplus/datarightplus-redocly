@@ -1,7 +1,0 @@
-description: The type of the discount
-enum:
-  - CONDITIONAL
-  - GUARANTEED
-  - OTHER
-type: string
-example: CONDITIONAL

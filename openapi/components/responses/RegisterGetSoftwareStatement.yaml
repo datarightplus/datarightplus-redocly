@@ -1,8 +1,0 @@
-description: JWT Encoded Software Statement string
-content:
-  application/jwt:
-    schema:
-      type: string
-headers:
-  x-v:
-    $ref: ../headers/XV.yaml

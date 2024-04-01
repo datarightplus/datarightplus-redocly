@@ -1,8 +1,0 @@
-description: 'The purpose for the email, as specified by the customer (Enumeration)'
-enum:
-  - HOME
-  - OTHER
-  - UNSPECIFIED
-  - WORK
-type: string
-example: HOME

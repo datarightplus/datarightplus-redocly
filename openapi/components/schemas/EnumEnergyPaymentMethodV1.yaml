@@ -1,9 +1,0 @@
-description: Payment method
-enum:
-  - PAPER_BILL
-  - CREDIT_CARD
-  - DIRECT_DEBIT
-  - BPAY
-  - OTHER
-type: string
-example: CREDIT_CARD

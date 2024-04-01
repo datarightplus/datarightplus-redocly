@@ -1,5 +1,0 @@
-description: Invalid Bearer Token
-content:
-  application/json:
-    schema:
-      $ref: ../schemas/ResponseErrorListV2.yaml

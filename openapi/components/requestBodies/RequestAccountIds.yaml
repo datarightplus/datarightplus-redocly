@@ -1,6 +1,0 @@
-description: Request payload containing list of specific Accounts to obtain data for
-content:
-  application/json:
-    schema:
-      $ref: ../schemas/RequestAccountIdsV1.yaml
-required: true

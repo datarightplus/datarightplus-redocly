@@ -1,7 +1,0 @@
-description: The type of customer that the plan is offered to.  If absent
-  then the plan is available to all customers
-enum:
-  - RESIDENTIAL
-  - BUSINESS
-type: string
-example: RESIDENTIAL

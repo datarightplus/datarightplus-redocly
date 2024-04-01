@@ -1,9 +1,0 @@
-type: string
-description: Initiator status in the Ecosystem Authority
-enum:
-  - ACTIVE
-  - SUSPENDED
-  - REVOKED
-  - SURRENDERED
-example: ACTIVE
-x-cds-type: Enum

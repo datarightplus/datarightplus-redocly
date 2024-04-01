@@ -1,3 +1,0 @@
-x-cds-allowMissingDiscriminator: true
-oneOf:
-  - $ref: ./ResponseElectricityServicePointByIdV1.yaml

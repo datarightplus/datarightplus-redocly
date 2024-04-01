@@ -1,9 +1,0 @@
-properties:
-  data:
-    description: List of Initiators in the Ecosystem Authority
-    items:
-      $ref: ./RegisterDataRecipientV1.yaml
-    type: array
-required:
-  - data
-type: object

@@ -1,8 +1,0 @@
-description: >-
-  The reason for taking out the loan. If absent, the lending rate is
-  applicable to all loan purposes
-enum:
-  - INVESTMENT
-  - OWNER_OCCUPIED
-type: string
-example: "OWNER_OCCUPIED"

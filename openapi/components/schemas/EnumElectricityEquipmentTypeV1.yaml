@@ -1,8 +1,0 @@
-description: Indicates whether the DER device is connected via an inverter
-  (and what category of inverter it is) or not (e.g. rotating machine).
-  If absent, assume equipment type to be `OTHER`.
-enum:
-  - INVERTER
-  - OTHER
-type: string
-example: INVERTER

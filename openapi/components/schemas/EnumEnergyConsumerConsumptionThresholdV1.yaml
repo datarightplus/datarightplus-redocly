@@ -1,8 +1,0 @@
-description:
-  $ref: ./EnumEnergyConsumerConsumptionThresholdV1.md
-enum:
-  - LOW
-  - MEDIUM
-  - HIGH
-type: string
-example: LOW

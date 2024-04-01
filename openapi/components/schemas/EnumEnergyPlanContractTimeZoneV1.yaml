@@ -1,8 +1,0 @@
-description: Required if pricingModel is set to TIME_OF_USE.  Defines the
-  time zone to use for calculation of the time of use thresholds. Defaults
-  to AEST if absent
-enum:
-  - LOCAL
-  - AEST
-type: string
-example: AEST

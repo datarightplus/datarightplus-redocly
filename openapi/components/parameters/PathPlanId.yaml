@@ -1,9 +1,0 @@
-description: ID of the specific plan requested
-explode: false
-in: path
-name: planId
-required: true
-schema:
-  type: string
-x-cds-type: ASCIIString
-style: simple

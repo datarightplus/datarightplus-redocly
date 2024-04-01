@@ -1,7 +1,0 @@
-description: The type of the incentive
-enum:
-  - GIFT
-  - ACCOUNT_CREDIT
-  - OTHER
-type: string
-example: ACCOUNT_CREDIT

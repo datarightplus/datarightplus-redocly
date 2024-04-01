@@ -1,6 +1,0 @@
-properties:
-  classification:
-    $ref: ./EnumEnergyConsumerClassificationV1.yaml
-  threshold:
-    $ref: ./EnumEnergyConsumerConsumptionThresholdV1.yaml
-type: object

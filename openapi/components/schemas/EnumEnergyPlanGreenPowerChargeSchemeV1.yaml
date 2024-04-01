@@ -1,6 +1,0 @@
-description: The applicable green power scheme
-enum:
-  - GREENPOWER
-  - OTHER
-type: string
-example: GREENPOWER

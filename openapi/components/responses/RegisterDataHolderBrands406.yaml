@@ -1,5 +1,0 @@
-description: Invalid x-v or Invalid Accept Header
-content:
-  application/json:
-    schema:
-      $ref: ../schemas/ResponseErrorListV2.yaml

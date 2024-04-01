@@ -1,9 +1,0 @@
-default: ALL
-description: Energy Fuel Type
-enum:
-  - ELECTRICITY
-  - GAS
-  - DUAL
-  - ALL
-type: string
-example: ALL

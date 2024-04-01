@@ -1,7 +1,0 @@
-description: Indicator of the method of concession calculation
-enum:
-  - FIXED_AMOUNT
-  - FIXED_PERCENTAGE
-  - VARIABLE
-type: string
-example: FIXED_AMOUNT

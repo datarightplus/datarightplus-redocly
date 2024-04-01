@@ -1,4 +1,0 @@
-description: Success
-headers:
-  x-v:
-    $ref: ../headers/XV.yaml

@@ -1,6 +1,0 @@
-description: The applicable scheme
-enum:
-  - PREMIUM
-  - OTHER
-type: string
-example: PREMIUM

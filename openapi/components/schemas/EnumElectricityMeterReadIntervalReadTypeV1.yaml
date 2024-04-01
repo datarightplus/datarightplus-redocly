@@ -1,7 +1,0 @@
-default: NONE
-enum:
-  - NONE
-  - MIN_30
-  - FULL
-type: string
-example: NONE

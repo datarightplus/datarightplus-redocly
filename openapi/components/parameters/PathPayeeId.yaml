@@ -1,9 +1,0 @@
-description: The ID used to locate the details of a particular payee
-explode: false
-in: path
-name: payeeId
-required: true
-schema:
-  type: string
-x-cds-type: ASCIIString
-style: simple

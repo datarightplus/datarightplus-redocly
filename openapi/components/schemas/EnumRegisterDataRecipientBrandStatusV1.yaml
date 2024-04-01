@@ -1,8 +1,0 @@
-type: string
-description: Initiator Brand Status in the Ecosystem Authority
-enum:
-  - ACTIVE
-  - INACTIVE
-  - REMOVED
-example: ACTIVE
-x-cds-type: Enum

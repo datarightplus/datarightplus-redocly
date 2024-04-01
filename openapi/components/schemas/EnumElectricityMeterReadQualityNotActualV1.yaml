@@ -1,6 +1,0 @@
-description: The quality of the read taken that is not `ACTUAL`
-enum:
-  - SUBSTITUTE
-  - FINAL_SUBSTITUTE
-type: string
-example: SUBSTITUTE

@@ -1,8 +1,0 @@
-description:
-  $ref: ./EnumEnergyPaymentScheduleCalculationTypeV1.md
-enum:
-  - STATIC
-  - BALANCE
-  - CALCULATED
-type: string
-example: CALCULATED

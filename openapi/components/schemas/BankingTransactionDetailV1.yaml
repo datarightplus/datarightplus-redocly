@@ -1,8 +1,0 @@
-allOf:
-  - $ref: ./BankingTransactionV1.yaml
-  - properties:
-      extendedData:
-        $ref: ./BankingTransactionDetailExtendedDataV1.yaml
-    required:
-      - extendedData
-    type: object

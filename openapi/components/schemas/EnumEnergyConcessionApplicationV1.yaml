@@ -1,8 +1,0 @@
-description: Specify what an energy account concession applies to
-enum:
-  - INVOICE
-  - USAGE
-  - SERVICE_CHARGE
-  - CONTROLLED_LOAD
-type: string
-example: INVOICE

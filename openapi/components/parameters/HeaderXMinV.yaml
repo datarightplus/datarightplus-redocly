@@ -1,8 +1,0 @@
-description: Minimum acceptable version of the API end point requested by the Initiator.
-explode: false
-in: header
-name: x-min-v
-required: false
-schema:
-  type: string
-style: simple
