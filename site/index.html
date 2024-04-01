@@ -47,7 +47,7 @@
   <script>
     const searchParams = new URLSearchParams(window.location.search);
     if(searchParams.has('v')) {
-      Redoc.init(`releases/openapi-${searchParams.get('v')}.yaml`);
+      Redoc.init(`//raw.githubusercontent.com/datarightplus/datarightplus-redocly/releases/site/releases/openapi-${searchParams.get('v')}.yaml`);
     } else {
       Redoc.init("openapi.yaml");
     }
@@ -67,13 +67,13 @@
     var $list = document.getElementById('selectVersion');
 
     (async () => {
-      const res = await fetch('//raw.githubusercontent.com/datarightplus/datarightplus-redocly/develop/site/releases/index.json', {
+      const res = await fetch('//raw.githubusercontent.com/datarightplus/datarightplus-redocly/releases/site/releases/index.json', {
         headers: { Accept: 'application/json' },
       });
       const json = await res.json();
       json.forEach((release) => {
         var $listitem = document.createElement('option');
-        $listitem.setAttribute('value', `releases/openapi-${release.name}.yaml`);
+        $listitem.setAttribute('value', `//raw.githubusercontent.com/datarightplus/datarightplus-redocly/releases/site/releases/openapi-${release.name}.yaml`);
         $listitem.innerText = release.name;
         if(searchParams.has('v') && release.name == searchParams.get('v')) {
           $listitem.setAttribute("selected", true);
