@@ -4,6 +4,20 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [ID8] - 2024-04-01
+### :bug: Bug Fixes
+- [`ecd51ea`](https://github.com/datarightplus/datarightplus-redocly/commit/ecd51ea3819e8f0ef8ec63576fad61b840b116c4) - Workflow updates to handle stashed commits in separate tree *(commit by [@perlboy](https://github.com/perlboy))*
+
+### :memo: Documentation Changes
+- [`5db6e77`](https://github.com/datarightplus/datarightplus-redocly/commit/5db6e775c84ec1227be99ac5d93e454586ec4ee1) - commit updated CHANGELOG for ID7 [skip ci] *(commit by [@perlboy](https://github.com/perlboy))*
+
+### :flying_saucer: Other Changes
+- [`01451a7`](https://github.com/datarightplus/datarightplus-redocly/commit/01451a7ec3d60daf81819254296f4b3e8c5eecb5) - Don't save a created version of the spec in source *(commit by [@perlboy](https://github.com/perlboy))*
+- [`1dac152`](https://github.com/datarightplus/datarightplus-redocly/commit/1dac152c8bbda2748a2639a74400b7f099add710) - Merge branch 'develop' of github.com:datarightplus/datarightplus-redocly into develop *(commit by [@perlboy](https://github.com/perlboy))*
+- [`cc877d6`](https://github.com/datarightplus/datarightplus-redocly/commit/cc877d6693d434c93aff13615a96e42b677f8bbe) - Increment verison number to ID8 *(commit by [@perlboy](https://github.com/perlboy))*
+- [`17f3605`](https://github.com/datarightplus/datarightplus-redocly/commit/17f3605cd316c81eb6a7b606b5251202a3b6a2ee) - Merge branch 'release/ID8' *(commit by [@perlboy](https://github.com/perlboy))*
+
+
 ## [ID7] - 2024-04-01
 ### :memo: Documentation Changes
 - [`5713340`](https://github.com/datarightplus/datarightplus-redocly/commit/5713340c3ff9623b73af454c477fcd43c68a3bc0) - commit updated CHANGELOG and tagged specification for ID6 [skip ci] *(commit by [@perlboy](https://github.com/perlboy))*
@@ -113,3 +127,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [ID5]: https://github.com/datarightplus/datarightplus-redocly/compare/ID4...ID5
 [ID6]: https://github.com/datarightplus/datarightplus-redocly/compare/ID5...ID6
 [ID7]: https://github.com/datarightplus/datarightplus-redocly/compare/ID6...ID7
+[ID8]: https://github.com/datarightplus/datarightplus-redocly/compare/ID7...ID8
