@@ -4,6 +4,15 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [test1] - 2024-04-01
+### :memo: Documentation Changes
+- [`332fce1`](https://github.com/datarightplus/datarightplus-redocly/commit/332fce122dbbe37740536abd9f0281aba7913289) - commit updated CHANGELOG for ID12 [skip ci] *(commit by [@perlboy](https://github.com/perlboy))*
+
+### :flying_saucer: Other Changes
+- [`cb9f5f9`](https://github.com/datarightplus/datarightplus-redocly/commit/cb9f5f96b59c556cf5fe8b36eaf4c80eeaf52603) - Merge branch 'release/ID12' into develop *(commit by [@perlboy](https://github.com/perlboy))*
+- [`971b2c3`](https://github.com/datarightplus/datarightplus-redocly/commit/971b2c35c203902dd7e5c34cc45bcb62328e9f7b) - Updated workflow *(commit by [@perlboy](https://github.com/perlboy))*
+
+
 ## [ID12] - 2024-04-01
 ### :bug: Bug Fixes
 - [`7193153`](https://github.com/datarightplus/datarightplus-redocly/commit/71931532ce25d21bc2b62d72f940b13d5f63ce34) - don't attempt to get clean branch from releases *(commit by [@perlboy](https://github.com/perlboy))*
@@ -183,3 +192,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [ID10]: https://github.com/datarightplus/datarightplus-redocly/compare/ID9...ID10
 [ID11]: https://github.com/datarightplus/datarightplus-redocly/compare/ID10...ID11
 [ID12]: https://github.com/datarightplus/datarightplus-redocly/compare/ID11...ID12
+[test1]: https://github.com/datarightplus/datarightplus-redocly/compare/ID12...test1
