@@ -49,13 +49,6 @@ jobs:
           draft: false
           makeLatest: true
           body: ${{ steps.changelog.outputs.changes }}
-      - name: Copy openapi to release location
-        if: startsWith(github.event.ref, 'refs/tags/')
-        run: |
-          mkdir -p site/releases
-          cp site/openapi.yaml site/releases/openapi-${{ github.ref_name }}.yaml
-          sleep 5
-          curl https://api.github.com/repos/datarightplus/datarightplus-redocly/releases > site/releases/index.json
       - name: Commit CHANGELOG
         if: startsWith(github.event.ref, 'refs/tags/')
         uses: stefanzweifel/git-auto-commit-action@v5
@@ -63,16 +56,25 @@ jobs:
           branch: develop
           commit_message: 'docs: commit updated CHANGELOG for ${{ github.ref_name }} [skip ci]'
           file_pattern: "CHANGELOG.md"
-      - name: Commit Releases OpenAPI Specification
+      - name: Checkout releases repository
         if: startsWith(github.event.ref, 'refs/tags/')
-        uses: stefanzweifel/git-auto-commit-action@v5
+        uses: actions/checkout@v4
         with:
-          branch: releases
-          push_options: '--force'
-          skip_dirty_check: true
-          skip_checkout: true
-          commit_message: 'docs: commit tagged specification for ${{ github.ref_name }} [skip ci]'
-          file_pattern: "site/releases/openapi-${{ github.ref_name }}.yaml site/releases/index.json"
+          ref: releases
+          path: releases
+      - name: Copy openapi to release location and commit
+        if: startsWith(github.event.ref, 'refs/tags/')
+        run: |
+          cd releases
+          cp ../site/openapi.yaml site/releases/openapi-${{ github.ref_name }}.yaml
+          sleep 5
+          curl https://api.github.com/repos/datarightplus/datarightplus-redocly/releases > site/releases/index.json
+          git config user.name github-releaser
+          git config user.email github-actions@github.com
+          git add .
+          git commit -m "docs: commit tagged specification for ${{ github.ref_name }} [skip ci]"
+          git push
+          cd ..
   deploy-pages:
     if: github.ref == 'refs/heads/develop'
     runs-on: ubuntu-latest
