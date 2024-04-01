@@ -4,6 +4,15 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [ID2] - 2024-04-01
+### :bug: Bug Fixes
+- [`ca7c3ab`](https://github.com/datarightplus/datarightplus-redocly/commit/ca7c3abe0cb54b65d4066a822f6aca9d100452d3) - Workflow to support RFC release mechanism *(commit by [@perlboy](https://github.com/perlboy))*
+
+### :flying_saucer: Other Changes
+- [`c6ee072`](https://github.com/datarightplus/datarightplus-redocly/commit/c6ee072bf640446606bc65d81f2371938da20dad) - Merge branch 'release/ID1' into develop *(commit by [@perlboy](https://github.com/perlboy))*
+- [`05f3f02`](https://github.com/datarightplus/datarightplus-redocly/commit/05f3f02482ba053782f4e19bf4a40dd3a25fd464) - Release ID2 *(commit by [@perlboy](https://github.com/perlboy))*
+
+
 ## [v0.0.6] - 2024-03-31
 ### :bug: Bug Fixes
 - [`6676e31`](https://github.com/datarightplus/datarightplus-redocly/commit/6676e319cd6d4cc6344711775bd4ad494da03332) - re-publish on tag to ensure selector functions as expected *(commit by [@perlboy](https://github.com/perlboy))*
@@ -44,3 +53,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 [v0.0.6]: https://github.com/datarightplus/datarightplus-redocly/compare/v0.0.5...v0.0.6
 [v0.0.6]: https://github.com/datarightplus/datarightplus-redocly/compare/v0.0.5...v0.0.6
+[ID2]: https://github.com/datarightplus/datarightplus-redocly/compare/ID1...ID2
