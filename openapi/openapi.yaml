@@ -10,7 +10,7 @@ info:
     name: MIT
     url: https://dataright.plus/
   title: "DataRight+: Redocly"
-  version: ID13
+  version: ID1
 paths:
   /banking/accounts:
     $ref: paths/banking@accounts.yaml
