@@ -4,6 +4,18 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [ID11] - 2024-04-01
+### :memo: Documentation Changes
+- [`e4ae27e`](https://github.com/datarightplus/datarightplus-redocly/commit/e4ae27e446ae1e5bb579f0d750c6c059b8454a73) - commit updated CHANGELOG for ID10 [skip ci] *(commit by [@perlboy](https://github.com/perlboy))*
+
+### :flying_saucer: Other Changes
+- [`28e07fd`](https://github.com/datarightplus/datarightplus-redocly/commit/28e07fd249e6ec0150cd2e56c24366a4dea22884) - Merge branch 'release/ID10' into develop *(commit by [@perlboy](https://github.com/perlboy))*
+- [`6d7cb50`](https://github.com/datarightplus/datarightplus-redocly/commit/6d7cb50c10ce2152f405c2fd6306005752b0e5e8) - Introduce placeholder index *(commit by [@perlboy](https://github.com/perlboy))*
+- [`aa42fd0`](https://github.com/datarightplus/datarightplus-redocly/commit/aa42fd0a1179db3ba36df82e2fa24c97b92c8bb5) - Merge branch 'develop' of github.com:datarightplus/datarightplus-redocly into develop *(commit by [@perlboy](https://github.com/perlboy))*
+- [`9ee8262`](https://github.com/datarightplus/datarightplus-redocly/commit/9ee82624ab5a995518b598d0d73c6b8458a3b2d7) - ID11 Version bump *(commit by [@perlboy](https://github.com/perlboy))*
+- [`f5e6a3e`](https://github.com/datarightplus/datarightplus-redocly/commit/f5e6a3efef2c3990f32a3cc7482e6f51e0259c22) - Merge branch 'release/ID11' *(commit by [@perlboy](https://github.com/perlboy))*
+
+
 ## [ID10] - 2024-04-01
 ### :memo: Documentation Changes
 - [`72e39e7`](https://github.com/datarightplus/datarightplus-redocly/commit/72e39e7ef77b44060df59ad5356e20830f5d6e0d) - commit updated CHANGELOG for ID9 [skip ci] *(commit by [@perlboy](https://github.com/perlboy))*
@@ -155,3 +167,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [ID8]: https://github.com/datarightplus/datarightplus-redocly/compare/ID7...ID8
 [ID9]: https://github.com/datarightplus/datarightplus-redocly/compare/ID8...ID9
 [ID10]: https://github.com/datarightplus/datarightplus-redocly/compare/ID9...ID10
+[ID11]: https://github.com/datarightplus/datarightplus-redocly/compare/ID10...ID11
