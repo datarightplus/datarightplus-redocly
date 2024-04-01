@@ -68,6 +68,9 @@ jobs:
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           branch: releases
+          push_options: '--force'
+          skip_dirty_check: true
+          skip_checkout: true
           commit_message: 'docs: commit tagged specification for ${{ github.ref_name }} [skip ci]'
           file_pattern: "site/releases/openapi-${{ github.ref_name }}.yaml site/releases/index.json"
   deploy-pages:
