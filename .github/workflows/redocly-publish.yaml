@@ -10,13 +10,13 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '18.x'
-      - name: Update openapi.yaml
-        if: startsWith(github.event.ref, 'refs/tags/')
+      - name: Update openapi.yaml to be latest if develop tree
+        if: github.ref == 'refs/heads/develop'
         uses: fjogeleit/yaml-update-action@main
         with:
           valueFile: 'openapi/openapi.yaml'
           propertyPath: 'info.version'
-          value: "${{ github.ref_name }}"
+          value: "latest"
           commitChange: false
       - run: npm ci
       - run: npm run build --if-present
