@@ -52,6 +52,7 @@ jobs:
       - name: Copy openapi to release location
         if: startsWith(github.event.ref, 'refs/tags/')
         run: |
+          mkdir -p site/releases
           cp site/openapi.yaml site/releases/openapi-${{ github.ref_name }}.yaml
           sleep 5
           curl https://api.github.com/repos/datarightplus/datarightplus-redocly/releases > site/releases/index.json
