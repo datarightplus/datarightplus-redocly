@@ -17,7 +17,8 @@ The published version of this specification is _always_ based on the current `de
 The following is shorthand for how to create a release:
 1. Ensure all changes are committed
 2. Run `git flow release start RELEASENAME` where RELEASENAME _should_ be an RFC style name such as `ID1`
-3. Run `git flow release finish RELEASENAME`, CI/CD will replace the appropriate version number
+3. Modify the `version` attribute in openapi/openapi.yaml to be set to the RELEASENAME
+3. Run `git flow release finish RELEASENAME`
 4. Push the tags with `git push origin --tags`
 5. Push the main branch `git push origin main`
 6. Push the develop branch `git push origin develop`

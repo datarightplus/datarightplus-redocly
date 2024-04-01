@@ -4,6 +4,15 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [ID7] - 2024-04-01
+### :memo: Documentation Changes
+- [`5713340`](https://github.com/datarightplus/datarightplus-redocly/commit/5713340c3ff9623b73af454c477fcd43c68a3bc0) - commit updated CHANGELOG and tagged specification for ID6 [skip ci] *(commit by [@perlboy](https://github.com/perlboy))*
+
+### :flying_saucer: Other Changes
+- [`0198409`](https://github.com/datarightplus/datarightplus-redocly/commit/0198409dc7c7c0f9c94f3dce7fd2f7db6e5761ff) - Updated commit location to releases branch *(commit by [@perlboy](https://github.com/perlboy))*
+- [`6195231`](https://github.com/datarightplus/datarightplus-redocly/commit/61952315892a9a24d67bf678d9a7e20d9cd7972c) - Merge branch 'release/ID7' *(commit by [@perlboy](https://github.com/perlboy))*
+
+
 ## [ID6] - 2024-04-01
 ### :sparkles: New Features
 - [`4ef86c3`](https://github.com/datarightplus/datarightplus-redocly/commit/4ef86c3205c6b5dcca80f90c81d5d46c512fa454) - Add favicon *(commit by [@perlboy](https://github.com/perlboy))*
@@ -103,3 +112,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [ID4]: https://github.com/datarightplus/datarightplus-redocly/compare/ID3...ID4
 [ID5]: https://github.com/datarightplus/datarightplus-redocly/compare/ID4...ID5
 [ID6]: https://github.com/datarightplus/datarightplus-redocly/compare/ID5...ID6
+[ID7]: https://github.com/datarightplus/datarightplus-redocly/compare/ID6...ID7
