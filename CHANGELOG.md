@@ -4,6 +4,19 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [ID10] - 2024-04-01
+### :memo: Documentation Changes
+- [`72e39e7`](https://github.com/datarightplus/datarightplus-redocly/commit/72e39e7ef77b44060df59ad5356e20830f5d6e0d) - commit updated CHANGELOG for ID9 [skip ci] *(commit by [@perlboy](https://github.com/perlboy))*
+
+### :flying_saucer: Other Changes
+- [`1fb0520`](https://github.com/datarightplus/datarightplus-redocly/commit/1fb0520e9b2fec37ecf437522872c80227613427) - Merge branch 'release/ID9' into develop *(commit by [@perlboy](https://github.com/perlboy))*
+- [`eeeddf0`](https://github.com/datarightplus/datarightplus-redocly/commit/eeeddf0dde1ed5546a085fb9acefdcd389ea49e3) - Remove old releases as they now live in a dedicated branch *(commit by [@perlboy](https://github.com/perlboy))*
+- [`19c55eb`](https://github.com/datarightplus/datarightplus-redocly/commit/19c55ebde47cb53f7b707cc5ddd01bfa6757ca62) - Merge branch 'develop' of github.com:datarightplus/datarightplus-redocly into develop *(commit by [@perlboy](https://github.com/perlboy))*
+- [`af7590a`](https://github.com/datarightplus/datarightplus-redocly/commit/af7590a9066df76d752065da9e149d6fd5081ca8) - Tweaks for release management *(commit by [@perlboy](https://github.com/perlboy))*
+- [`765c360`](https://github.com/datarightplus/datarightplus-redocly/commit/765c360098db9cd760a8ade8a0342050764b4306) - ID10 version bump *(commit by [@perlboy](https://github.com/perlboy))*
+- [`629ce3f`](https://github.com/datarightplus/datarightplus-redocly/commit/629ce3fb971b487dab77f533f7ce9433211f8bda) - Merge branch 'release/ID10' *(commit by [@perlboy](https://github.com/perlboy))*
+
+
 ## [ID9] - 2024-04-01
 ### :memo: Documentation Changes
 - [`687e813`](https://github.com/datarightplus/datarightplus-redocly/commit/687e8139c0cb80afff666eadcbcbee0f49a9f32b) - commit updated CHANGELOG for ID8 [skip ci] *(commit by [@perlboy](https://github.com/perlboy))*
@@ -141,3 +154,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [ID7]: https://github.com/datarightplus/datarightplus-redocly/compare/ID6...ID7
 [ID8]: https://github.com/datarightplus/datarightplus-redocly/compare/ID7...ID8
 [ID9]: https://github.com/datarightplus/datarightplus-redocly/compare/ID8...ID9
+[ID10]: https://github.com/datarightplus/datarightplus-redocly/compare/ID9...ID10
