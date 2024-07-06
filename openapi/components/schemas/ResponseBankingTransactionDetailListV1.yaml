@@ -1,0 +1,19 @@
+properties:
+  data:
+    type: object
+    properties:
+      transactionDetails:
+        items:
+          $ref: ./BankingTransactionDetailV1.yaml
+        type: array
+    required:
+      - transactionDetails
+  links:
+    $ref: ./LinksPaginatedV1.yaml
+  meta:
+    $ref: ./MetaPaginatedTransactionV1.yaml
+required:
+  - data
+  - links
+  - meta
+type: object

@@ -1,0 +1,7 @@
+oneOf: 
+  - $ref: ResponseGetDiscoveryDocumentV1.yaml
+discriminator: 
+  propertyName: version
+  mapping: 
+    V1: ResponseGetDiscoveryDocumentV1.yaml
+  

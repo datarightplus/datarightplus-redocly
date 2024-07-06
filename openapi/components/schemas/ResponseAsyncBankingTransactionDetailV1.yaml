@@ -1,0 +1,18 @@
+properties:
+  version:
+    type: string
+    default: V1
+  data:
+    type: array
+    items:
+      $ref: ./BankingTransactionDetailV1.yaml
+    minItems: 0
+  links:
+    $ref: ./LinksV1.yaml
+  meta:
+    $ref: ./MetaActionStatusV1.yaml
+required:
+  - data
+  - links
+  - meta
+type: object

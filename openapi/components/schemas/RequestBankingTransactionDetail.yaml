@@ -1,0 +1,6 @@
+oneOf:
+  - $ref: RequestBankingTransactionDetailV1.yaml
+discriminator:
+  propertyName: version
+  mapping:
+    V1: RequestBankingTransactionDetailV1.yaml

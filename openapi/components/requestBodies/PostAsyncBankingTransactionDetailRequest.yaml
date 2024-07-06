@@ -1,0 +1,9 @@
+description: Get Async Banking Transaction Details
+content:
+  application/json:
+    schema:
+      $ref: ../schemas/RequestBankingTransactionDetail.yaml
+    encoding:
+      payload:
+        contentType: application/json
+required: true

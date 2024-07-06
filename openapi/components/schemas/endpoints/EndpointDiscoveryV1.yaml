@@ -1,0 +1,5 @@
+type: object
+properties:
+  banking:
+    $ref: EndpointDiscoveryBankingV1.yaml
+

@@ -1,0 +1,9 @@
+description: Global unique identifier of an action
+explode: false
+in: path
+name: actionId
+required: true
+schema:
+  type: string
+  x-cds-type: ASCIIString
+style: simple

@@ -1,0 +1,12 @@
+type: object
+properties:
+  responseVersions:
+    description: The response versions supported by this adapter endpoint
+    default: [ V1 ]
+    type: array
+    items:
+      $ref: ../versions/EnumResponseGetAsyncBankingTransactionDetail.yaml
+required:
+  - responseVersions
+example:
+  responseVersions: [ V1 ]

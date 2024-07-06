@@ -1,0 +1,7 @@
+name: with-data
+in: query
+description: Include data, if available, in response
+required: false
+schema:
+  type: boolean
+style: form

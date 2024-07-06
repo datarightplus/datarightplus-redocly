@@ -1,0 +1,9 @@
+type: object
+properties:
+  version:
+    type: string
+    default: V1
+  data: 
+    $ref: endpoints/EndpointMetaV1.yaml
+required:
+  - version

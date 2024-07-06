@@ -1,0 +1,9 @@
+description: >-
+  A unique string representing an Agreement Identifier as defined in [DATARIGHTPLUS-ROSETTA](https://datarightplus.github.io/datarightplus-rosetta/draft-authors-datarightplus-rosetta.html).
+explode: false
+in: header
+name: x-agreement-id
+required: true
+schema:
+  type: string
+style: simple

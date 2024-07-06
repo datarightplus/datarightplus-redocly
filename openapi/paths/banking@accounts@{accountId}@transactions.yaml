@@ -13,6 +13,12 @@ get:
   operationId: getTransactions
   parameters:
     - $ref: ../components/parameters/PathAccountId.yaml
+    - $ref: ../components/parameters/HeaderXV.yaml
+    - $ref: ../components/parameters/HeaderXMinV.yaml
+    - $ref: ../components/parameters/HeaderXFapiInteractionId.yaml
+    - $ref: ../components/parameters/HeaderXFAPIAuthDate.yaml
+    - $ref: ../components/parameters/HeaderXFAPICustomerIPAddress.yaml
+    - $ref: ../components/parameters/HeaderXCDSClientHeaders.yaml
     - $ref: ../components/parameters/QueryOldestDateTime.yaml
     - $ref: ../components/parameters/QueryNewestDateTime.yaml
     - $ref: ../components/parameters/QueryMinAmount.yaml
@@ -20,12 +26,7 @@ get:
     - $ref: ../components/parameters/QueryTransactionText.yaml
     - $ref: ../components/parameters/QueryPage.yaml
     - $ref: ../components/parameters/QueryPageSize.yaml
-    - $ref: ../components/parameters/HeaderXV.yaml
-    - $ref: ../components/parameters/HeaderXMinV.yaml
-    - $ref: ../components/parameters/HeaderXFapiInteractionId.yaml
-    - $ref: ../components/parameters/HeaderXFAPIAuthDate.yaml
-    - $ref: ../components/parameters/HeaderXFAPICustomerIPAddress.yaml
-    - $ref: ../components/parameters/HeaderXCDSClientHeaders.yaml
+
   responses:
     200:
       $ref: ../components/responses/GetTransactions.yaml
@@ -49,3 +50,4 @@ get:
   security:
     - ProviderAuth: ['bank:transactions:read']
   x-version: '1'
+

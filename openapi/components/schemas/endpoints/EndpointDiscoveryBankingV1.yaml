@@ -1,0 +1,7 @@
+type: object
+properties:
+  postAsyncBankingTransactionDetail:
+    $ref: EndpointPostAsyncBankingTransactionDetailV1.yaml
+  getAsyncBankingTransactionDetail:
+    $ref: EndpointGetAsyncBankingTransactionDetailV1.yaml
+
