@@ -1,0 +1,9 @@
+type: object
+properties:
+  getCustomer:
+    $ref: EndpointGetCustomerV1.yaml
+  getCustomerDetail:
+    $ref: EndpointGetCustomerDetailV1.yaml
+required:
+  - getCustomer
+  - getCustomerDetail

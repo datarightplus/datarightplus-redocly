@@ -1,5 +1,15 @@
 type: object
 properties:
+  admin:
+    $ref: EndpointDiscoveryAdminV1.yaml
+  common:
+    $ref: EndpointDiscoveryCommonV1.yaml
   banking:
     $ref: EndpointDiscoveryBankingV1.yaml
+  energy:
+    $ref: EndpointDiscoveryEnergyV1.yaml
+  operations:
+    $ref: EndpointDiscoveryOperationsV1.yaml
+required:
+  - operations
 

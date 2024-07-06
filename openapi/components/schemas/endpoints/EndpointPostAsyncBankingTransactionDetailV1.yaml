@@ -1,20 +1,20 @@
 type: object
 properties:
+  responseVersions:
+    description: The response versions supported by this endpoint
+    default: [ V1 ]
+    type: array
+    items:
+      $ref: ../versions/EnumResponseGetAsyncBankingTransactionDetail.yaml
   requestVersions:
-    description: The request versions supported by this adapter endpoint
+    description: The response versions supported by this endpoint
     default: [ V1 ]
     type: array
     items:
       $ref: ../versions/EnumRequestPostAsyncBankingTransactionDetail.yaml
-  responseVersions:
-    description: The response versions supported by this adapter endpoint
-    default: [ V1 ]
-    type: array
-    items:
-      $ref: ../versions/EnumResponsePostAsyncBankingTransactionDetail.yaml
 required:
   - requestVersions
   - responseVersions
 example:
-  requestVersions: [ V1 ]
   responseVersions: [ V1 ]
+  requestVersions: [ V1 ]

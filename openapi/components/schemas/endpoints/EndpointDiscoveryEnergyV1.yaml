@@ -1,0 +1,71 @@
+type: object
+properties:
+  getElectricityDERSpecificServicePoints:
+    $ref: EndpointGetElectricityDERSpecificServicePointsV1.yaml
+  getElectricityServicePointDER:
+    $ref: EndpointGetElectricityServicePointDERV1.yaml
+  getElectricityServicePointDERBulk:
+    $ref: EndpointGetElectricityServicePointDERBulkV1.yaml
+  getElectricityServicePointDetail:
+    $ref: EndpointGetElectricityServicePointDetailV1.yaml
+  getElectricityServicePointUsage:
+    $ref: EndpointGetElectricityServicePointUsageV1.yaml
+  getElectricityServicePointUsageBulk:
+    $ref: EndpointGetElectricityServicePointUsageBulkV1.yaml
+  getElectricityUsageSpecificServicePoints:
+    $ref: EndpointGetElectricityUsageSpecificServicePointsV1.yaml
+  getEnergyAccountBalance:
+    $ref: EndpointGetEnergyAccountBalanceV1.yaml
+  getEnergyAccountBalances:
+    $ref: EndpointGetEnergyAccountBalancesV1.yaml
+  getEnergyAccountBilling:
+    $ref: EndpointGetEnergyAccountBillingV1.yaml
+  getEnergyAccountBillingBulk:
+    $ref: EndpointGetEnergyAccountBillingBulkV1.yaml
+  getEnergyAccountConcessions:
+    $ref: EndpointGetEnergyAccountConcessionsV1.yaml
+  getEnergyAccountDetail:
+    $ref: EndpointGetEnergyAccountDetailV1.yaml
+  getEnergyAccountPaymentSchedule:
+    $ref: EndpointGetEnergyAccountPaymentScheduleV1.yaml
+  getEnergyPlanDetail:
+    $ref: EndpointGetEnergyPlanDetailV1.yaml
+  listBillingSpecificEnergyAccounts:
+    $ref: EndpointListBillingSpecificEnergyAccountsV1.yaml
+  listElectricityServicePoints:
+    $ref: EndpointListElectricityServicePointsV1.yaml
+  listEnergyAccountInvoices:
+    $ref: EndpointListEnergyAccountInvoicesV1.yaml
+  listEnergyAccounts:
+    $ref: EndpointListEnergyAccountsV1.yaml
+  listEnergyInvoices:
+    $ref: EndpointListEnergyInvoicesV1.yaml
+  listEnergyInvoicesSpecificAccounts:
+    $ref: EndpointListEnergyInvoicesSpecificAccountsV1.yaml
+  listEnergyPlans:
+    $ref: EndpointListEnergyPlansV1.yaml
+required:
+  - getElectricityDERSpecificServicePoints
+  - getElectricityDERSpecificServicePoints
+  - getElectricityServicePointDER
+  - getElectricityServicePointDERBulk
+  - getElectricityServicePointDetail
+  - getElectricityServicePointUsage
+  - getElectricityServicePointUsageBulk
+  - getElectricityUsageSpecificServicePoints
+  - getEnergyAccountBalance
+  - getEnergyAccountBalances
+  - getEnergyAccountBilling
+  - getEnergyAccountBillingBulk
+  - getEnergyAccountConcessions
+  - getEnergyAccountDetail
+  - getEnergyAccountPaymentSchedule
+  - getEnergyPlanDetail
+  - listBillingSpecificEnergyAccounts
+  - listElectricityServicePoints
+  - listEnergyAccountInvoices
+  - listEnergyAccounts
+  - listEnergyInvoices
+  - listEnergyInvoicesSpecificAccounts
+  - listEnergyPlans
+

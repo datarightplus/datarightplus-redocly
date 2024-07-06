@@ -1,0 +1,6 @@
+type: object
+properties:
+  getMetrics:
+    $ref: EndpointGetMetricsV1.yaml
+required:
+  - getMetrics

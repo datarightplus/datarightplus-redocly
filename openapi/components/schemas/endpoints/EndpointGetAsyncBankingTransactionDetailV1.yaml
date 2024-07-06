@@ -1,7 +1,7 @@
 type: object
 properties:
   responseVersions:
-    description: The response versions supported by this adapter endpoint
+    description: The response versions supported by this endpoint
     default: [ V1 ]
     type: array
     items:
