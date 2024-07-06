@@ -15,8 +15,10 @@ properties:
     items:
       $ref: ../versions/EnumResponseGetMetrics.yaml
 required:
+  - baseUri
   - flags
   - responseVersions
 example:
+  baseUri: "https://admin-api.acme.bank/cds-au/v1"
   responseVersions: [ V5 ]
   flags: [ "SUPPORTS_CDS_VERSIONING" ]

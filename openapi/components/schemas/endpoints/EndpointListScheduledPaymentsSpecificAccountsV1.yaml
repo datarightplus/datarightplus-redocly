@@ -1,5 +1,8 @@
 type: object
 properties:
+  baseUri:
+    type: string
+    format: uri
   flags:
     description: The flags supported by this endpoint
     default: [ "SUPPORTS_CDS_VERSIONING" ]
@@ -21,10 +24,12 @@ properties:
     items:
       $ref: ../versions/EnumResponseListScheduledPaymentsSpecificAccounts.yaml
 required:
+  - baseUri
   - flags
   - requestVersions
   - responseVersions
 example:
+  baseUri: "https://secure-api.acme.bank/cds-au/v1"
   requestVersions: [ V1 ]
   responseVersions: [ V2 ]
   flags: [ "SUPPORTS_CDS_VERSIONING" ]

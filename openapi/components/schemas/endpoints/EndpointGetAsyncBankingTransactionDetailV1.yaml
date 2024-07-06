@@ -1,5 +1,8 @@
 type: object
 properties:
+  baseUri:
+    type: string
+    format: uri
   responseVersions:
     description: The response versions supported by this endpoint
     default: [ V1 ]
@@ -7,6 +10,8 @@ properties:
     items:
       $ref: ../versions/EnumResponseGetAsyncBankingTransactionDetail.yaml
 required:
+  - baseUri
   - responseVersions
 example:
+  baseUri: "https://secure-api.acme.bank/dio-au/v1"
   responseVersions: [ V1 ]
