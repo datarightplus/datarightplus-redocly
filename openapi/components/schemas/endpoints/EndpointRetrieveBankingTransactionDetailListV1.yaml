@@ -3,6 +3,7 @@ properties:
   baseUri:
     type: string
     format: uri
+    example: "https://secure-api.acme.bank/dio-au/v1"
   responseVersions:
     description: The response versions supported by this endpoint
     default: [ V1 ]
