@@ -28,7 +28,7 @@ get:
       $ref: ../components/responses/Generic500.yaml
     503:
       $ref: ../components/responses/Generic503.yaml
-  summary: Get Banking Transaction Details Action and Data
+  summary: Retrieve Banking Transaction Detail List
   tags:
     - Transactions
   security:
