@@ -8,13 +8,13 @@ properties:
     default: [ V1 ]
     type: array
     items:
-      $ref: ../versions/EnumResponseGetAsyncBankingTransactionDetail.yaml
+      $ref: ../versions/EnumResponseRequestBankingTransactionDetailList.yaml
   requestVersions:
     description: The response versions supported by this endpoint
     default: [ V1 ]
     type: array
     items:
-      $ref: ../versions/EnumRequestPostAsyncBankingTransactionDetail.yaml
+      $ref: ../versions/EnumRequestRequestBankingTransactionDetailList.yaml
 required:
   - baseUri
   - requestVersions

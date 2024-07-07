@@ -8,7 +8,7 @@ properties:
     default: [ V1 ]
     type: array
     items:
-      $ref: ../versions/EnumResponseGetAsyncBankingTransactionDetail.yaml
+      $ref: ../versions/EnumResponseRetrieveBankingTransactionDetailList.yaml
 required:
   - baseUri
   - responseVersions
