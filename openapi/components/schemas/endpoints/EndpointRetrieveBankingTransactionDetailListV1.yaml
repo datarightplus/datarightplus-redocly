@@ -13,6 +13,3 @@ properties:
 required:
   - baseUri
   - responseVersions
-example:
-  baseUri: "https://secure-api.acme.bank/dio-au/v1"
-  responseVersions: [ V1 ]

@@ -29,8 +29,3 @@ required:
   - flags
   - requestVersions
   - responseVersions
-example:
-  baseUri: "https://secure-api.acme.bank/cds-au/v1"
-  responseVersions: [ V1 ]
-  flags: [ "SUPPORTS_CDS_VERSIONING" ]
-  requestVersions: [ V1 ]

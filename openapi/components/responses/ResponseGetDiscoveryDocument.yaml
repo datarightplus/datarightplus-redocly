@@ -6,4 +6,3 @@ content:
 headers:
   x-fapi-interaction-id:
     $ref: ../headers/XFAPIInteractionId.yaml
-

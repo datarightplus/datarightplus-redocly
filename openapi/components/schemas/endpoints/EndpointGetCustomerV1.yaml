@@ -22,7 +22,3 @@ required:
   - baseUri
   - flags
   - responseVersions
-example:
-  baseUri: "https://secure-api.acme.energy/cds-au/v1"
-  responseVersions: [ V1 ]
-  flags: [ "SUPPORTS_CDS_VERSIONING" ]

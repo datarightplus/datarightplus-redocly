@@ -12,4 +12,3 @@ properties:
     $ref: EndpointDiscoveryOperationsV1.yaml
 required:
   - operations
-
