@@ -49,4 +49,3 @@ get:
   security:
     - ProviderAuth: ['bank:transactions:read']
   x-version: '1'
-
