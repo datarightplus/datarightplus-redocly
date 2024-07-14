@@ -3,7 +3,8 @@ properties:
   version:
     type: string
     default: V1
-  endpoints:
-    $ref: endpoints/EndpointDiscoveryV1.yaml
+  scheme:
+    $ref: endpoints/DiscoverySchemeV1.yaml
 required:
-  - endpoints
+  - scheme
+  - version

@@ -11,7 +11,7 @@ post:
     $ref: ../components/requestBodies/RequestBankingTransactionDetailList.yaml
   responses:
     200:
-      $ref: ../components/responses/ResponseRequestBankingTransactionDetailList.yaml
+      $ref: ../components/responses/ResponseGetBankingTransactionDetailListStatus.yaml
     400:
       $ref: ../components/responses/GetTransactions400.yaml
     403:
@@ -32,3 +32,6 @@ post:
   security:
     - ProviderAuth: ['bank:transactions:read']
   x-version: '1'
+  servers:
+    - url: 'https://secure.api.register.dataright.plus/dio-au/v1'
+      description: "Example MTLS Base URL for Provider extensions"

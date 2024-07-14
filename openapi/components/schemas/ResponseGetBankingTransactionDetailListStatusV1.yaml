@@ -1,10 +1,15 @@
-type: object
 properties:
   version:
     type: string
     default: V1
   data:
     $ref: ./RequestBankingTransactionDetailListDataV1.yaml
+  links:
+    $ref: ./LinksV1.yaml
+  meta:
+    $ref: ./MetaActionStatusV1.yaml
 required:
   - data
-  - version
+  - links
+  - meta
+type: object

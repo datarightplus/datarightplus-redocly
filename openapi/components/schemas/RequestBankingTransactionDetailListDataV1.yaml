@@ -1,0 +1,46 @@
+type: object
+properties:
+  accountId:
+    description: ID of a specific account to obtain data for. This is a tokenised
+      ID previous obtained from the Account List end point.
+    in: path
+    schema:
+      type: string
+      x-cds-type: ASCIIString
+    example: 5ecc1b30-5889-49d4-a988-e44b4e215574
+  oldestDate:
+    description: >-
+      Constrain the request to records with effective date at or after this date.
+      Format is aligned to DateString common type
+    schema:
+      type: string
+      format: date
+      x-cds-type: DateString
+    example: "2023-07-01"
+  newestDate:
+      description: >-
+        Constrain the request to records with effective date at or before this date.
+        Format is aligned to DateString common type
+      schema:
+        type: string
+        format: date
+        x-cds-type: DateString
+      example: "2024-06-30"
+  minAmount:
+    description: >-
+      Filter transactions to only transactions with amounts higher or equal to than
+      this amount
+    schema:
+      type: string
+    x-cds-type: AmountString
+  maxAmount:
+    description: >-
+      Filter transactions to only transactions with amounts less than or equal to
+      than this amount
+    schema:
+      type: string
+    x-cds-type: AmountString
+required:
+  - accountId
+  - oldestDate
+  - newestDate

@@ -14,15 +14,10 @@ properties:
         $ref: ../flags/CDSDefault.yaml
   responseVersions:
     description: The response versions supported by this endpoint
-    default: [ V1 ]
     type: array
     items:
       $ref: ../versions/EnumResponseListEnergyPlans.yaml
 required:
-  - baseUri
   - flags
   - responseVersions
-example:
-  baseUri: "https://api.eme.energy/cds-au/v1"
-  responseVersions: [ V1 ]
-  flags: [ "SUPPORTS_CDS_VERSIONING" ]
+

@@ -1,17 +1,17 @@
 get:
   description: >-
-    Retrieve banking transaction detail action status.
-  operationId: getBankingTransactionDetailListStatus
+    Retrieve banking transaction detail records.
+  operationId: retrieveBankingTransactionDetailList
   parameters:
     - $ref: ../components/parameters/PathActionId.yaml
     - in: header
       name: x-v
       schema:
-        $ref: ../components/schemas/versions/EnumResponseGetBankingTransactionDetailListStatus.yaml
+        $ref: ../components/schemas/versions/EnumResponseRetrieveBankingTransactionDetailList.yaml
     - $ref: ../components/parameters/HeaderXFapiInteractionId.yaml
   responses:
     200:
-      $ref: ../components/responses/ResponseGetBankingTransactionDetailListStatus.yaml
+      $ref: ../components/responses/ResponseRetrieveBankingTransactionDetailList.yaml
     400:
       $ref: ../components/responses/GetTransactions400.yaml
     403:
@@ -26,7 +26,7 @@ get:
       $ref: ../components/responses/Generic500.yaml
     503:
       $ref: ../components/responses/Generic503.yaml
-  summary: Get Banking Transaction Detail List Status
+  summary: Download Banking Transaction Detail List
   tags:
     - Transactions
   security:

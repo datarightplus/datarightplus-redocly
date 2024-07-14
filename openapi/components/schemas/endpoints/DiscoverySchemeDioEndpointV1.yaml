@@ -1,0 +1,6 @@
+type: object
+properties:
+  requestBankingTransactionDetailList:
+    $ref: EndpointRequestBankingTransactionDetailListV1.yaml
+  retrieveBankingTransactionDetailList:
+    $ref: EndpointRetrieveBankingTransactionDetailListV1.yaml

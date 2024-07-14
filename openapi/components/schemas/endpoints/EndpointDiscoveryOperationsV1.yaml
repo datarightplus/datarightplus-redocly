@@ -1,9 +1,0 @@
-type: object
-properties:
-  getOutages:
-    $ref: EndpointGetOutagesV1.yaml
-  getStatus:
-    $ref: EndpointGetStatusV1.yaml
-required:
-  - getOutages
-  - getStatus

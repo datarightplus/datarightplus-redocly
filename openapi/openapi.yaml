@@ -16,6 +16,8 @@ paths:
     $ref: paths/actions@bulk-banking-transactions.yaml
   /actions/bulk-banking-transactions/{actionId}:
     $ref: paths/actions@bulk-banking-transactions@{actionId}.yaml
+  /actions/bulk-banking-transactions/{actionId}/download:
+    $ref: paths/actions@bulk-banking-transactions@{actionId}@download.yaml
   /banking/accounts:
     $ref: paths/banking@accounts.yaml
   /banking/accounts/balances:
