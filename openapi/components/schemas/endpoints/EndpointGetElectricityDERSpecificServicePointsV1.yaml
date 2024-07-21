@@ -12,12 +12,12 @@ properties:
     description: The request versions supported by this endpoint
     type: array
     items:
-      $ref: ../versions/EnumRequestGetElectricityDERSpecificServicePoints.yaml
+      $ref: ../versions/EnumRequestGetElectricityDERSpecificServicePointsV1.yaml
   responseVersions:
     description: The response versions supported by this endpoint
     type: array
     items:
-      $ref: ../versions/EnumResponseGetElectricityDERSpecificServicePoints.yaml
+      $ref: ../versions/EnumResponseGetElectricityDERSpecificServicePointsV1.yaml
 required:
   - flags
   - responseVersions

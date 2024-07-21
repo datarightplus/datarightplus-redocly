@@ -7,21 +7,19 @@ get:
     - in: header
       name: x-v
       schema:
-        $ref: ../components/schemas/versions/EnumResponseGetBankingTransactionDetailListStatus.yaml
+        $ref: ../components/schemas/versions/EnumResponseGetBankingTransactionDetailListStatusV1.yaml
     - $ref: ../components/parameters/HeaderXFapiInteractionId.yaml
   responses:
     200:
-      $ref: ../components/responses/ResponseGetBankingTransactionDetailListStatus.yaml
+      $ref: ../components/responses/GetBankingTransactionDetailListStatus.yaml
     400:
-      $ref: ../components/responses/GetTransactions400.yaml
+      $ref: ../components/responses/GetBankingTransactionDetailListStatus400.yaml
     403:
       $ref: ../components/responses/Generic403.yaml
     404:
-      $ref: ../components/responses/GetTransactions404.yaml
+      $ref: ../components/responses/GetBankingTransactionDetailListStatus404.yaml
     406:
-      $ref: ../components/responses/GetTransactions406.yaml
-    422:
-      $ref: ../components/responses/GetTransactions422.yaml
+      $ref: ../components/responses/GetBankingTransactionDetailListStatus406.yaml
     500:
       $ref: ../components/responses/Generic500.yaml
     503:

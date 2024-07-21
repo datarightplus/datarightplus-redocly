@@ -7,26 +7,24 @@ get:
     - in: header
       name: x-v
       schema:
-        $ref: ../components/schemas/versions/EnumResponseRetrieveBankingTransactionDetailList.yaml
+        $ref: ../components/schemas/versions/EnumResponseRetrieveBankingTransactionDetailListV1.yaml
     - $ref: ../components/parameters/HeaderXFapiInteractionId.yaml
   responses:
     200:
-      $ref: ../components/responses/ResponseRetrieveBankingTransactionDetailList.yaml
+      $ref: ../components/responses/RetrieveBankingTransactionDetailList.yaml
     400:
-      $ref: ../components/responses/GetTransactions400.yaml
+      $ref: ../components/responses/RetrieveBankingTransactionDetailList400.yaml
     403:
       $ref: ../components/responses/Generic403.yaml
     404:
-      $ref: ../components/responses/GetTransactions404.yaml
+      $ref: ../components/responses/RetrieveBankingTransactionDetailList404.yaml
     406:
-      $ref: ../components/responses/GetTransactions406.yaml
-    422:
-      $ref: ../components/responses/GetTransactions422.yaml
+      $ref: ../components/responses/RetrieveBankingTransactionDetailList406.yaml
     500:
       $ref: ../components/responses/Generic500.yaml
     503:
       $ref: ../components/responses/Generic503.yaml
-  summary: Download Banking Transaction Detail List
+  summary: Retrieve Banking Transaction Detail List
   tags:
     - Transactions
   security:

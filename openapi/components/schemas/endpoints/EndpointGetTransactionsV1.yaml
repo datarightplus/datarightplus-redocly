@@ -12,7 +12,7 @@ properties:
     description: The response versions supported by this endpoint
     type: array
     items:
-      $ref: ../versions/EnumResponseGetTransactions.yaml
+      $ref: ../versions/EnumResponseGetTransactionsV1.yaml
 required:
   - flags
   - responseVersions

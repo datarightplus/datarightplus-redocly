@@ -12,7 +12,7 @@ properties:
     description: The response versions supported by this endpoint
     type: array
     items:
-      $ref: ../versions/EnumResponseGetElectricityServicePointDetail.yaml
+      $ref: ../versions/EnumResponseGetElectricityServicePointDetailV1.yaml
 required:
   - flags
   - responseVersions

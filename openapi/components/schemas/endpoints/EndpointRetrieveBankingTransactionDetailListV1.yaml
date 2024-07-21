@@ -1,9 +1,15 @@
 type: object
 properties:
+  baseUri:
+    description: Base URI for this Operation
+    type: string
+    format: uri
+    example: "https://secure-api.acme.bank/dio-au/v1"
   responseVersions:
     description: The response versions supported by this endpoint
     type: array
     items:
-      $ref: ../versions/EnumResponseRetrieveBankingTransactionDetailList.yaml
+      $ref: ../versions/EnumResponseRetrieveBankingTransactionDetailListV1.yaml
 required:
+  - baseUri
   - responseVersions

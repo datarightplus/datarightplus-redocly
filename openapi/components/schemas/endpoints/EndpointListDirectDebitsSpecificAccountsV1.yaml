@@ -12,12 +12,12 @@ properties:
     description: The request versions supported by this endpoint
     type: array
     items:
-      $ref: ../versions/EnumRequestListDirectDebitsSpecificAccounts.yaml
+      $ref: ../versions/EnumRequestListDirectDebitsSpecificAccountsV1.yaml
   responseVersions:
     description: The response versions supported by this endpoint
     type: array
     items:
-      $ref: ../versions/EnumResponseListDirectDebitsSpecificAccounts.yaml
+      $ref: ../versions/EnumResponseListDirectDebitsSpecificAccountsV1.yaml
 required:
   - flags
   - requestVersions

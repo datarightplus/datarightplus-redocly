@@ -1,9 +1,5 @@
 type: object
 properties:
-  baseUri:
-    type: string
-    format: uri
-    example: "https://api.acme.energy/cds-au/v1"
   flags:
     description: The flags supported by this endpoint
     default: [ "SUPPORTS_CDS_VERSIONING" ]
@@ -16,7 +12,7 @@ properties:
     description: The response versions supported by this endpoint
     type: array
     items:
-      $ref: ../versions/EnumResponseGetEnergyPlanDetail.yaml
+      $ref: ../versions/EnumResponseGetEnergyPlanDetailV1.yaml
 required:
   - flags
   - responseVersions

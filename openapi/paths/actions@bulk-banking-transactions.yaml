@@ -5,23 +5,23 @@ post:
     - in: header
       name: x-v
       schema:
-        $ref: ../components/schemas/versions/EnumResponseRequestBankingTransactionDetailList.yaml
+        $ref: ../components/schemas/versions/EnumResponseRequestBankingTransactionDetailListV1.yaml
     - $ref: ../components/parameters/HeaderXFapiInteractionId.yaml
   requestBody:
     $ref: ../components/requestBodies/RequestBankingTransactionDetailList.yaml
   responses:
     200:
-      $ref: ../components/responses/ResponseGetBankingTransactionDetailListStatus.yaml
+      $ref: ../components/responses/RequestBankingTransactionDetailList.yaml
     400:
-      $ref: ../components/responses/GetTransactions400.yaml
+      $ref: ../components/responses/RequestBankingTransactionDetailList400.yaml
     403:
       $ref: ../components/responses/Generic403.yaml
     404:
-      $ref: ../components/responses/GetTransactions404.yaml
+      $ref: ../components/responses/RequestBankingTransactionDetailList404.yaml
     406:
-      $ref: ../components/responses/GetTransactions406.yaml
+      $ref: ../components/responses/RequestBankingTransactionDetailList406.yaml
     422:
-      $ref: ../components/responses/GetTransactions422.yaml
+      $ref: ../components/responses/RequestBankingTransactionDetailList422.yaml
     500:
       $ref: ../components/responses/Generic500.yaml
     503:

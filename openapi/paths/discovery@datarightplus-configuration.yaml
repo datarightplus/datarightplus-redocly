@@ -7,7 +7,7 @@ get:
     - in: header
       name: x-max-v
       schema:
-        $ref: ../components/schemas/versions/EnumResponseGetDiscoveryDocument.yaml
+        $ref: ../components/schemas/versions/EnumResponseGetDiscoveryDocumentV1.yaml
   responses:
     200:
       $ref: ../components/responses/ResponseGetDiscoveryDocument.yaml

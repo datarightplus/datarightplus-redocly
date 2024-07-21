@@ -4,7 +4,7 @@ content:
     schema:
       x-cds-allowMissingDiscriminator: true
       oneOf:
-        - $ref: ../schemas/ResponseRetrieveBankingTransactionDetailListV1.yaml
+        - $ref: ../schemas/ResponseGetBankingTransactionDetailListStatusV1.yaml
 headers:
   x-fapi-interaction-id:
     $ref: ../headers/XFAPIInteractionId.yaml

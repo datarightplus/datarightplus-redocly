@@ -12,7 +12,7 @@ properties:
     description: The response versions supported by this endpoint
     type: array
     items:
-      $ref: ../versions/EnumResponseGetMetrics.yaml
+      $ref: ../versions/EnumResponseGetMetricsV1.yaml
 required:
   - flags
   - responseVersions

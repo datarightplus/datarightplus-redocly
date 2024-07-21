@@ -1,0 +1,8 @@
+oneOf:
+  - $ref: ../schemas/ErrorResourceInvalidV1.yaml
+  - $ref: ../schemas/ErrorResourceNotImplementedV1.yaml
+discriminator:
+  propertyName: code
+  mapping:
+    "urn:au-cds:error:cds-all:Resource/Invalid": ../schemas/ErrorResourceInvalidV1.yaml
+    "urn:au-cds:error:cds-all:Resource/NotImplemented": ../schemas/ErrorResourceNotImplementedV1.yaml
