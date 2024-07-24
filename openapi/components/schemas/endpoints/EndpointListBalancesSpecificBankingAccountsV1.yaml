@@ -1,0 +1,24 @@
+type: object
+properties:
+  flags:
+    description: The flags supported by this endpoint
+    default: [ "SUPPORTS_CDS_VERSIONING" ]
+    type: array
+    items:
+      type: string
+      enum:
+        $ref: ../flags/CDSDefault.yaml
+  requestVersions:
+    description: The request versions supported by this endpoint
+    type: array
+    items:
+      $ref: ../versions/EnumRequestListBalancesSpecificBankingAccountsV1.yaml
+  responseVersions:
+    description: The response versions supported by this endpoint
+    type: array
+    items:
+      $ref: ../versions/EnumResponseListBalancesSpecificBankingAccountsV1.yaml
+required:
+  - flags
+  - requestVersions
+  - responseVersions

@@ -10,8 +10,14 @@ info:
     name: MIT
     url: https://dataright.plus/
   title: "DataRight+: Redocly"
-  version: ID1
+  version: ID2
 paths:
+  /actions/bulk-banking-transactions:
+    $ref: paths/actions@bulk-banking-transactions.yaml
+  /actions/bulk-banking-transactions/{actionId}:
+    $ref: paths/actions@bulk-banking-transactions@{actionId}.yaml
+  /actions/bulk-banking-transactions/{actionId}/retrieve:
+    $ref: paths/actions@bulk-banking-transactions@{actionId}@retrieve.yaml
   /banking/accounts:
     $ref: paths/banking@accounts.yaml
   /banking/accounts/balances:
@@ -48,6 +54,8 @@ paths:
     $ref: paths/discovery@outages.yaml
   /discovery/status:
     $ref: paths/discovery@status.yaml
+  /discovery/datarightplus-configuration:
+    $ref: paths/discovery@datarightplus-configuration.yaml
   /energy/plans:
     $ref: paths/energy@plans.yaml
   /energy/plans/{planId}:

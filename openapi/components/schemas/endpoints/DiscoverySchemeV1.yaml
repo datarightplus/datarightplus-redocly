@@ -1,0 +1,6 @@
+type: object
+properties:
+  cds:
+    $ref: DiscoverySchemeCdsV1.yaml
+  dio:
+    $ref: DiscoverySchemeDioV1.yaml

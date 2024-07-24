@@ -1,0 +1,6 @@
+type: object
+properties:
+  endpoint:
+    $ref: DiscoverySchemeDioEndpointV1.yaml
+required:
+  - endpoint

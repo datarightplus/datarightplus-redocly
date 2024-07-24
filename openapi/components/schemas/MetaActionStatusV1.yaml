@@ -1,0 +1,27 @@
+properties:
+  actionId:
+    description: >-
+      Unique Action Identifier
+    type: string
+    format: uuid
+    example: 9fe3f97e-c22c-4516-b6ed-05c0486db195
+  status:
+    description: >-
+      Current status of the requested action
+    enum:
+      - PENDING
+      - PROCESSING
+      - COMPLETE
+      - EXPIRED
+      - FAILED
+    type: string
+    example: PROCESSING
+  statusDescription:
+    description: >-
+      Description of the current status, can be used to provide an extended description
+    example: Job Received, contacting internal systems to formulate response.
+required:
+  - actionId
+  - status
+  - statusDescription
+type: object

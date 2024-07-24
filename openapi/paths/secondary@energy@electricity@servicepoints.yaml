@@ -28,3 +28,5 @@ post:
   x-version: '1'
   tags:
     - Electricity Authority Assets
+  security:
+    - ElecAuth: []

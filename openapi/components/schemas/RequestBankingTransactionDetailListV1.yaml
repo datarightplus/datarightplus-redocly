@@ -1,0 +1,10 @@
+type: object
+properties:
+  version:
+    type: string
+    default: V1
+  data:
+    $ref: ./RequestBankingTransactionDetailListDataV1.yaml
+required:
+  - data
+  - version

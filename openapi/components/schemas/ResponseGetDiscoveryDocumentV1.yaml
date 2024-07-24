@@ -1,0 +1,10 @@
+type: object
+properties:
+  version:
+    type: string
+    default: V1
+  scheme:
+    $ref: endpoints/DiscoverySchemeV1.yaml
+required:
+  - scheme
+  - version

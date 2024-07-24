@@ -1,0 +1,12 @@
+oneOf:
+  - $ref: ../schemas/ErrorHeaderInvalidVersionV1.yaml
+  - $ref: ../schemas/ErrorGeneralExpectedV1.yaml
+  - $ref: ../schemas/ErrorHeaderMissingV1.yaml
+  - $ref: ../schemas/ErrorHeaderInvalidV1.yaml
+discriminator:
+  propertyName: code
+  mapping:
+    "urn:au-cds:error:cds-all:Header/InvalidVersion": ../schemas/ErrorHeaderInvalidVersionV1.yaml
+    "urn:au-cds:error:cds-all:GeneralError/Expected": ../schemas/ErrorGeneralExpectedV1.yaml
+    "urn:au-cds:error:cds-all:Header/Missing": ../schemas/ErrorHeaderMissingV1.yaml
+    "urn:au-cds:error:cds-all:Header/Invalid": ../schemas/ErrorHeaderInvalidV1.yaml

@@ -1,0 +1,6 @@
+description: Supported Response Version
+enum:
+  - V1
+  - V2
+type: string
+example: V2
