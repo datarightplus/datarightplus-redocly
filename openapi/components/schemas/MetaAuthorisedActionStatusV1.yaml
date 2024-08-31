@@ -1,0 +1,44 @@
+properties:
+  actionId:
+    description: >-
+      Unique Action Identifier
+    type: string
+    format: uuid
+    example: 9fe3f97e-c22c-4516-b6ed-05c0486db195
+  status:
+    description: >-
+      Current status of the requested action
+    enum:
+      - PENDING
+      - IN_PROGRESS
+      - ACTIVE
+      - REJECTED
+      - REVOKED
+      - EXPIRED
+    type: string
+    example: IN_PROGRESS
+  statusDescription:
+    description: >-
+      Description of the current status, can be used to provide an extended description
+    example: Authorisation has been initiated by the User Agent
+  creationDateTime:
+    description: Creation Date/Time
+    type: string
+    format: date-time
+    x-cds-type: DateTimeString
+    example: 2024-02-31T08:14:25Z
+  lastUpdated:
+    description: Last Status Update time
+    type: string
+    format: date-time
+    x-cds-type: DateTimeString
+    example: 2024-08-31T08:14:25Z
+  extendedStatus:
+    $ref: ./MetaAuthorisedActionExtendedStatusV1.yaml
+required:
+  - actionId
+  - status
+  - statusDescription
+  - lastUpdated
+  - creationDateTime
+type: object

@@ -1,0 +1,10 @@
+type: object
+properties:
+  version:
+    type: string
+    default: V2
+  data:
+    $ref: ./RequestDataSharingAgreementDataV2.yaml
+required:
+  - data
+  - version

@@ -10,8 +10,18 @@ info:
     name: MIT
     url: https://dataright.plus/
   title: "DataRight+: Redocly"
-  version: ID1
+  version: ID2
 paths:
+  /actions/bulk-banking-transactions:
+    $ref: paths/actions@bulk-banking-transactions.yaml
+  /actions/bulk-banking-transactions/{actionId}:
+    $ref: paths/actions@bulk-banking-transactions@{actionId}.yaml
+  /actions/bulk-banking-transactions/{actionId}/retrieve:
+    $ref: paths/actions@bulk-banking-transactions@{actionId}@retrieve.yaml
+  /actions/data-sharing:
+    $ref: paths/actions@data-sharing.yaml
+  /actions/data-sharing/{actionId}:
+    $ref: paths/actions@data-sharing@{actionId}.yaml
   /banking/accounts:
     $ref: paths/banking@accounts.yaml
   /banking/accounts/balances:
@@ -48,6 +58,8 @@ paths:
     $ref: paths/discovery@outages.yaml
   /discovery/status:
     $ref: paths/discovery@status.yaml
+  /discovery/datarightplus-configuration:
+    $ref: paths/discovery@datarightplus-configuration.yaml
   /energy/plans:
     $ref: paths/energy@plans.yaml
   /energy/plans/{planId}:
@@ -123,6 +135,11 @@ paths:
 tags:
   - name: Admin
     description: "Admin APIs"
+  - name: Banking Actions
+    description: "Banking Actions"
+    x-displayName: Banking
+  - name: Data Sharing
+    description: "Data Sharing Functions"
   - name: Banking Accounts
     x-displayName: Accounts
     description: "Accounts Related APIs"
@@ -187,6 +204,8 @@ tags:
 x-tagGroups:
   - name: "Introduction"
     tags: []
+  - name: "Actions"
+    tags: ["Banking Actions", "Data Sharing"]
   - name: "Common"
     tags: ["Customer", "Operations"]
   - name: "Banking Sector"

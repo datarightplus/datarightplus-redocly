@@ -1,0 +1,9 @@
+description: Request Banking Transaction Detail list
+content:
+  application/json:
+    schema:
+      $ref: ../schemas/RequestBankingTransactionDetailList.yaml
+    encoding:
+      payload:
+        contentType: application/json
+required: true

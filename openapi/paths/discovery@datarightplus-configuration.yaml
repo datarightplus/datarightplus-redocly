@@ -1,0 +1,15 @@
+get:
+  description: Retrieve DataRight+ Discovery Document
+  operationId: getDiscoveryDocument
+  summary: Get Discovery Document
+  parameters:
+    - $ref: ../components/parameters/HeaderXFapiInteractionId.yaml
+    - in: header
+      name: x-max-v
+      schema:
+        $ref: ../components/schemas/versions/EnumResponseGetDiscoveryDocumentV1.yaml
+  responses:
+    200:
+      $ref: ../components/responses/ResponseGetDiscoveryDocument.yaml
+  tags:
+    - Operations

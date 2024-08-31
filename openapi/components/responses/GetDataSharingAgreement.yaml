@@ -1,0 +1,8 @@
+description: Success
+content:
+  application/json:
+    schema:
+      $ref: ../schemas/ResponseDataSharingAgreement.yaml
+headers:
+  x-fapi-interaction-id:
+    $ref: ../headers/XFAPIInteractionId.yaml

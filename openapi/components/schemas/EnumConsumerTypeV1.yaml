@@ -1,0 +1,5 @@
+type: string
+description: "Specific Consumer Type"
+enum:
+  - INDIVIDUAL
+  - NON_INDIVIDUAL

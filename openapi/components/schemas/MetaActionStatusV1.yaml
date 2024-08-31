@@ -1,0 +1,41 @@
+properties:
+  actionId:
+    description: >-
+      Unique Action Identifier
+    type: string
+    format: uuid
+    example: 9fe3f97e-c22c-4516-b6ed-05c0486db195
+  status:
+    description: >-
+      Current status of the requested action
+    enum:
+      - INITIALISE
+      - PROCESSING
+      - COMPLETE
+      - EXPIRED
+      - FAILED
+    type: string
+    example: PROCESSING
+  statusDescription:
+    description: >-
+      Description of the current status, can be used to provide an extended description
+    example: Job Received, contacting internal systems to formulate response.
+  creationDateTime:
+    description: Creation Date/Time
+    type: string
+    format: date-time
+    x-cds-type: DateTimeString
+    example: 2024-02-31T08:14:25Z
+  lastUpdated:
+    description: Last Status Update time
+    type: string
+    format: date-time
+    x-cds-type: DateTimeString
+    example: 2024-08-31T08:14:25Z
+required:
+  - actionId
+  - status
+  - statusDescription
+  - creationDateTime
+  - lastUpdated
+type: object

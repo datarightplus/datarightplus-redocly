@@ -1,0 +1,35 @@
+get:
+  description: >-
+    Retrieve banking transaction detail action status.
+  operationId: getBankingTransactionDetailListStatus
+  parameters:
+    - $ref: ../components/parameters/PathActionId.yaml
+    - in: header
+      name: x-v
+      schema:
+        $ref: ../components/schemas/versions/EnumResponseGetBankingTransactionDetailListStatusV1.yaml
+    - $ref: ../components/parameters/HeaderXFapiInteractionId.yaml
+  responses:
+    200:
+      $ref: ../components/responses/GetBankingTransactionDetailListStatus.yaml
+    400:
+      $ref: ../components/responses/GetBankingTransactionDetailListStatus400.yaml
+    403:
+      $ref: ../components/responses/Generic403.yaml
+    404:
+      $ref: ../components/responses/GetBankingTransactionDetailListStatus404.yaml
+    406:
+      $ref: ../components/responses/GetBankingTransactionDetailListStatus406.yaml
+    500:
+      $ref: ../components/responses/Generic500.yaml
+    503:
+      $ref: ../components/responses/Generic503.yaml
+  summary: Get Banking Transaction Detail List Status
+  tags:
+    - Banking Actions
+  security:
+    - ProviderAuth: ['bank:transactions:read']
+  x-version: '1'
+  servers:
+    - url: 'https://secure.api.register.dataright.plus/dio-au/v1'
+      description: "Example MTLS Base URL for Provider extensions"
