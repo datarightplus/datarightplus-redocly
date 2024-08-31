@@ -5,7 +5,7 @@ content:
       properties:
         errors:
           items:
-            $ref: ./RequestBankingTransactionDetailList406Item.yaml
+            $ref: ./RequestDataSharingAgreement406Item.yaml
           type: array
       required:
         - errors

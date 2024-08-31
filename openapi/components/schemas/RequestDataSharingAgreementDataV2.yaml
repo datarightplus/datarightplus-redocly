@@ -1,0 +1,36 @@
+type: object
+properties:
+  agreementId:
+    description: Unique Agreement Identifier, if provided during initialisation triggers an agreement amendment for the included duration and data clusters
+    type: string
+  sharingDuration:
+    description: Length, in seconds, to request sharing to be granted for
+    type: integer
+    minimum: 0
+    maximum: 31536000
+    example: 7776000
+  dataClusters:
+    description: One or more data clusters to enable sharing for
+    minItems: 1
+    type: array
+    items:
+      $ref: ./EnumDataClusterV1.yaml
+  consumerType:
+    $ref: ./EnumConsumerTypeV1.yaml
+  oldestDate:
+    description: Oldest Record Date, if undefined specifies no record filter
+    type: string
+    format: date
+    x-cds-type: DateString
+  newestDate:
+    description: Newest Record Date, if undefined specifies no record filter
+    type: string
+    format: date
+    x-cds-type: DateString
+required:
+  - sharingDuration
+  - dataClusters
+example:
+  sharingDuration: 31536000
+  dataClusters:
+    - BANK_ACCOUNTS_BASIC_READ

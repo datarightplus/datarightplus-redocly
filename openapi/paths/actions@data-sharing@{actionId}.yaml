@@ -1,0 +1,33 @@
+get:
+  description: >-
+    Retrieve a Data Sharing Agreement current state and configuration
+  operationId: getDataSharingAgreement
+  parameters:
+    - $ref: ../components/parameters/PathActionId.yaml
+    - in: header
+      name: x-v
+      schema:
+        $ref: ../components/schemas/versions/EnumResponseGetDataSharingAgreementV2.yaml
+    - $ref: ../components/parameters/HeaderXFapiInteractionId.yaml
+  responses:
+    200:
+      $ref: ../components/responses/GetDataSharingAgreement.yaml
+    400:
+      $ref: ../components/responses/GetDataSharingAgreement400.yaml
+    403:
+      $ref: ../components/responses/Generic403.yaml
+    404:
+      $ref: ../components/responses/GetDataSharingAgreement404.yaml
+    406:
+      $ref: ../components/responses/GetDataSharingAgreement406.yaml
+    422:
+      $ref: ../components/responses/GetDataSharingAgreement422.yaml
+    500:
+      $ref: ../components/responses/Generic500.yaml
+    503:
+      $ref: ../components/responses/Generic503.yaml
+  summary: Get Sharing Agreement
+  tags:
+    - Data Sharing
+  security:
+    - ProviderAuth: ["dio:sharing"]
