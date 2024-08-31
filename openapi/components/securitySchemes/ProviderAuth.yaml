@@ -20,3 +20,8 @@ flows:
       "energy:billing:read": The scope would allow the third party to access the  billing and invoice data for a customer’s energy account.
       "common:customer.basic:read": The scope would allow the third party to access personally identifiable information about the customer. For retail customers this would be information about the customer themselves. For business customers it would imply the name of specific user but also information about the business. Includes name and occupation for individuals or name, business numbers and industry code for organisations
       "common:customer.detail:read": The scope would allow the third party to access more detailed information about the customer. Includes the data available with the Basic Customer Data scope plus contact details. Includes basic data plus phone, email and address information.
+  clientCredentials:
+    tokenUrl: https://idp.holder.cdr/token
+    scopes:
+      "cdr:registration": This scope would allow an Initiator to register or manage a software product client with a Provider.
+      "dio:sharing": This scope allows an Initiator to initialise DataRight+ Sharing Arrangements

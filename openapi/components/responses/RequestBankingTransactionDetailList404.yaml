@@ -5,7 +5,7 @@ content:
       properties:
         errors:
           items:
-            $ref: ./GetTransactions404Item.yaml
+            $ref: ./RequestBankingTransactionDetailList404Item.yaml
           type: array
       required:
         - errors

@@ -1,0 +1,22 @@
+properties:
+  lastAuthStatus:
+    description: Authorisation Status information
+    example: PRE_AUTHENTICATION
+    type: string
+    enum:
+      - PRE_IDENTIFICATION
+      - PRE_AUTHENTICATION
+      - MANUAL_STEP_REQUIRED
+      - PRE_ACCOUNT_SELECTION
+      - PRE_AUTHORISATION
+      - AWAITING_CODE_CLAIM
+      - COMPLETE
+  lastAuthStatusDescription:
+    type: string
+    description: >-
+      Description of the current authorisation status
+    example: Customer completed identification but did not authenticate correctly
+required:
+  - lastAuthStatus
+  - lastAuthStatusDescription
+type: object

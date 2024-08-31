@@ -9,17 +9,18 @@ properties:
     description: >-
       Current status of the requested action
     enum:
-      - INITIALISE
-      - PROCESSING
-      - COMPLETE
+      - PENDING
+      - IN_PROGRESS
+      - ACTIVE
+      - REJECTED
+      - REVOKED
       - EXPIRED
-      - FAILED
     type: string
-    example: PROCESSING
+    example: IN_PROGRESS
   statusDescription:
     description: >-
       Description of the current status, can be used to provide an extended description
-    example: Job Received, contacting internal systems to formulate response.
+    example: Authorisation has been initiated by the User Agent
   creationDateTime:
     description: Creation Date/Time
     type: string
@@ -30,10 +31,12 @@ properties:
     type: string
     format: date-time
     x-cds-type: DateTimeString
+  extendedStatus:
+    $ref: ./MetaAuthorisedActionExtendedStatusV1.yaml
 required:
   - actionId
   - status
   - statusDescription
-  - creationDateTime
   - lastUpdated
+  - creationDateTime
 type: object

@@ -1,11 +1,11 @@
-description: Not Acceptable
+description: Bad Request
 content:
   application/json:
     schema:
       properties:
         errors:
           items:
-            $ref: ./RequestBankingTransactionDetailList406Item.yaml
+            $ref: ./RequestDataSharingAgreement400Item.yaml
           type: array
       required:
         - errors

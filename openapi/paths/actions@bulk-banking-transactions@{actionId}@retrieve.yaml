@@ -26,7 +26,7 @@ get:
       $ref: ../components/responses/Generic503.yaml
   summary: Retrieve Banking Transaction Detail List
   tags:
-    - Transactions
+    - Banking Actions
   security:
     - ProviderAuth: ['bank:transactions:read']
   x-version: '1'

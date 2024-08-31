@@ -1,11 +1,11 @@
-description: Not Acceptable
+description: Unprocessable Entity Error
 content:
   application/json:
     schema:
       properties:
         errors:
           items:
-            $ref: ./RequestBankingTransactionDetailList406Item.yaml
+            $ref: ./RequestDataSharingAgreement422Item.yaml
           type: array
       required:
         - errors

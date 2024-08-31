@@ -18,6 +18,10 @@ paths:
     $ref: paths/actions@bulk-banking-transactions@{actionId}.yaml
   /actions/bulk-banking-transactions/{actionId}/retrieve:
     $ref: paths/actions@bulk-banking-transactions@{actionId}@retrieve.yaml
+  /actions/data-sharing:
+    $ref: paths/actions@data-sharing.yaml
+  /actions/data-sharing/{actionId}:
+    $ref: paths/actions@data-sharing@{actionId}.yaml
   /banking/accounts:
     $ref: paths/banking@accounts.yaml
   /banking/accounts/balances:
@@ -131,6 +135,11 @@ paths:
 tags:
   - name: Admin
     description: "Admin APIs"
+  - name: Banking Actions
+    description: "Banking Actions"
+    x-displayName: Banking
+  - name: Data Sharing
+    description: "Data Sharing Functions"
   - name: Banking Accounts
     x-displayName: Accounts
     description: "Accounts Related APIs"
@@ -195,6 +204,8 @@ tags:
 x-tagGroups:
   - name: "Introduction"
     tags: []
+  - name: "Actions"
+    tags: ["Banking Actions", "Data Sharing"]
   - name: "Common"
     tags: ["Customer", "Operations"]
   - name: "Banking Sector"
