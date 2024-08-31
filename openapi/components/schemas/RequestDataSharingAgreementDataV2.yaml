@@ -8,6 +8,7 @@ properties:
     type: integer
     minimum: 0
     maximum: 31536000
+    example: 7776000
   dataClusters:
     description: One or more data clusters to enable sharing for
     minItems: 1

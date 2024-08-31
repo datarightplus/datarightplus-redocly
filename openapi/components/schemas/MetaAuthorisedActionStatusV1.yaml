@@ -26,11 +26,13 @@ properties:
     type: string
     format: date-time
     x-cds-type: DateTimeString
+    example: 2024-02-31T08:14:25Z
   lastUpdated:
     description: Last Status Update time
     type: string
     format: date-time
     x-cds-type: DateTimeString
+    example: 2024-08-31T08:14:25Z
   extendedStatus:
     $ref: ./MetaAuthorisedActionExtendedStatusV1.yaml
 required:
