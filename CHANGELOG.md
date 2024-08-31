@@ -4,6 +4,44 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [ID2] - 2024-08-31
+### :construction_worker: Build System
+- [`8a7a993`](https://github.com/datarightplus/datarightplus-redocly/commit/8a7a993788c7b39abdb47c1ef266213d25bce5de) - **deps**: bump ws from 7.5.7 to 7.5.10 *(commit by [@dependabot[bot]](https://github.com/apps/dependabot))*
+
+### :memo: Documentation Changes
+- [`24e8dcd`](https://github.com/datarightplus/datarightplus-redocly/commit/24e8dcda19dad3bce03c742ec135160f527836d4) - commit updated CHANGELOG for ID1 [skip ci] *(commit by [@perlboy](https://github.com/perlboy))*
+
+### :flying_saucer: Other Changes
+- [`6cb9777`](https://github.com/datarightplus/datarightplus-redocly/commit/6cb9777da6bbaa7aa910ea0f5157c68e0aba539f) - Merge branch 'release/ID1' into develop *(commit by [@perlboy](https://github.com/perlboy))*
+- [`94aa0fc`](https://github.com/datarightplus/datarightplus-redocly/commit/94aa0fcd2c190e15298eb58b78db8d60d8b2ff70) - Tweak changelog for the future *(commit by [@perlboy](https://github.com/perlboy))*
+- [`de14236`](https://github.com/datarightplus/datarightplus-redocly/commit/de14236ba4b25303516b3a015a8a6501e4c71d9d) - WIP *(commit by [@perlboy](https://github.com/perlboy))*
+- [`5d121ea`](https://github.com/datarightplus/datarightplus-redocly/commit/5d121eaf1a071e1e9b11fab392b81ae3fa7e7128) - Introduce discovery document *(commit by [@perlboy](https://github.com/perlboy))*
+- [`412ad0a`](https://github.com/datarightplus/datarightplus-redocly/commit/412ad0a17b3c6b3ac1b90670cb07128b25addfc3) - Add Base URI support to endpoints *(commit by [@perlboy](https://github.com/perlboy))*
+- [`630e6df`](https://github.com/datarightplus/datarightplus-redocly/commit/630e6dff2f196696c8f9a94d3aca3a50c3fa9add) - Revised method names *(commit by [@perlboy](https://github.com/perlboy))*
+- [`f4c58dd`](https://github.com/datarightplus/datarightplus-redocly/commit/f4c58dd837b6f23a84a40c93a85fbea088680600) - Tweak operations *(commit by [@perlboy](https://github.com/perlboy))*
+- [`b4a8220`](https://github.com/datarightplus/datarightplus-redocly/commit/b4a82207564401ead0dd0f218a9a3e5832908a3b) - Add examples to pass lint *(commit by [@perlboy](https://github.com/perlboy))*
+- [`1c92f9b`](https://github.com/datarightplus/datarightplus-redocly/commit/1c92f9b3c7b394213cea2c37e16a1fe72708f050) - Revert no-op change *(commit by [@perlboy](https://github.com/perlboy))*
+- [`7bbb81f`](https://github.com/datarightplus/datarightplus-redocly/commit/7bbb81fc42198dbae24e698a719f363eebb8274d) - Remove sharing arrangement for now *(commit by [@perlboy](https://github.com/perlboy))*
+- [`4029b03`](https://github.com/datarightplus/datarightplus-redocly/commit/4029b030314c708b2b037ad8d7a75baaa50261f6) - Revert no-op change *(commit by [@perlboy](https://github.com/perlboy))*
+- [`b9ef344`](https://github.com/datarightplus/datarightplus-redocly/commit/b9ef34429c80ad1fe7ad8788a00018b79369aa8e) - Remove agreementId *(commit by [@perlboy](https://github.com/perlboy))*
+- [`cd05c60`](https://github.com/datarightplus/datarightplus-redocly/commit/cd05c605ad386e3ec72b0c20699e2704f7bb51e2) - Revert no-op change *(commit by [@perlboy](https://github.com/perlboy))*
+- [`3e682df`](https://github.com/datarightplus/datarightplus-redocly/commit/3e682dfca552d537aa52d7c6b801c3ec84dae305) - Work towards restructuring discovery *(commit by [@perlboy](https://github.com/perlboy))*
+- [`c41f7b3`](https://github.com/datarightplus/datarightplus-redocly/commit/c41f7b30a1317d1cd60b78cfe0ac32c6c0480bab) - Changes for bulk tx download, version enums *(commit by [@perlboy](https://github.com/perlboy))*
+- [`5fe072b`](https://github.com/datarightplus/datarightplus-redocly/commit/5fe072b2c1685e2723e981298406390ce585eab0) - NPM package updates *(commit by [@perlboy](https://github.com/perlboy))*
+- [`230f11b`](https://github.com/datarightplus/datarightplus-redocly/commit/230f11b7581b2a36501ccf678f7af7eb52e2ede0) - Merge pull request [#2](https://github.com/datarightplus/datarightplus-redocly/pull/2) from datarightplus/dependabot/npm_and_yarn/ws-7.5.10
+
+build(deps): bump ws from 7.5.7 to 7.5.10 *(commit by [@perlboy](https://github.com/perlboy))*
+- [`8249dfd`](https://github.com/datarightplus/datarightplus-redocly/commit/8249dfd4a53e1ac8ab2b0397658898c1b2290c70) - Fix conflict *(commit by [@perlboy](https://github.com/perlboy))*
+- [`c0404d9`](https://github.com/datarightplus/datarightplus-redocly/commit/c0404d9532d42c152e8896e36b9fe3582e16e306) - Merge pull request [#1](https://github.com/datarightplus/datarightplus-redocly/pull/1) from datarightplus/datarightplus-tranche2
+
+Initial Introduction of Discovery and Async Bulk Transaction Detail *(commit by [@perlboy](https://github.com/perlboy))*
+- [`052c412`](https://github.com/datarightplus/datarightplus-redocly/commit/052c41259cfa10ad5ea55bc48b6b3587771d557c) - Updates for sharing agreement *(commit by [@perlboy](https://github.com/perlboy))*
+- [`7d0896a`](https://github.com/datarightplus/datarightplus-redocly/commit/7d0896aef5c8e7394a81437e4917469534e41e1b) - Add examples *(commit by [@perlboy](https://github.com/perlboy))*
+- [`d79f8e9`](https://github.com/datarightplus/datarightplus-redocly/commit/d79f8e9b81fce777f7b90617220046afe59832f9) - Merge pull request [#3](https://github.com/datarightplus/datarightplus-redocly/pull/3) from datarightplus/datarightplus-tranche2
+
+Updates for sharing agreement *(commit by [@perlboy](https://github.com/perlboy))*
+
+
 ## [ID1] - 2024-04-01
 ### :sparkles: New Features
 - [`d41f09e`](https://github.com/datarightplus/datarightplus-redocly/commit/d41f09ea0835e474b926c9a743ed2e37d8be1d83) - Add favicon reference *(commit by [@perlboy](https://github.com/perlboy))*
@@ -92,3 +130,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 
 [ID1]: https://github.com/datarightplus/datarightplus-redocly/compare/develop%40%7B2year%7D...develop
+[ID2]: https://github.com/datarightplus/datarightplus-redocly/compare/ID1...ID2
