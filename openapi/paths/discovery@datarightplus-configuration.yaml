@@ -3,7 +3,6 @@ get:
   operationId: getDiscoveryDocument
   summary: Get Discovery Document
   parameters:
-    - $ref: ../components/parameters/HeaderXFapiInteractionId.yaml
     - in: header
       name: x-max-v
       schema:
