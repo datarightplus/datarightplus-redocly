@@ -1,5 +1,3 @@
 description: Supported Response Version
-enum:
-  - V1
 type: string
 example: V1
