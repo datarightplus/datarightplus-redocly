@@ -5,6 +5,7 @@ get:
   parameters:
     - in: header
       name: x-max-v
+      required: true
       schema:
         $ref: ../components/schemas/versions/EnumResponseGetDiscoveryDocumentV1.yaml
   responses:
