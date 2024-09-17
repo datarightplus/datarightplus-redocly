@@ -1,0 +1,54 @@
+properties:
+  version:
+    type: string
+    default: V1
+  data:
+    $ref: ./RequestInitiateEnergySwitchV1.yaml
+  links:
+    $ref: ./LinksV1.yaml
+  meta:
+    $ref: ./MetaAuthorisedActionStatusV1.yaml
+required:
+  - data
+  - links
+  - meta
+type: object
+example:
+  version: "V1"
+  data:
+    connectionDetail:
+      planId: ENERGY_SAVER_PLAN
+      nationalMeteringId: 6987332211
+      lifeSupportRequired: false
+      concessionEligible: false
+      electronicBills: true
+    customerDetail:
+      customerUType: person
+      person:
+        firstName: John
+        lastName: Doe
+        middleNames: []
+        emailAddresses:
+          - address: john@doe.com
+            purpose: HOME
+        phoneNumbers:
+          - fullNumber: "+61439123123"
+            number: "0439123123"
+            purpose: MOBILE
+        physicalAddresses:
+          - addressUType: simple
+            purpose: MAIL
+            simple:
+              addressLine1: "55 McDonald Avenue"
+              city: "Maryville"
+              postcode: "2293"
+              state: "NSW"
+  links:
+    self: "https://api.provider.com.au/dio-au/actions/energy-account-switch/8ba3f97e-c22c-4516-b6ed-05c0486db195"
+  meta:
+    actionId: "8ba3f97e-c22c-4516-b6ed-05c0486db195"
+    status: IN_PROGRESS
+    statusDescription: "Energy Account Switch is currently in progress"
+    extendedStatus:
+      lastAuthStatus: COMPLETE
+      lastAuthStatusDescription: "Energy Account Switch authorisation has been completed."

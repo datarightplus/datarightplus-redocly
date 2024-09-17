@@ -1,0 +1,33 @@
+post:
+  description: Endpoint to initiate an energy account opening via the DataRight+ framework
+  operationId: initiateEnergySwitch
+  parameters:
+    - in: header
+      name: x-v
+      schema:
+        $ref: ../components/schemas/versions/EnumResponseInitiateEnergySwitchV1.yaml
+    - $ref: ../components/parameters/HeaderXFapiInteractionId.yaml
+  requestBody:
+    $ref: ../components/requestBodies/RequestInitiateEnergySwitch.yaml
+  responses:
+    200:
+      $ref: ../components/responses/InitiateEnergySwitch.yaml
+    400:
+      $ref: ../components/responses/InitiateEnergySwitch400.yaml
+    403:
+      $ref: ../components/responses/Generic403.yaml
+    404:
+      $ref: ../components/responses/InitiateEnergySwitch404.yaml
+    406:
+      $ref: ../components/responses/InitiateEnergySwitch406.yaml
+    422:
+      $ref: ../components/responses/InitiateEnergySwitch422.yaml
+    500:
+      $ref: ../components/responses/Generic500.yaml
+    503:
+      $ref: ../components/responses/Generic503.yaml
+  summary: Initiate Energy Switch
+  tags:
+    - Account Origination
+  security:
+    - ProviderAuth: ["dio:action"]

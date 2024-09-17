@@ -22,8 +22,10 @@ paths:
     $ref: paths/actions@data-sharing.yaml
   /actions/data-sharing/{actionId}:
     $ref: paths/actions@data-sharing@{actionId}.yaml
-  /actions/energy-account-sitch-v1:
-    $ref: paths/actions@energy-account-switch-v1.yaml
+  /actions/energy-account-switch:
+    $ref: paths/actions@energy-account-switch.yaml
+  /actions/energy-account-switch/{actionId}:
+    $ref: paths/actions@energy-account-switch@{actionId}.yaml
   /banking/accounts:
     $ref: paths/banking@accounts.yaml
   /banking/accounts/balances:
@@ -209,7 +211,7 @@ x-tagGroups:
   - name: "Introduction"
     tags: []
   - name: "Actions"
-    tags: ["Banking Actions", "Data Sharing"]
+    tags: ["Banking Actions", "Data Sharing", "Account Origination"]
   - name: "Common"
     tags: ["Customer", "Operations"]
   - name: "Banking Sector"

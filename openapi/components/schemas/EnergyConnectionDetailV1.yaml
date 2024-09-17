@@ -1,0 +1,22 @@
+description: Energy Connection Request Detail
+type: object
+properties:
+  planId:
+    description: The Energy Plan to switch to, originally sourced from the Get Plans endpoint for the target Provider
+    type: string
+  nationalMeteringId:
+    description: National Metering Identifier, sourced from the Service Point Detail of the source Provider
+    type: string
+    pattern: '^\d{10}$'
+    example: "4567123487"
+  lifeSupportRequired:
+    description: Does anyone intending to reside at the supply address require a life support machine?
+    type: boolean
+  concessionEligible:
+    description: Does the Consumer hold an eligible concession?
+    type: boolean
+  electronicBills:
+    description: Electronic Bills preferred and enabled
+    type: boolean
+required:
+  - planId
