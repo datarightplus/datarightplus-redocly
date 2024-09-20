@@ -1,0 +1,61 @@
+properties:
+  actionId:
+    description: >-
+      Unique Action Identifier
+    type: string
+    format: uuid
+    example: 9fe3f97e-c22c-4516-b6ed-05c0486db195
+  actionStatus:
+    description: >-
+      Current status of the requested action
+    enum:
+      - PENDING
+      - IN_PROGRESS
+      - SUCCESS
+      - FAILED
+    type: string
+    example: IN_PROGRESS
+  actionStatusDescription:
+    type: string
+    description: >-
+      Description of the current status, can be used to provide an extended description
+    example: Authorisation has been initiated by the User Agent
+  authStatus:
+    description: Authorisation Status information
+    example: PRE_AUTHENTICATION
+    type: string
+    enum:
+      - PENDING
+      - PRE_IDENTIFICATION
+      - PRE_AUTHENTICATION
+      - MANUAL_STEP_REQUIRED
+      - PRE_ACCOUNT_SELECTION
+      - PRE_AUTHORISATION
+      - AWAITING_CODE_CLAIM
+      - COMPLETE
+  authStatusDescription:
+    type: string
+    description: >-
+      Description of the current authorisation status
+    example: Customer completed identification but did not authenticate correctly
+  creationDateTime:
+    description: Creation Date/Time
+    type: string
+    format: date-time
+    x-cds-type: DateTimeString
+    example: 2024-02-31T08:14:25Z
+  lastUpdated:
+    description: Last Status Update time
+    type: string
+    format: date-time
+    x-cds-type: DateTimeString
+    example: 2024-08-31T08:14:25Z
+required:
+  - actionId
+  - actionStatus
+  - actionStatusDescription
+  - authStatus
+  - authStatusDescription
+  - lastUpdated
+  - creationDateTime
+type: object

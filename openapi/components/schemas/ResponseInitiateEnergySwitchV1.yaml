@@ -7,7 +7,7 @@ properties:
   links:
     $ref: ./LinksV1.yaml
   meta:
-    $ref: ./MetaAuthorisedActionStatusV1.yaml
+    $ref: ./MetaInitiateEnergySwitchV1.yaml
 required:
   - data
   - links
@@ -47,8 +47,7 @@ example:
     self: "https://api.provider.com.au/dio-au/actions/energy-account-switch/8ba3f97e-c22c-4516-b6ed-05c0486db195"
   meta:
     actionId: "8ba3f97e-c22c-4516-b6ed-05c0486db195"
-    status: IN_PROGRESS
-    statusDescription: "Energy Account Switch is currently in progress"
-    extendedStatus:
-      lastAuthStatus: COMPLETE
-      lastAuthStatusDescription: "Energy Account Switch authorisation has been completed."
+    actionStatus: IN_PROGRESS
+    actionStatusDescription: "Energy Account Switch is currently in progress"
+    authStatus: COMPLETE
+    authStatusDescription: "Authorisation for action has been completed"
