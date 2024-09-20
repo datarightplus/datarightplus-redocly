@@ -10,3 +10,7 @@ properties:
     $ref: EndpointRequestDataSharingAgreementV2.yaml
   getDataSharingAgreement:
     $ref: EndpointGetDataSharingAgreementV2.yaml
+  initiateEnergySwitch:
+    $ref: EndpointInitiateEnergySwitchV1.yaml
+  getEnergySwitchStatus:
+    $ref: EndpointGetEnergySwitchStatusV1.yaml
