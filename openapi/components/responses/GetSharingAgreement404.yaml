@@ -1,11 +1,11 @@
-description: Not Acceptable
+description: Resource Not Found
 content:
   application/json:
     schema:
       properties:
         errors:
           items:
-            $ref: ./RequestDataSharingAgreement406Item.yaml
+            $ref: ./GetSharingAgreement404Item.yaml
           type: array
       required:
         - errors

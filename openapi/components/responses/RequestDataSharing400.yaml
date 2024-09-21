@@ -1,11 +1,11 @@
-description: Resource Not Found
+description: Bad Request
 content:
   application/json:
     schema:
       properties:
         errors:
           items:
-            $ref: ./RequestDataSharingAgreement404Item.yaml
+            $ref: ./RequestDataSharing400Item.yaml
           type: array
       required:
         - errors

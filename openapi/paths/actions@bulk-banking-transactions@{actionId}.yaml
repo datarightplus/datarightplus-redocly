@@ -6,6 +6,7 @@ get:
     - $ref: ../components/parameters/PathActionId.yaml
     - in: header
       name: x-v
+      required: true
       schema:
         $ref: ../components/schemas/versions/EnumResponseGetBankingTransactionDetailListStatusV1.yaml
     - $ref: ../components/parameters/HeaderXFapiInteractionId.yaml

@@ -12,18 +12,12 @@ properties:
     items:
       type: string
       enum:
-        $ref: ../flags/CDSDefault.yaml
+        $ref: ../flags/DataSharingAgreementV2.yaml
   responseVersions:
     description: The response versions supported by this endpoint
     type: array
     items:
-      $ref: ../versions/EnumResponseGetDataSharingAgreementV2.yaml
-  requestVersions:
-    description: The request versions supported by this endpoint
-    type: array
-    items:
-      $ref: ../versions/EnumRequestGetDataSharingAgreementV2.yaml
+      $ref: ../versions/EnumResponseGetSharingAgreementV2.yaml
 required:
   - baseUri
-  - requestVersions
   - responseVersions

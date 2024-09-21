@@ -4,7 +4,7 @@ properties:
     type: string
     default: V2
   data:
-    $ref: ./RequestDataSharingAgreementDataV2.yaml
+    $ref: ./RequestSharingAgreementDataV2.yaml
 required:
   - data
   - version

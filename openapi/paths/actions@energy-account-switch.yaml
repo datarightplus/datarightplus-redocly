@@ -4,6 +4,7 @@ post:
   parameters:
     - in: header
       name: x-v
+      required: true
       schema:
         $ref: ../components/schemas/versions/EnumResponseInitiateEnergySwitchV1.yaml
     - $ref: ../components/parameters/HeaderXFapiInteractionId.yaml

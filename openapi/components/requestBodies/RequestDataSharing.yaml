@@ -2,7 +2,7 @@ description: Request Data Sharing Agreement
 content:
   application/json:
     schema:
-      $ref: ../schemas/RequestDataSharingAgreement.yaml
+      $ref: ../schemas/RequestSharingAgreement.yaml
     encoding:
       payload:
         contentType: application/json

@@ -1,7 +1,7 @@
 get:
   description: >-
-    Retrieve Current Data Sharing Agreement related to token used
-  operationId: getCurrentSharingAgreement
+    Retrieve Data Sharing Agreement details
+  operationId: getSharingAgreement
   parameters:
     - $ref: ../components/parameters/PathAgreementId.yaml
     - in: header
@@ -21,8 +21,8 @@ get:
       $ref: ../components/responses/Generic500.yaml
     503:
       $ref: ../components/responses/Generic503.yaml
-  summary: Get Current Sharing Agreement
+  summary: Get Sharing Agreement
   tags:
     - Data Sharing
   security:
-    - ProviderAuth: ["openid"]
+    - ProviderAuth: ["dio:sharing"]
