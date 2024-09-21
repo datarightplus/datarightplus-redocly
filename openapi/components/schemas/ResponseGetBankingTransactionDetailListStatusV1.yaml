@@ -7,7 +7,7 @@ properties:
   links:
     $ref: ./LinksV1.yaml
   meta:
-    $ref: ./MetaActionStatusV1.yaml
+    $ref: ./MetaRequestBankingTransactionDetailListV1.yaml
 required:
   - data
   - links
