@@ -22,8 +22,8 @@ paths:
     $ref: paths/actions@data-sharing.yaml
   /actions/data-sharing/{agreementId}:
     $ref: paths/actions@data-sharing@{agreementId}.yaml
-  /actions/request-data-sharing:
-    $ref: paths/actions@request-data-sharing.yaml
+  /actions/request-data-sharing/self:
+    $ref: paths/actions@request-data-sharing@self.yaml
   /actions/request-data-sharing/{actionId}:
     $ref: paths/actions@request-data-sharing@{actionId}.yaml
   /actions/energy-account-switch:
