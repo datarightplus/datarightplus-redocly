@@ -6,10 +6,14 @@ properties:
     $ref: EndpointRequestBankingTransactionDetailListV1.yaml
   retrieveBankingTransactionDetailList:
     $ref: EndpointRetrieveBankingTransactionDetailListV1.yaml
+  getCurrentSharingAgreement:
+    $ref: EndpointGetCurrentSharingAgreementV2.yaml
+  getSharingAgreement:
+    $ref: EndpointGetSharingAgreementV2.yaml
   requestDataSharingAgreement:
-    $ref: EndpointRequestDataSharingAgreementV2.yaml
-  getDataSharingAgreement:
-    $ref: EndpointGetDataSharingAgreementV2.yaml
+    $ref: EndpointRequestSharingAgreementV2.yaml
+  getSharingRequest:
+    $ref: EndpointGetSharingRequestV2.yaml
   initiateEnergySwitch:
     $ref: EndpointInitiateEnergySwitchV1.yaml
   getEnergySwitchStatus:

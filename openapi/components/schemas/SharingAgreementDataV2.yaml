@@ -1,0 +1,47 @@
+type: object
+properties:
+  agreementId:
+    description: Unique Agreement Identifier, if provided during initialisation triggers an agreement amendment for the included duration and data clusters
+    type: string
+    example: e1529071-601f-46ff-a097-97cdaba84065
+  status:
+    $ref: ./EnumAgreementStatusV1.yaml
+  creationDateTime:
+    description: >-
+      The date and time that this agreement was created.
+    type: string
+    format: date-time
+    x-cds-type: DateTimeString
+    example: 2023-09-21T14:44:16+10:00
+  expiryDateTime:
+    description: >-
+      The current expiry date-time of the agreement.
+    type: string
+    format: date-time
+    x-cds-type: DateTimeString
+    example: 2024-08-21T14:44:16+10:00
+  dataClusters:
+    description: One or more data clusters to enable sharing for
+    minItems: 1
+    type: array
+    items:
+      $ref: ./EnumDataClusterV1.yaml
+  oldestDate:
+    description: Oldest Record Date, if undefined specifies no record filter
+    type: string
+    format: date
+    x-cds-type: DateString
+  newestDate:
+    description: Newest Record Date, if undefined specifies no record filter
+    type: string
+    format: date
+    x-cds-type: DateString
+required:
+  - agreementId
+  - status
+  - creationDateTime
+  - expiryDateTime
+  - dataClusters
+example:
+  dataClusters:
+    - BANK_ACCOUNTS_BASIC_READ

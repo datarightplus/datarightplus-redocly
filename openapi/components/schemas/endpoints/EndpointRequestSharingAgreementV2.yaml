@@ -5,6 +5,14 @@ properties:
     type: string
     format: uri
     example: "https://secure-api.acme.bank/dio-au/v1"
+  flags:
+    description: The flags supported by this endpoint
+    default: [ ]
+    type: array
+    items:
+      type: string
+      enum:
+        $ref: ../flags/DataSharingAgreementV2.yaml
   responseVersions:
     description: The response versions supported by this endpoint
     type: array

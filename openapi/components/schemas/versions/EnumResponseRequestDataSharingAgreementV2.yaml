@@ -1,5 +1,0 @@
-description: Supported Request Version
-enum:
-  - V2
-type: string
-example: V2

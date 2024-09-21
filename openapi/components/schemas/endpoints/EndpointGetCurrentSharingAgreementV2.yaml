@@ -17,13 +17,7 @@ properties:
     description: The response versions supported by this endpoint
     type: array
     items:
-      $ref: ../versions/EnumResponseRequestDataSharingAgreementV2.yaml
-  requestVersions:
-    description: The request versions supported by this endpoint
-    type: array
-    items:
-      $ref: ../versions/EnumRequestRequestDataSharingAgreementV2.yaml
+      $ref: ../versions/EnumResponseGetSharingAgreementV2.yaml
 required:
   - baseUri
-  - requestVersions
   - responseVersions

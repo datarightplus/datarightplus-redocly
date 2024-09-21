@@ -5,7 +5,7 @@ content:
       properties:
         errors:
           items:
-            $ref: ./RequestDataSharingAgreement422Item.yaml
+            $ref: ./RequestDataSharing422Item.yaml
           type: array
       required:
         - errors

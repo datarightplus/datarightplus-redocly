@@ -1,0 +1,7 @@
+type: string
+example: ACTIVE
+description: Agreement Status
+enum:
+  - ACTIVE
+  - EXPIRED
+  - WITHDRAWN
