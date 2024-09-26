@@ -10,9 +10,44 @@ properties:
   links:
     $ref: ./LinksV1.yaml
   meta:
-    $ref: ./MetaRequestBankingTransactionDetailListV1.yaml
+    $ref: ./MetaPaginatedV1.yaml
 required:
   - data
   - links
   - meta
 type: object
+example:
+  version: V1
+  data:
+    - accountId: jdnmwucgrchzngrqieryhiovpvzknokkwsediggdlnxgxizegvwpwfflgavkrbay
+      amount: '133.55'
+      apcaNumber: '484799'
+      billerCode: '75556'
+      billerName: TAX OFFICE PAYMENTS
+      crn: '1234123412341'
+      currency: AUD
+      description: Outbound payment to ATO
+      executionDateTime: '2022-03-03T03:03:03.3Z'
+      isDetailAvailable: true
+      merchantCategoryCode: '5200'
+      merchantName: Freedom Furniture
+      postingDateTime: '2022-03-03T03:03:03.3Z'
+      reference: Payment for Services
+      status: POSTED
+      transactionId: 8cce04fbcc0fe8307e8c221b5ae497691935a368e98f5478610c60ca4ef81caf
+      type: PAYMENT
+      valueDateTime: '2022-03-13T03:03:03.3Z'
+      extendedData:
+        extensionUType: x2p101Payload
+        payee: string
+        payer: string
+        service: X2P1.01
+        x2p101Payload:
+          endToEndId: string
+          extendedDescription: An extended string description.
+          purposeCode: string
+  links:
+    self: https://api.provider.com.au/dio-au/v1/actions/bulk-banking-transactions/9fe3f97e-c22c-4516-b6ed-05c0486db195/retrieve
+  meta:
+    totalPages: 1
+    totalRecords: 9918

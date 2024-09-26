@@ -3,7 +3,6 @@ properties:
     description: >-
       Unique Action Identifier
     type: string
-    format: uuid
     example: 9fe3f97e-c22c-4516-b6ed-05c0486db195
   status:
     description: >-
