@@ -36,5 +36,5 @@ properties:
     x-cds-type: AmountString
 required:
   - accountId
-  - oldestDate
-  - newestDate
+  - oldestTime
+  - newestTime
