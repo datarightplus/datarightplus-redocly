@@ -18,6 +18,7 @@ properties:
   statusDescription:
     description: >-
       Description of the current status, can be used to provide an extended description
+    type: string
     example: Job Received, contacting internal systems to formulate response.
   creationDateTime:
     description: Creation Date/Time
