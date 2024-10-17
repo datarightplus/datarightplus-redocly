@@ -1,12 +1,11 @@
 type: object
 properties:
-  accountId:
-    description: ID of a specific account to obtain data for. This is a tokenised
-      ID previous obtained from the Account List end point.
-    in: path
-    type: string
-    x-cds-type: ASCIIString
-    example: 5ecc1b30-5889-49d4-a988-e44b4e215574
+  accountIds:
+    description: Array of specific account IDs to obtain data for
+    items:
+      type: string
+      x-cds-type: ASCIIString
+    type: array
   oldestDate:
     description: >-
       Constrain the request to records with effective date at or after this date.
