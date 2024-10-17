@@ -1,11 +1,14 @@
 type: object
 properties:
-  accountId:
-    description: ID of a specific account to obtain data for. This is a tokenised
-      ID previous obtained from the Account List end point.
-    type: string
-    x-cds-type: ASCIIString
-    example: 5ecc1b30-5889-49d4-a988-e44b4e215574
+  accountIds:
+    description: Array of specific account IDs to obtain data for. If absent all accounts within an agreement are included.
+    items:
+      type: string
+      x-cds-type: ASCIIString
+    type: array
+    example:
+      - 7b2604da-0810-4ad4-8c74-7ce0487ed26e
+      - 67d542f5-e0ec-4df5-821e-4dbf02c4403f
   oldestTime:
     description: >-
       Constrain the transaction history request to transactions with effective time
@@ -28,13 +31,14 @@ properties:
       this amount
     type: string
     x-cds-type: AmountString
+    example: "1.00"
   maxAmount:
     description: >-
       Filter transactions to only transactions with amounts less than or equal to
       than this amount
     type: string
     x-cds-type: AmountString
+    example: "120.00"
 required:
-  - accountId
   - oldestTime
   - newestTime
