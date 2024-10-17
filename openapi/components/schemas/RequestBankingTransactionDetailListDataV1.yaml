@@ -16,13 +16,15 @@ properties:
     type: string
     format: date-time
     x-cds-type: DateTimeString
+    example: "2023-07-01T15:43:00.123456Z"
   newestTime:
-    description: >-
-      Constrain the transaction history request to transactions with effective time
-      at or before this date/time. Format is aligned to DateTimeString common type
-    type: string
-    format: date-time
-    x-cds-type: DateTimeString
+      description: >-
+        Constrain the transaction history request to transactions with effective time
+        at or before this date/time. Format is aligned to DateTimeString common type.
+      type: string
+      format: date-time
+      x-cds-type: DateTimeString
+      example: "2024-06-30T15:43:00.123456Z"
   minAmount:
     description: >-
       Filter transactions to only transactions with amounts higher or equal to than
@@ -38,5 +40,5 @@ properties:
     x-cds-type: AmountString
     example: "120.00"
 required:
-  - oldestDate
-  - newestDate
+  - oldestTime
+  - newestTime

@@ -1,0 +1,9 @@
+description: Global unique identifier of an agreement
+explode: false
+in: path
+name: agreementId
+required: true
+schema:
+  type: string
+  x-cds-type: ASCIIString
+style: simple

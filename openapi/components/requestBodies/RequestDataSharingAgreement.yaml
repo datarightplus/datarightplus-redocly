@@ -1,9 +1,0 @@
-description: Request Data Sharing Agreement
-content:
-  application/json:
-    schema:
-      $ref: ../schemas/RequestDataSharingAgreement.yaml
-    encoding:
-      payload:
-        contentType: application/json
-required: true

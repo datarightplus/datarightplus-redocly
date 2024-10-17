@@ -1,0 +1,28 @@
+get:
+  description: >-
+    Retrieve a Data Sharing requests current state and configuration
+  operationId: getSharingRequest
+  parameters:
+    - $ref: ../components/parameters/PathActionId.yaml
+    - in: header
+      name: x-v
+      required: true
+      schema:
+        $ref: ../components/schemas/versions/EnumResponseRequestSharingAgreementV2.yaml
+    - $ref: ../components/parameters/HeaderXFapiInteractionId.yaml
+  responses:
+    200:
+      $ref: ../components/responses/GetSharingRequest.yaml
+    403:
+      $ref: ../components/responses/Generic403.yaml
+    404:
+      $ref: ../components/responses/GetSharingRequest404.yaml
+    500:
+      $ref: ../components/responses/Generic500.yaml
+    503:
+      $ref: ../components/responses/Generic503.yaml
+  summary: Get Sharing Request
+  tags:
+    - Data Sharing
+  security:
+    - ProviderAuth: ["dio:sharing"]

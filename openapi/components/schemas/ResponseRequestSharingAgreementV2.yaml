@@ -1,0 +1,29 @@
+properties:
+  version:
+    type: string
+    default: V2
+  data:
+    $ref: ./RequestSharingAgreementDataV2.yaml
+  links:
+    $ref: ./LinksV1.yaml
+  meta:
+    $ref: ./MetaRequestDataSharingV1.yaml
+required:
+  - data
+  - links
+  - meta
+type: object
+example:
+  version: "V2"
+  data:
+    sharingDuration: 31536000
+    dataClusters:
+      - BANK_ACCOUNTS_BASIC_READ
+  links:
+    self: "https://api.provider.com.au/dio-au/actions/request-data-sharing/8ba3f97e-c22c-4516-b6ed-05c0486db195"
+  meta:
+    actionId: "8ba3f97e-c22c-4516-b6ed-05c0486db195"
+    actionStatus: PENDING
+    actionStatusDescription: "Sharing Arrangement Request Pending"
+    authStatus: PENDING
+    authStatusDescription: "Pending Authorisation Initiation"

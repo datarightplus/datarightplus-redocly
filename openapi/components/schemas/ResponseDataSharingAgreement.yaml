@@ -1,6 +1,0 @@
-oneOf: 
-  - $ref: ResponseDataSharingAgreementV2.yaml
-discriminator: 
-  propertyName: version
-  mapping: 
-    V2: ResponseDataSharingAgreementV2.yaml

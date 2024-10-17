@@ -1,6 +1,0 @@
-oneOf:
-  - $ref: RequestDataSharingAgreementV2.yaml
-discriminator:
-  propertyName: version
-  mapping:
-    V2: RequestDataSharingAgreementV2.yaml
