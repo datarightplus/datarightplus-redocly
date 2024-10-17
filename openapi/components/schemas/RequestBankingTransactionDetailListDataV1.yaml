@@ -1,7 +1,7 @@
 type: object
 properties:
   accountIds:
-    description: Array of specific account IDs to obtain data for
+    description: Array of specific account IDs to obtain data for. If absent all accounts within an agreement are included.
     items:
       type: string
       x-cds-type: ASCIIString
@@ -35,6 +35,5 @@ properties:
     type: string
     x-cds-type: AmountString
 required:
-  - accountId
   - oldestDate
   - newestDate
