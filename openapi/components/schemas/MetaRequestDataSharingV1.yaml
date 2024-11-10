@@ -20,6 +20,7 @@ properties:
       - IN_PROGRESS
       - SUCCESS
       - FAILED
+      - EXPIRED
     type: string
     example: IN_PROGRESS
   actionStatusDescription:
