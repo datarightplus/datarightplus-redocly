@@ -32,7 +32,7 @@ get:
   tags:
     - Electricity Usage
   security:
-    - ProviderAuth: ['energy:electricity.usage:read']
+    - ProviderAuthAuthorizationCode: ['energy:electricity.usage:read']
   x-version: '1'
 post:
   description: Obtain the electricity usage data for a specific set of service points
@@ -68,5 +68,5 @@ post:
   tags:
     - Electricity Usage
   security:
-    - ProviderAuth: ['energy:electricity.usage:read']
+    - ProviderAuthAuthorizationCode: ['energy:electricity.usage:read']
   x-version: '1'

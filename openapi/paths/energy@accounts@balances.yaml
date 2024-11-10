@@ -29,7 +29,7 @@ get:
   tags:
     - Energy Accounts
   security:
-    - ProviderAuth: ['energy:billing:read']
+    - ProviderAuthAuthorizationCode: ['energy:billing:read']
   x-version: '1'
 post:
   summary: Get Balances For Specific Energy Accounts
@@ -62,5 +62,5 @@ post:
   tags:
     - Energy Accounts
   security:
-    - ProviderAuth: ['energy:billing:read']
+    - ProviderAuthAuthorizationCode: ['energy:billing:read']
   x-version: '1'

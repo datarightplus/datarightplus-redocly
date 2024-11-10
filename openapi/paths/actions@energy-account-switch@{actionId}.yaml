@@ -31,4 +31,4 @@ get:
   tags:
     - Account Origination
   security:
-    - ProviderAuth: ["dio:action"]
+    - ProviderAuthClientCredentials: ["dio:action"]

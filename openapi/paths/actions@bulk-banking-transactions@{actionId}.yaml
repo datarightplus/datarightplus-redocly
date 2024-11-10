@@ -29,7 +29,7 @@ get:
   tags:
     - Banking Actions
   security:
-    - ProviderAuth: ['bank:transactions:read']
+    - ProviderAuthAuthorizationCode: ['bank:transactions:read']
   x-version: '1'
   servers:
     - url: 'https://secure.api.register.dataright.plus/dio-au/v1'

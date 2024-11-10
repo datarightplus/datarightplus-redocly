@@ -28,5 +28,5 @@ get:
   tags:
     - Electrical Assets
   security:
-    - ProviderAuth: ['energy:electricity.servicepoints.detail:read']
+    - ProviderAuthAuthorizationCode: ['energy:electricity.servicepoints.detail:read']
   x-version: '1'

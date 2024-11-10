@@ -27,7 +27,7 @@ get:
     503:
       $ref: ../components/responses/Generic503.yaml
   security:
-    - ProviderAuth: ['energy:electricity.servicepoints.basic:read']
+    - ProviderAuthAuthorizationCode: ['energy:electricity.servicepoints.basic:read']
   x-version: '1'
   tags:
     - Electrical Assets

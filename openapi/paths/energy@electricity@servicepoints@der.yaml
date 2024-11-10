@@ -29,7 +29,7 @@ get:
   tags:
     - Electrical Assets
   security:
-    - ProviderAuth: ['energy:electricity.der:read']
+    - ProviderAuthAuthorizationCode: ['energy:electricity.der:read']
   x-version: '1'
 post:
   description: Obtain DER data for a specific set of service points
@@ -62,5 +62,5 @@ post:
   tags:
     - Electrical Assets
   security:
-    - ProviderAuth: ['energy:electricity.der:read']
+    - ProviderAuthAuthorizationCode: ['energy:electricity.der:read']
   x-version: '1'

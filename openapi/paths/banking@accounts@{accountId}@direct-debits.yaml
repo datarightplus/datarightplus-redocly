@@ -32,5 +32,5 @@ get:
   tags:
     - Direct Debits
   security:
-    - ProviderAuth: ['bank:regular_payments:read']
+    - ProviderAuthAuthorizationCode: ['bank:regular_payments:read']
   x-version: '1'

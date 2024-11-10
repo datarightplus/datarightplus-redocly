@@ -18,8 +18,6 @@ paths:
     $ref: paths/actions@bulk-banking-transactions@{actionId}.yaml
   /actions/bulk-banking-transactions/{actionId}/retrieve:
     $ref: paths/actions@bulk-banking-transactions@{actionId}@retrieve.yaml
-  /actions/data-sharing:
-    $ref: paths/actions@data-sharing.yaml
   /actions/data-sharing/{agreementId}:
     $ref: paths/actions@data-sharing@{agreementId}.yaml
   /actions/request-data-sharing/self:
@@ -232,8 +230,10 @@ x-tagGroups:
     tags: ["Electricity Authority Assets", "Electricity Authority Usage"]
 components:
   securitySchemes:
-    ProviderAuth:
-      $ref: ./components/securitySchemes/ProviderAuth.yaml
+    ProviderAuthAuthorizationCode:
+      $ref: ./components/securitySchemes/ProviderAuthAuthorizationCode.yaml
+    ProviderAuthClientCredentials:
+      $ref: ./components/securitySchemes/ProviderAuthClientCredentials.yaml
     EAClientAuth:
       $ref: ./components/securitySchemes/EAClientAuth.yaml
     EAAuth:

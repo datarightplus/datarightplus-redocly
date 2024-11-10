@@ -30,5 +30,5 @@ get:
   tags:
     - Energy Accounts
   security:
-    - ProviderAuth: ['energy:accounts.basic:read']
+    - ProviderAuthAuthorizationCode: ['energy:accounts.basic:read']
   x-version: '2'

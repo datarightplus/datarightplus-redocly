@@ -25,4 +25,4 @@ get:
   tags:
     - Data Sharing
   security:
-    - ProviderAuth: ["dio:sharing"]
+    - ProviderAuthClientCredentials: ["dio:sharing"]

@@ -28,5 +28,5 @@ get:
   tags:
     - Energy Accounts
   security:
-    - ProviderAuth: ['energy:billing:read']
+    - ProviderAuthAuthorizationCode: ['energy:billing:read']
   x-version: '1'
