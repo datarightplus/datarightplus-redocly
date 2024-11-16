@@ -26,5 +26,5 @@ get:
   tags:
     - Customer
   security:
-    - ProviderAuth: ['common:customer.basic:read']
+    - ProviderAuthAuthorizationCode: ['common:customer.basic:read']
   x-version: '1'

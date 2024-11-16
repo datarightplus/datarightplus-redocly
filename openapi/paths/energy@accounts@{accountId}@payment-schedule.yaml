@@ -42,5 +42,5 @@ get:
   tags:
     - Energy Billing
   security:
-    - ProviderAuth: ['energy:accounts.paymentschedule:read']
+    - ProviderAuthAuthorizationCode: ['energy:accounts.paymentschedule:read']
   x-version: '1'

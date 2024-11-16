@@ -29,5 +29,5 @@ get:
   tags:
     - Transactions
   security:
-    - ProviderAuth: ['bank:transactions:read']
+    - ProviderAuthAuthorizationCode: ['bank:transactions:read']
   x-version: '1'
