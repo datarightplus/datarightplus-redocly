@@ -16,9 +16,11 @@ properties:
       Current status of the requested action
     enum:
       - PENDING
+      - CLAIMED
       - IN_PROGRESS
       - SUCCESS
       - FAILED
+      - EXPIRED
     type: string
     example: IN_PROGRESS
   actionStatusDescription:
