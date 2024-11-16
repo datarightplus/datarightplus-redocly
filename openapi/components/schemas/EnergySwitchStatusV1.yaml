@@ -21,7 +21,7 @@ properties:
     example: 2024-08-31T08:14:25Z
 required:
   - switchId
-  - changeRequest
+  - msatsChangeRequest
   - creationDateTime
   - lastUpdated
 type: object
