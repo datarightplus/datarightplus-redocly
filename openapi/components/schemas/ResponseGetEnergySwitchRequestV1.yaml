@@ -3,7 +3,7 @@ properties:
     type: string
     default: V1
   data:
-    $ref: ./RequestInitiateEnergySwitchV1.yaml
+    $ref: ./RequestInitiateEnergySwitchDataV1.yaml
   links:
     $ref: ./LinksV1.yaml
   meta:
