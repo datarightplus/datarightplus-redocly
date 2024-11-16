@@ -1,11 +1,12 @@
 properties:
   switchId:
     description: >-
-      Switch identifier assigned following onboarding form completion. <br />      
-      **MUST** be provided if `actionStatus` is `SUCCESS`.
+      Switch Identifier following submission.
     type: string
     format: uuid
     example: e1529071-601f-46ff-a097-97cdaba84065
+  msatsChangeRequest:
+    $ref: ./EnergyMSATSChangeRequestV1.yaml
   creationDateTime:
     description: Creation Date/Time
     type: string
@@ -20,6 +21,7 @@ properties:
     example: 2024-08-31T08:14:25Z
 required:
   - switchId
+  - changeRequest
   - creationDateTime
   - lastUpdated
 type: object

@@ -1,0 +1,13 @@
+type: string
+example: REQUESTED
+description:
+  $ref: ./EnumMSATSChangeRequestStatusCodeV1.md
+enum:
+  - PVAL
+  - REQ
+  - PEND
+  - OBJ
+  - CAN
+  - COM
+  - REJ
+
