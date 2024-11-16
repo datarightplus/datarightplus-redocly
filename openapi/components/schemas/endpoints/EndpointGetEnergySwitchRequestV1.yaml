@@ -9,7 +9,7 @@ properties:
     description: The response versions supported by this endpoint
     type: array
     items:
-      $ref: ../versions/EnumResponseGetEnergySwitchStatusV1.yaml
+      $ref: ../versions/EnumResponseGetEnergySwitchRequestV1.yaml
 required:
   - baseUri
   - responseVersions
