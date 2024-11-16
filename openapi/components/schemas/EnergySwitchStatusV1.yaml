@@ -1,0 +1,25 @@
+properties:
+  switchId:
+    description: >-
+      Switch identifier assigned following onboarding form completion. <br />      
+      **MUST** be provided if `actionStatus` is `SUCCESS`.
+    type: string
+    format: uuid
+    example: e1529071-601f-46ff-a097-97cdaba84065
+  creationDateTime:
+    description: Creation Date/Time
+    type: string
+    format: date-time
+    x-cds-type: DateTimeString
+    example: 2024-02-31T08:14:25Z
+  lastUpdated:
+    description: Last Status Update time
+    type: string
+    format: date-time
+    x-cds-type: DateTimeString
+    example: 2024-08-31T08:14:25Z
+required:
+  - switchId
+  - creationDateTime
+  - lastUpdated
+type: object

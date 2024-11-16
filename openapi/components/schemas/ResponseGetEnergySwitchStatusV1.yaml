@@ -1,0 +1,23 @@
+properties:
+  version:
+    type: string
+    default: V1
+  data:
+    $ref: ./EnergySwitchStatusV1.yaml
+  links:
+    $ref: ./LinksV1.yaml
+  meta:
+    $ref: ./MetaV1.yaml
+required:
+  - data
+  - links
+  - meta
+type: object
+example:
+  version: "V1"
+  data:
+    switchId: 7a20c06e-17d6-4eb0-852b-6afea5e44eb2
+    creationDateTime: 2023-09-21T14:44:16+10:00
+    lastUpdated: 2023-09-23T11:44:16+10:00
+  links:
+    self: "https://api.provider.com.au/dio-au/actions/energy-account-switch/8ba3f97e-c22c-4516-b6ed-05c0486db195"
