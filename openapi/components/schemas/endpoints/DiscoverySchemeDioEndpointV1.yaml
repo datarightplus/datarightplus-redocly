@@ -16,5 +16,7 @@ properties:
     $ref: EndpointGetSharingRequestV2.yaml
   initiateEnergySwitch:
     $ref: EndpointInitiateEnergySwitchV1.yaml
+  getEnergySwitchRequest:
+    $ref: EndpointGetEnergySwitchRequestV1.yaml
   getEnergySwitchStatus:
     $ref: EndpointGetEnergySwitchStatusV1.yaml

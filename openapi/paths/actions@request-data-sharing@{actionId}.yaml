@@ -26,3 +26,6 @@ get:
     - Data Sharing
   security:
     - ProviderAuthClientCredentials: ["dio:sharing"]
+  servers:
+    - url: 'https://secure.api.provider.com.au/dio-au/v1'
+      description: "Example MTLS Base URL for Provider extensions"

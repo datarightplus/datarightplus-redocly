@@ -44,8 +44,9 @@ example:
               postcode: "2293"
               state: "NSW"
   links:
-    self: "https://api.provider.dataright.plus/dio-au/v1/actions/request-energy-account-switch/8ba3f97e-c22c-4516-b6ed-05c0486db195"
+    self: "https://api.provider.com.au/dio-au/actions/energy-account-switch/8ba3f97e-c22c-4516-b6ed-05c0486db195"
   meta:
     actionId: "8ba3f97e-c22c-4516-b6ed-05c0486db195"
-    actionStatus: PENDING
-    actionStatusDescription: "Energy Account Switch onboarding initiation pending"
+    switchId: "7a20c06e-17d6-4eb0-852b-6afea5e44eb2"
+    actionStatus: SUCCESS
+    actionStatusDescription: "Energy Account Switch successfully initiated, refer to Switch Status for more information"

@@ -1,6 +1,0 @@
-oneOf:
-  - $ref: ../schemas/ErrorGeneralExpectedV1.yaml
-discriminator:
-  propertyName: code
-  mapping:
-    "urn:au-cds:error:cds-all:GeneralError/Expected": ../schemas/ErrorGeneralExpectedV1.yaml
