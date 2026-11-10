@@ -1,7 +1,7 @@
 type: object
 properties:
   code:
-    description: Holds an end point specific error code. This MAY be a standard CDR error code or an application-specific error code.
+    description: Holds an endpoint specific error code. This MAY be a standard CDR error code or an application-specific error code.
     type: string
     default: "urn:au-cds:error:cds-all:Authorisation/AdrStatusNotActive"
   title:
@@ -13,7 +13,7 @@ properties:
     type: string
     example: "The ADR requesting this information is not Active"
   meta:
-    description: Holds additional end point specific data relevant to the error
+    description: Holds additional endpoint specific data relevant to the error
     properties:
       urn:
         description: Holds a standard CDR error code

@@ -4,7 +4,7 @@ properties:
     type: string
     format: uri
     x-cds-type: URIString
-    example: "https://api.provider.com.au/cds-au/v1/endpoint/path"
+    example: "https://api.bank.com.au/cds-au/v1/endpoint/path"
 required:
   - self
 type: object
