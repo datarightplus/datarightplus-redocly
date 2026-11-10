@@ -1,6 +1,12 @@
-description: A correlation identifier as described in [FAPI-1.0-Baseline 6.2.1-11](https://openid.net/specs/openid-financial-api-part-1-1_0.html#protected-resources-provisions)
+description: >-
+  An [RFC4122](https://tools.ietf.org/html/rfc4122) UUID used as
+  a correlation id. If provided, the data holder must play back
+  this value in the _x-fapi-interaction-id_ response header. If not
+  provided a [RFC4122](https://tools.ietf.org/html/rfc4122) UUID
+  value is required to be provided in the response header to track
+  the interaction. This header MUST be responded for success and
+  error responses for authenticated APIs.
 explode: false
-required: true
 schema:
   type: string
   format: uuid
