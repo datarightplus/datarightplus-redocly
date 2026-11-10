@@ -28,5 +28,5 @@ get:
   tags:
     - Energy Accounts
   security:
-    - ProviderAuth: ['energy:accounts.concessions:read']
+    - ProviderAuthAuthorizationCode: ['energy:accounts.concessions:read']
   x-version: '1'

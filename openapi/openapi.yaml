@@ -18,10 +18,18 @@ paths:
     $ref: paths/actions@bulk-banking-transactions@{actionId}.yaml
   /actions/bulk-banking-transactions/{actionId}/retrieve:
     $ref: paths/actions@bulk-banking-transactions@{actionId}@retrieve.yaml
-  /actions/data-sharing:
-    $ref: paths/actions@data-sharing.yaml
-  /actions/data-sharing/{actionId}:
-    $ref: paths/actions@data-sharing@{actionId}.yaml
+  /actions/data-sharing/{agreementId}:
+    $ref: paths/actions@data-sharing@{agreementId}.yaml
+  /actions/request-data-sharing:
+    $ref: paths/actions@request-data-sharing.yaml
+  /actions/request-data-sharing/{actionId}:
+    $ref: paths/actions@request-data-sharing@{actionId}.yaml
+  /actions/request-energy-account-switch:
+    $ref: paths/actions@request-energy-account-switch.yaml
+  /actions/request-energy-account-switch/{actionId}:
+    $ref: paths/actions@request-energy-account-switch@{actionId}.yaml
+  /actions/energy-account-switch/{switchId}:
+    $ref: paths/actions@energy-account-switch@{switchId}.yaml
   /banking/accounts:
     $ref: paths/banking@accounts.yaml
   /banking/accounts/balances:
@@ -138,6 +146,8 @@ tags:
   - name: Banking Actions
     description: "Banking Actions"
     x-displayName: Banking
+  - name: Energy Account Switch
+    description: "Energy Account Switch Functionality"
   - name: Data Sharing
     description: "Data Sharing Functions"
   - name: Banking Accounts
@@ -205,7 +215,7 @@ x-tagGroups:
   - name: "Introduction"
     tags: []
   - name: "Actions"
-    tags: ["Banking Actions", "Data Sharing"]
+    tags: ["Banking Actions", "Data Sharing", "Energy Account Switch"]
   - name: "Common"
     tags: ["Customer", "Operations"]
   - name: "Banking Sector"
@@ -222,8 +232,10 @@ x-tagGroups:
     tags: ["Electricity Authority Assets", "Electricity Authority Usage"]
 components:
   securitySchemes:
-    ProviderAuth:
-      $ref: ./components/securitySchemes/ProviderAuth.yaml
+    ProviderAuthAuthorizationCode:
+      $ref: ./components/securitySchemes/ProviderAuthAuthorizationCode.yaml
+    ProviderAuthClientCredentials:
+      $ref: ./components/securitySchemes/ProviderAuthClientCredentials.yaml
     EAClientAuth:
       $ref: ./components/securitySchemes/EAClientAuth.yaml
     EAAuth:

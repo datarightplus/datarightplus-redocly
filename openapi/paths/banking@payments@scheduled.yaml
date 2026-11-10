@@ -34,7 +34,7 @@ get:
   tags:
     - Scheduled Payments
   security:
-    - ProviderAuth: ['bank:regular_payments:read']
+    - ProviderAuthAuthorizationCode: ['bank:regular_payments:read']
   x-version: '2'
 post:
   description: Obtain scheduled payments for a specified list of accounts
@@ -67,5 +67,5 @@ post:
   tags:
     - Scheduled Payments
   security:
-    - ProviderAuth: ['bank:regular_payments:read']
+    - ProviderAuthAuthorizationCode: ['bank:regular_payments:read']
   x-version: '2'

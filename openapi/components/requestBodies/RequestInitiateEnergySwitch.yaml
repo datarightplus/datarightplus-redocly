@@ -1,0 +1,9 @@
+description: Initiate Energy Account Switch
+content:
+  application/json:
+    schema:
+      $ref: ../schemas/RequestInitiateEnergySwitch.yaml
+    encoding:
+      payload:
+        contentType: application/json
+required: true

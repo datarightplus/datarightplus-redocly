@@ -31,7 +31,7 @@ get:
   tags:
     - Energy Billing
   security:
-    - ProviderAuth: ['energy:billing:read']
+    - ProviderAuthAuthorizationCode: ['energy:billing:read']
   x-version: '1'
 post:
   summary: Get Invoices For Specific Energy Accounts
@@ -66,5 +66,5 @@ post:
   tags:
     - Energy Billing
   security:
-    - ProviderAuth: ['energy:billing:read']
+    - ProviderAuthAuthorizationCode: ['energy:billing:read']
   x-version: '1'

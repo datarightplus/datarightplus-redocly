@@ -1,0 +1,26 @@
+properties:
+  version:
+    type: string
+    default: V2
+  data:
+    $ref: ./SharingAgreementDataV2.yaml
+  links:
+    $ref: ./LinksV1.yaml
+  meta:
+    $ref: ./MetaV1.yaml
+required:
+  - data
+  - links
+  - meta
+type: object
+example:
+  version: "V2"
+  data:
+    agreementId: e1529071-601f-46ff-a097-97cdaba84065
+    status: ACTIVE
+    creationDateTime: 2023-09-21T14:44:16+10:00
+    expiryDateTime: 2024-08-21T14:44:16+10:00
+    dataClusters:
+      - BANK_ACCOUNTS_BASIC_READ
+  links:
+    self: "https://api.provider.com.au/dio-au/actions/data-sharing/e1529071-601f-46ff-a097-97cdaba84065"

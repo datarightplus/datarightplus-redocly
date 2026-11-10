@@ -1,0 +1,6 @@
+oneOf:
+  - $ref: RequestInitiateEnergySwitchV1.yaml
+discriminator:
+  propertyName: version
+  mapping:
+    V1: RequestInitiateEnergySwitchV1.yaml

@@ -4,6 +4,7 @@ post:
   parameters:
     - in: header
       name: x-v
+      required: true
       schema:
         $ref: ../components/schemas/versions/EnumResponseRequestBankingTransactionDetailListV1.yaml
     - $ref: ../components/parameters/HeaderXFapiInteractionId.yaml
@@ -30,8 +31,8 @@ post:
   tags:
     - Banking Actions
   security:
-    - ProviderAuth: ['bank:transactions:read']
+    - ProviderAuthAuthorizationCode: ['bank:transactions:read']
   x-version: '1'
   servers:
-    - url: 'https://secure.api.register.dataright.plus/dio-au/v1'
+    - url: 'https://secure.api.provider.com.au/dio-au/v1'
       description: "Example MTLS Base URL for Provider extensions"

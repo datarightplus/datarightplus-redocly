@@ -1,0 +1,9 @@
+description: Global unique identifier of an energy switch
+explode: false
+in: path
+name: switchId
+required: true
+schema:
+  type: string
+  x-cds-type: ASCIIString
+style: simple

@@ -1,0 +1,7 @@
+description: MSATS Change Request
+properties:
+  status:
+    $ref: ./EnumMSATSChangeRequestStatusCodeV1.yaml
+required:
+  - status
+type: object

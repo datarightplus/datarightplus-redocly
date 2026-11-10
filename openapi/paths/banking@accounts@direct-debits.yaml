@@ -32,7 +32,7 @@ get:
   tags:
     - Direct Debits
   security:
-    - ProviderAuth: ['bank:regular_payments:read']
+    - ProviderAuthAuthorizationCode: ['bank:regular_payments:read']
   x-version: '1'
 post:
   description: Obtain direct debit authorisations for a specified list of accounts
@@ -65,5 +65,5 @@ post:
   tags:
     - Direct Debits
   security:
-    - ProviderAuth: ['bank:regular_payments:read']
+    - ProviderAuthAuthorizationCode: ['bank:regular_payments:read']
   x-version: '1'

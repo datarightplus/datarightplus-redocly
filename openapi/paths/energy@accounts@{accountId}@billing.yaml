@@ -34,5 +34,5 @@ get:
   tags:
     - Energy Billing
   security:
-    - ProviderAuth: ['energy:billing:read']
+    - ProviderAuthAuthorizationCode: ['energy:billing:read']
   x-version: '2'

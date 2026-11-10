@@ -16,7 +16,7 @@ get:
     - Dynamic Client Registration
   x-version: '1'
   security:
-    - ProviderAuth: ['cdr:registration']
+    - ProviderAuthClientCredentials: ["cdr:registration"]
 put:
   description: >-
     Update a Initiator Registration for a given OAuth2 Client ID.
@@ -39,7 +39,7 @@ put:
     - Dynamic Client Registration
   x-version: '1'
   security:
-    - ProviderAuth: ['cdr:registration']
+    - ProviderAuthClientCredentials: ["cdr:registration"]
 delete:
   description: >-
     Delete an Initiator Registration for a given OAuth2 Client ID.
@@ -60,4 +60,4 @@ delete:
     - Dynamic Client Registration
   x-version: '1'
   security:
-    - ProviderAuth: ['cdr:registration']
+    - ProviderAuthClientCredentials: ["cdr:registration"]

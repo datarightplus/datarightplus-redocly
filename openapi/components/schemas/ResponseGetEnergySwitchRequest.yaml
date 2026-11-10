@@ -1,0 +1,6 @@
+oneOf: 
+  - $ref: ResponseGetEnergySwitchRequestV1.yaml
+discriminator: 
+  propertyName: version
+  mapping: 
+    V1: ResponseGetEnergySwitchRequestV1.yaml

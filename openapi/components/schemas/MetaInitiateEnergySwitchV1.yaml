@@ -1,0 +1,50 @@
+properties:
+  actionId:
+    description: >-
+      Unique Action Identifier
+    type: string
+    format: uuid
+    example: 9fe3f97e-c22c-4516-b6ed-05c0486db195
+  switchId:
+    description: >-
+      Switch identifier assigned following onboarding form completion. <br />      
+      **MUST** be provided if `actionStatus` is `SUCCESS`.
+    type: string
+    format: uuid
+    example: e1529071-601f-46ff-a097-97cdaba84065
+  actionStatus:
+    description: >-
+      Current status of the requested action
+    enum:
+      - PENDING
+      - CLAIMED
+      - IN_PROGRESS
+      - SUCCESS
+      - FAILED
+      - EXPIRED
+    type: string
+    example: IN_PROGRESS
+  actionStatusDescription:
+    type: string
+    description: >-
+      Description of the current status, can be used to provide an extended description
+    example: Authorisation has been initiated by the User Agent
+  creationDateTime:
+    description: Creation Date/Time
+    type: string
+    format: date-time
+    x-cds-type: DateTimeString
+    example: 2024-02-31T08:14:25Z
+  lastUpdated:
+    description: Last Status Update time
+    type: string
+    format: date-time
+    x-cds-type: DateTimeString
+    example: 2024-08-31T08:14:25Z
+required:
+  - actionId
+  - actionStatus
+  - actionStatusDescription
+  - lastUpdated
+  - creationDateTime
+type: object

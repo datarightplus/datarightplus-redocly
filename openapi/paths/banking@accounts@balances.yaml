@@ -32,7 +32,7 @@ get:
   tags:
     - Banking Balances
   security:
-    - ProviderAuth: ['bank:accounts.basic:read']
+    - ProviderAuthAuthorizationCode: ['bank:accounts.basic:read']
   x-version: '1'
 post:
   description: Obtain balances for a specified list of accounts
@@ -65,5 +65,5 @@ post:
   tags:
     - Banking Balances
   security:
-    - ProviderAuth: ['bank:accounts.basic:read']
+    - ProviderAuthAuthorizationCode: ['bank:accounts.basic:read']
   x-version: '1'

@@ -28,5 +28,5 @@ get:
   tags:
     - Banking Accounts
   security:
-    - ProviderAuth: ['bank:accounts.detail:read']
+    - ProviderAuthAuthorizationCode: ['bank:accounts.detail:read']
   x-version: '3'

@@ -1,0 +1,48 @@
+type: object
+properties:
+  connectionDetail:
+    $ref: ./EnergyConnectionDetailV1.yaml
+  customerDetail:
+    type: object
+    properties:
+      customerUType:
+        description: The type of customer object that is present
+        enum:
+          - organisation
+          - person
+        type: string
+        example: person
+      organisation:
+        $ref: ./CommonOrganisationDetailV2.yaml
+      person:
+        $ref: ./CommonPersonDetailV2.yaml
+required:
+  - connectionDetail
+example:
+  connectionDetail:
+    planId: ENERGY_SAVER_PLAN
+    nationalMeteringId: 6987332211
+    lifeSupportRequired: false
+    concessionEligible: false
+    electronicBills: true
+  customerDetail:
+    customerUType: person
+    person:
+      firstName: John
+      lastName: Doe
+      middleNames: []
+      emailAddresses:
+        - address: john@doe.com
+          purpose: HOME
+      phoneNumbers:
+        - fullNumber: "+61439123123"
+          number: "0439123123"
+          purpose: MOBILE
+      physicalAddresses:
+        - addressUType: simple
+          purpose: MAIL
+          simple:
+            addressLine1: "55 McDonald Avenue"
+            city: "Maryville"
+            postcode: "2293"
+            state: "NSW"

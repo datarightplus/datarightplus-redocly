@@ -29,5 +29,5 @@ get:
   tags:
     - DER
   security:
-    - ProviderAuth: ['energy:electricity.der:read']
+    - ProviderAuthAuthorizationCode: ['energy:electricity.der:read']
   x-version: '1'

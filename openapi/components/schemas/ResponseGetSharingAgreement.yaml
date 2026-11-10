@@ -1,0 +1,6 @@
+oneOf: 
+  - $ref: ResponseGetSharingAgreementV2.yaml
+discriminator: 
+  propertyName: version
+  mapping: 
+    V2: ResponseGetSharingAgreementV2.yaml
